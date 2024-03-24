@@ -1,8 +1,8 @@
 {
-  "name": "eureka-bank",
+  "name": "@eureka-bank/prettier-config",
   "version": "1.0.0",
   "description": "",
-  "private": true,
+  "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@eureka-bank/prettier-config": "workspace:^",
-    "prettier": "^3.2.5"
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.12"
   }
 }
