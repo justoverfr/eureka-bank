@@ -4,7 +4,9 @@
 
 /** @type { PrettierConfig | SortImportsConfig | TailwindConfig } */
 export default {
-  singleQuote: false,
+  endOfLine: "auto",
+  semi: true,
+  singleQuote: true,
   plugins: [
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
