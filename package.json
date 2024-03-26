@@ -23,10 +23,5 @@
     "commitizen": "^4.3.0",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5"
-  },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
   }
 }
