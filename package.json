@@ -7,8 +7,6 @@
     "format": "prettier . --ignore-path .gitignore",
     "format:check": "pnpm format --check",
     "format:write": "pnpm format --write",
-    "lint:front": "cd apps/web && pnpm lint",
-    "lint:back": "cd apps/api && pnpm lint",
     "commit": "cz",
     "prepare": "husky"
   },
@@ -21,7 +19,9 @@
     "@commitlint/cz-commitlint": "^19.2.0",
     "@eureka-bank/prettier-config": "workspace:^",
     "commitizen": "^4.3.0",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5"
+    "prettier": "^3.2.5",
+    "nx": "18.1.3"
   }
 }

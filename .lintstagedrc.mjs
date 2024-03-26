@@ -1,3 +1,3 @@
 export default {
-  '*': () => ['pnpm format:write', 'pnpm lint:front', 'pnpm lint:back'],
+  '*': () => ['pnpm format:write', 'pnpm nx run-many --target=lint'],
 };
