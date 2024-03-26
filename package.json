@@ -4,13 +4,29 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier . --ignore-path .gitignore",
+    "format:check": "pnpm format --check",
+    "format:write": "pnpm format --write",
+    "lint:front": "cd apps/web && pnpm lint",
+    "lint:back": "cd apps/api && pnpm lint",
+    "commit": "cz",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/cz-commitlint": "^19.2.0",
     "@eureka-bank/prettier-config": "workspace:^",
+    "commitizen": "^4.3.0",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }
