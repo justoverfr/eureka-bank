@@ -1,0 +1,3 @@
+{
+  "extends": "@eureka-bank/eslint-config/base"
+}
