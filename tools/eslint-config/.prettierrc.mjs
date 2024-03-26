@@ -2,7 +2,7 @@
 
 /** @type { PrettierConfig } */
 
-import prettierConfig from "@eureka-bank/prettier-config";
+import prettierConfig from '@eureka-bank/prettier-config';
 
 export default {
   ...prettierConfig,
