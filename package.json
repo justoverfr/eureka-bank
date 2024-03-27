@@ -4,9 +4,12 @@
   "description": "",
   "private": true,
   "scripts": {
-    "format": "prettier . --ignore-path .gitignore",
-    "format:check": "pnpm format --check",
-    "format:write": "pnpm format --write",
+    "dev": "nx run-many --target=dev",
+    "build": "nx run-many --target=build",
+    "start": "nx run-many --target=start",
+    "lint": "nx run-many --target=lint",
+    "lint:fix": "nx run-many --target=lint --fix",
+    "format": "prettier --write . --ignore-path .gitignore",
     "commit": "cz",
     "prepare": "husky"
   },
