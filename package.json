@@ -10,6 +10,9 @@
     "lint": "nx run-many --target=lint",
     "lint:fix": "nx run-many --target=lint --fix",
     "format": "prettier --write . --ignore-path .gitignore",
+    "db:migrate": "nx run @eureka-bank/db:migrate",
+    "db:push": "nx run @eureka-bank/db:push",
+    "db:studio": "nx run @eureka-bank/db:studio",
     "commit": "cz",
     "prepare": "husky"
   },

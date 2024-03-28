@@ -6,13 +6,26 @@ import { app, options } from './app';
 
 async function main() {
   const server = Fastify({
-    logger: true,
+    logger: {
+      transport: {
+        target: 'pino-pretty',
+        options: {
+          translateTime: 'HH:MM:ss Z',
+          ignore: 'pid,hostname',
+        },
+      },
+    },
   });
 
   try {
     server.register(app, options);
 
-    await server.listen({ host: 'localhost', port: 3333 });
+    const PORT = (await process.env.BACKEND_PORT) || 3333;
+
+    await server.listen({
+      host: 'localhost',
+      port: Number(PORT),
+    });
 
     closeWithGrace(
       {
@@ -27,8 +40,7 @@ async function main() {
         process.exit(err ? 1 : 0);
       },
     );
-
-    console.log(`Server listening on http://localhost:3333`);
+    server.log.info(process.env.SAUMON);
   } catch (err) {
     console.error(err);
     process.exit(1);
