@@ -30,14 +30,17 @@ const app: FastifyPluginAsync<AppOptions> = async (
     forceESM: true,
   });
 
-  // This loads all plugins defined in routes
+  // This loads all plugins from .routes.ts files defined in modules
   // define your routes in one of these
   void fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'routes'),
-    options: opts,
+    dir: path.join(__dirname, 'modules'),
+    options: {
+      prefix: '/api',
+      ...opts,
+    },
     forceESM: true,
+    matchFilter: /\.routes\.ts$/,
   });
 };
 
-export default app;
 export { app, options };
