@@ -6,6 +6,7 @@ import Image from 'next/image';
 import ProtoTypes from 'prop-types';
 
 import { ThemeContext } from '@/providers/theme-provider';
+
 import BarChart from '../chart/BarChart';
 
 function TotalWIdgetCardV2({ logo, activeMember }) {

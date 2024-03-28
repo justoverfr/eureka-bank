@@ -3,6 +3,7 @@
 import { useContext, useEffect, useRef } from 'react';
 
 import { ThemeContext } from '@/providers/theme-provider';
+
 import LineChart from '../chart/LineChart';
 import DateFilter from '../forms/DateFilter';
 
