@@ -137,6 +137,7 @@ fabric.properties
 
 # Icon must end with two \r
 Icon
+!icon/
 
 
 # Thumbnails
