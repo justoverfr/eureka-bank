@@ -1,12 +1,13 @@
 {
-  "name": "web",
+  "name": "@eureka-bank/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ui:add": "pnpm dlx shadcn-ui@latest add"
   },
   "dependencies": {
     "@fullcalendar/daygrid": "^6.1.11",
@@ -14,7 +15,11 @@
     "@fullcalendar/list": "^6.1.11",
     "@fullcalendar/react": "^6.1.11",
     "@fullcalendar/timegrid": "^6.1.11",
+    "@hookform/resolvers": "^3.3.4",
     "@netlify/plugin-nextjs": "^4.41.3",
+    "@radix-ui/react-checkbox": "^1.0.4",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
     "aos": "^2.3.4",
     "chart.js": "^4.4.2",
     "class-variance-authority": "^0.7.0",
@@ -28,10 +33,12 @@
     "react-calendar": "^4.8.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
+    "react-hook-form": "^7.51.2",
     "react-quill": "^2.0.0",
     "swiper": "^11.1.0",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@eureka-bank/eslint-config": "workspace:^",

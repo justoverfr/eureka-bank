@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "files": [
-    "./base.js",
-    "./react.js"
+    "base.js",
+    "react.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
