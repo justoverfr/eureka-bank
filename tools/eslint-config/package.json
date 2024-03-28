@@ -12,6 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "prettier": "@eureka-bank/prettier-config",
   "devDependencies": {
     "@eureka-bank/prettier-config": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
