@@ -53,10 +53,11 @@ function Pricing() {
                 Money now!
               </span>
               <span className="leading-160 text-lg font-medium text-gray-600 xl:max-w-[478px] xl:text-xl">
-                If you're a developer looking for an admin dashboard that is
-                developer-friendly, rich with features, and highly customizable
-                look no further than BankCo. We offer very simple pricing
-                depending on your needs.
+                Looking for a bank that aligns with your values of freedom,
+                security, and innovation? Eureka Bank is your answer. We offer a
+                fully decentralized banking experience that puts you in control.
+                Join Eureka Bank, where your financial journey transforms into
+                an adventure of possibilities.
               </span>
             </div>
             <Image
@@ -71,7 +72,7 @@ function Pricing() {
           <div className="z-10 flex flex-col items-center justify-center gap-10 lg:flex-row">
             {/* <!-- card start  --> */}
             <div
-              className="boder-[#E7E5EA1A] bg-basicSecondary w-full rounded-[32px] border border-solid px-5 text-center sm:w-7/12 lg:w-[350px] xl:px-10"
+              className="boder-[#E7E5EA1A] w-full rounded-[32px] border border-solid bg-emerald-800 px-5 text-center sm:w-7/12 lg:w-[350px] xl:px-10"
               data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
             >

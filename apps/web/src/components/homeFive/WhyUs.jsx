@@ -14,7 +14,7 @@ function WhyUs() {
         {/* <!-- Right side start  --> */}
         <div className="max-w-[500px]">
           <span className="font-poppins leading-big-loose text-3xl font-bold text-[#090D26] xl:text-4xl 2xl:text-5xl">
-            Why you choose BankCo.
+            Why you choose EurekaBank
           </span>
           <div className="z-10 flex flex-col text-sm font-normal text-[#4f4f4f] xl:text-xl xl:leading-[42px]">
             <div className="mt-3 flex gap-[10px]">

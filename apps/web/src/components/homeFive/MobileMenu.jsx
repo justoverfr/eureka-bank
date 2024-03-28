@@ -28,8 +28,8 @@ function MobileMenu() {
             alt="logo"
             className="w-5 sm:w-7 lg:w-10 xl:w-fit"
           />
-          <span className="leading-extra-loose text-primary flex h-full items-center justify-center pr-16 text-xl font-extrabold tracking-tight lg:text-4xl">
-            <span className="text-gray-900">Bank</span> Co.
+          <span className="leading-extra-loose text-primary flex h-full items-center justify-center gap-3 pr-16 text-xl font-extrabold tracking-tight lg:text-4xl">
+            <span className="text-gray-900">EUREKA</span> BANK
           </span>
         </Link>
         <div

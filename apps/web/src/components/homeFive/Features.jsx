@@ -82,7 +82,7 @@ function Features() {
           category="Upcoming"
           categoryClass="-top-10"
           title="Light & Dark Mode"
-          desc="BankCo is available in two modes: Light & Dark Mode"
+          desc="EurekaBank is available in two modes: Light & Dark Mode"
           img={darkModeW}
           imgHover={darkMode}
         />

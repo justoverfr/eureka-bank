@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import dashboard from '/public/static/images/dashboard/dashboard.jpg';
 import fill3 from '/public/static/images/shape/fill3.svg';
@@ -188,26 +189,34 @@ function Hero() {
                 width={fill3.width}
                 alt=""
               />
-              Create
+              Unleash
             </span>
-            <span className="leading-big-loose"> Awesome </span>
+            <span className="leading-big-loose"> Financial </span>
             <span className="bg-primary-new leading-big-loose px-2">
-              Dashboards
+              Sovereignty
             </span>{' '}
-            Designs in less than a minute
+            with Cutting-Edge Decentralized Banking
           </span>
         </div>
         <div className="mt-5 w-full max-w-[784px] text-center">
           <span className="leading-160 text-lg font-medium text-[#48494E] decoration-[#48494E] xl:text-xl">
-            Create & Design awesome dashboards directly in Html & Figma in just
-            a few moments with the First Dashboard Builder for HTML!
+            Banking, Redefined: Secure, Decentralized... Yours!
           </span>
         </div>
         {/* <!-- Heading end  --> */}
         {/* <!-- Buttons  --> */}
         <div className="relative mt-10 flex items-center justify-center gap-9">
-          <a
-            href="#"
+          <Link
+            href="/signin"
+            className="border-primary group relative z-50 inline-flex h-[60px] shrink-0 items-center justify-center gap-3 overflow-hidden rounded-xl border-[2.333px] transition-all"
+          >
+            <div className="bg-primary absolute bottom-0 right-0 z-0 h-0 w-0 transition-all group-hover:h-full group-hover:w-full"></div>
+            <span className="text-primary z-10 h-full w-full px-9 py-2.5 text-center text-xl font-semibold leading-8 group-hover:text-white">
+              Login
+            </span>
+          </Link>
+          <Link
+            href="/signup"
             className="border-primary group relative z-40 inline-flex h-[60px] shrink-0 items-center justify-center gap-3 overflow-hidden rounded-xl border-[2.333px] transition-all"
           >
             <div className="bg-primary absolute bottom-0 right-0 z-0 h-full w-full transition-all group-hover:h-0 group-hover:w-0"></div>
@@ -215,18 +224,9 @@ function Hero() {
               className="group-hover:text-primary z-10 h-full w-full px-9 py-2.5 text-center text-xl font-semibold leading-8 text-white"
               href="#"
             >
-              Live Preview
+              SignUp
             </div>
-          </a>
-          <a
-            href="#"
-            className="border-primary group relative z-50 inline-flex h-[60px] shrink-0 items-center justify-center gap-3 overflow-hidden rounded-xl border-[2.333px] transition-all"
-          >
-            <div className="bg-primary absolute bottom-0 right-0 z-0 h-0 w-0 transition-all group-hover:h-full group-hover:w-full"></div>
-            <span className="text-primary z-10 h-full w-full px-9 py-2.5 text-center text-xl font-semibold leading-8 group-hover:text-white">
-              Login
-            </span>
-          </a>
+          </Link>
         </div>
         {/* <!-- image start  --> */}
         <div className="relative z-0 flex items-center justify-center">

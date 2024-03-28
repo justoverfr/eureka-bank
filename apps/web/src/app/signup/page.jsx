@@ -107,7 +107,7 @@ function SignUp() {
             <SignUpForm />
             {/* Form Bottom  */}
             <p className="text-bgray-900 dark:text-bgray-50 pt-7 text-center text-base font-medium">
-              Already have an account?
+              Already have an account?{' '}
               <Link href="/signin" className="font-semibold underline">
                 Sign In
               </Link>
@@ -140,12 +140,12 @@ function SignUp() {
             </nav>
             {/* Copyright  */}
             <p className="text-bgray-600 dark:text-darkblack-300 mt-6 text-center text-sm">
-              &copy; 2023 Bankco. All Right Reserved.
+              &copy; 2024 EurekaBank. All Right Reserved.
             </p>
           </div>
         </div>
         {/*  Right  */}
-        <RightSide img={signupImg} />ß
+        <RightSide img={signupImg} />
       </div>
     </section>
   );

@@ -53,7 +53,7 @@ function RightSide({ img }) {
             Speady, Easy and Fast
           </h3>
           <p className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">
-            BankCo. help you set saving goals, earn cash back offers, Go to
+            EurekaBank help you set saving goals, earn cash back offers, Go to
             disclaimer for more details and get paychecks up to two days early.
             Get a <span className="text-success-300 font-bold">$20</span> bonus
             when you receive qualifying direct deposits

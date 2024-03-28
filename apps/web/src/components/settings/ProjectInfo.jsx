@@ -26,7 +26,7 @@ function ProjectInfo() {
             Owner
           </span>
           <span className="text-bgray-700 dark:text-bgray-50 text-left text-base font-medium">
-            BankCo.
+            EurekaBank
           </span>
         </li>
         <li className="flex justify-between">

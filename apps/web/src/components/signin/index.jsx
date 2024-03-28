@@ -43,7 +43,7 @@ function LeftSide() {
       <div className="m-auto max-w-[450px] pb-16 pt-24">
         <header className="mb-8 text-center">
           <h2 className="text-bgray-900 font-poppins mb-2 text-4xl font-semibold dark:text-white">
-            Sign in to Bankco.
+            Sign in to EUREKA BANK
           </h2>
           <p className="font-urbanis text-bgray-600 dark:text-bgray-50 text-base font-medium">
             Send, spend and save smarter
@@ -209,7 +209,7 @@ function LeftSide() {
           </Link>
         </nav>
         <p className="text-bgray-600 mt-6 text-center text-sm dark:text-white">
-          @ 2023 Bankco. All Right Reserved.
+          &copy; 2024 EurekaBank. All Right Reserved.
         </p>
       </div>
     </div>
