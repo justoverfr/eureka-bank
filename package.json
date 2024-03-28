@@ -13,6 +13,7 @@
     "db:migrate": "nx run @eureka-bank/db:migrate",
     "db:push": "nx run @eureka-bank/db:push",
     "db:studio": "nx run @eureka-bank/db:studio",
+    "clear": "nx clear-cache",
     "commit": "cz",
     "prepare": "husky"
   },

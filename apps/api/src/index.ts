@@ -3,18 +3,13 @@ import Fastify from 'fastify';
 import closeWithGrace from 'close-with-grace';
 
 import { app, options } from './app';
+import { Environment, envToLogger } from './utils/logger';
 
 async function main() {
+  console.log('process.env.NODE_ENV', await process.env.NODE_ENV);
+
   const server = Fastify({
-    logger: {
-      transport: {
-        target: 'pino-pretty',
-        options: {
-          translateTime: 'HH:MM:ss Z',
-          ignore: 'pid,hostname',
-        },
-      },
-    },
+    logger: envToLogger[(await process.env.NODE_ENV) as Environment] ?? false,
   });
 
   try {
@@ -40,7 +35,6 @@ async function main() {
         process.exit(err ? 1 : 0);
       },
     );
-    server.log.info(process.env.SAUMON);
   } catch (err) {
     console.error(err);
     process.exit(1);
