@@ -17,8 +17,8 @@ function Menu() {
             alt="logo"
           />
 
-          <span className="leading-extra-loose text-primary flex h-full items-center justify-center pr-16 text-4xl font-extrabold tracking-tight">
-            <span className="text-gray-900">Bank</span> Co.
+          <span className="leading-extra-loose text-primary flex h-full items-center justify-center gap-3 pr-16 text-4xl font-extrabold tracking-tight">
+            <span className="text-gray-900">EUREKA</span> BANK
           </span>
         </div>
       </Link>
@@ -52,7 +52,7 @@ function Menu() {
         </Link>
       </div>
       <Link
-        href="#"
+        href="/signin"
         className="border-primary group relative z-50 inline-flex h-[60px] shrink-0 items-center justify-center gap-3 overflow-hidden rounded-xl border-[2.333px] transition-all"
       >
         <div className="bg-primary absolute bottom-0 right-0 z-0 h-0 w-0 transition-all group-hover:h-full group-hover:w-full"></div>
@@ -61,12 +61,12 @@ function Menu() {
         </span>
       </Link>
       <Link
-        href="#"
+        href="/signup"
         className="border-primary group relative z-40 inline-flex h-[60px] shrink-0 items-center justify-center gap-3 overflow-hidden rounded-xl border-[2.333px] transition-all"
       >
         <div className="bg-primary absolute bottom-0 right-0 z-0 h-full w-full transition-all group-hover:h-0 group-hover:w-0"></div>
         <div className="group-hover:text-primary z-10 h-full w-full px-9 py-2.5 text-center text-xl font-semibold leading-8 text-white">
-          Live Preview
+          SignUp
         </div>
       </Link>
     </section>

@@ -114,11 +114,11 @@ function SignUpForm() {
             htmlFor="remember"
             className="text-bgray-600 dark:text-bgray-50 text-base"
           >
-            By creating an account, you agreeing to our
+            By creating an account, you agreeing to our{' '}
             <span className="text-bgray-900 dark:text-white">
               Privacy Policy,
             </span>{' '}
-            and
+            and{' '}
             <span className="text-bgray-900 dark:text-white">
               Electronics Communication Policy
             </span>
