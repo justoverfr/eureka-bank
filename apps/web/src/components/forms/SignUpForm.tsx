@@ -1,6 +1,7 @@
 'use client';
 
-import Link from 'next/link';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -43,7 +44,15 @@ const signupFormSchema = z
     path: ['confirmPassword'],
   });
 
+const signupError = {
+  users_email_unique: 'Email aready in use',
+  users_phone_unique: 'Phone number already in use',
+  unexpected: 'An error occurred. Please try again.',
+};
+
 function SignUpForm() {
+  const [error, setError] = useState<string | null>(null);
+
   const form = useForm({
     resolver: zodResolver(signupFormSchema),
     defaultValues: {
@@ -57,21 +66,44 @@ function SignUpForm() {
     },
   });
 
+  const router = useRouter();
+
   const onSubmit = (data: z.infer<typeof signupFormSchema>) => {
     console.log(data);
 
     const body = JSON.stringify(data);
 
-    // no cors
-    fetch('http://localhost:3333/api/auth/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body,
-    }).then((res) => {
-      console.log(res);
-    });
+    const signup = async () => {
+      await fetch('http://localhost:3333/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body,
+      })
+        .then((res) => {
+          if (res.ok) {
+            setError(null);
+            router.push('/my-wallet');
+          } else {
+            // if res.message includes "users_email_unique" or "users_phone_unique"
+            // set error message to signupError[res.message]
+            res.json().then((data) => {
+              if (data.message.includes('users_email_unique')) {
+                setError(signupError.users_email_unique);
+              } else if (data.message.includes('users_phone_unique')) {
+                setError(signupError.users_phone_unique);
+              } else {
+                setError(signupError.unexpected);
+              }
+            });
+          }
+        })
+        .catch((err) => {
+          setError(signupError.unexpected);
+        });
+    };
+    signup();
   };
 
   return (
@@ -325,6 +357,9 @@ function SignUpForm() {
         >
           Sign Up
         </button>
+        {error && (
+          <div className="text-center text-sm text-red-500">{error}</div>
+        )}
       </form>
     </Form>
   );
