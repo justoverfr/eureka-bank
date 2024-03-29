@@ -46,8 +46,9 @@ const signupFormSchema = z
   });
 
 const signupError = {
-  users_email_unique: 'Email already exists',
-  users_phone_unique: 'Phone number already exists',
+  users_email_unique: 'Email aready in use',
+  users_phone_unique: 'Phone number already in use',
+  unexpected: 'An error occurred. Please try again.',
 };
 
 function SignUpForm() {
@@ -94,13 +95,13 @@ function SignUpForm() {
               } else if (data.message.includes('users_phone_unique')) {
                 setError(signupError.users_phone_unique);
               } else {
-                setError('An error occurred. Please try again.');
+                setError(signupError.unexpected);
               }
             });
           }
         })
         .catch((err) => {
-          setError('An error occurred. Please try again.');
+          setError(signupError.unexpected);
         });
     };
     signup();
