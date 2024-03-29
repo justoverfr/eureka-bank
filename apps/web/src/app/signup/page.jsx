@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import SignUpForm from '@/components/forms/SignUpForm';
 import RightSide from '@/components/signin/RightSide';
+
 import signupImg from '/public/static/images/illustration/signup.svg';
 import logoColor from '/public/static/images/logo/logo-color.svg';
 import logoWhite from '/public/static/images/logo/logo-white.svg';

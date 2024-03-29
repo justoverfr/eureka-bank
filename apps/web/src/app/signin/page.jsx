@@ -1,5 +1,6 @@
 import LeftSide from '@/components/signin';
 import RightSide from '@/components/signin/RightSide';
+
 import signinImg from '/public/static/images/illustration/signin.svg';
 
 function SignIn() {
