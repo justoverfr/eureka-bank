@@ -1,3 +1,9 @@
+/**
+ * Logger configuration
+ *
+ * @see https://fastify.dev/docs/latest/Reference/Logging/
+ */
+
 // Define the type for your environments
 type EnvConfig = {
   development: {
