@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "files": [
-    "./base.js"
+    "base.js",
+    "react.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +13,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "./base.js"
+    ]
+  },
+  "prettier": "@eureka-bank/prettier-config",
   "devDependencies": {
     "@eureka-bank/prettier-config": "workspace:^",
     "@typescript-eslint/eslint-plugin": "^7.3.1",

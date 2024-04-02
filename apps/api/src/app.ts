@@ -39,7 +39,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
       ...opts,
     },
     forceESM: true,
-    matchFilter: /\.routes\.ts$/,
+    matchFilter: /\.routes\.(ts|js)$/,
   });
 };
 

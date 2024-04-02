@@ -1,6 +1,7 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 
 import { createUser } from '@/modules/users/user.service';
+
 import { RegisterBody } from './auth.schema';
 
 export async function registerHandler(
@@ -9,5 +10,7 @@ export async function registerHandler(
 ) {
   const user = await createUser(request.body);
 
-  reply.send(user);
+  const { password, ...userWithoutPassword } = user;
+
+  reply.send(userWithoutPassword);
 }

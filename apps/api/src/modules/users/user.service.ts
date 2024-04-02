@@ -1,9 +1,11 @@
+import argon2 from 'argon2';
+
 import { db, schema } from '@eureka-bank/db';
 
 export async function createUser(data: typeof schema.users.$inferInsert) {
-  const passwordHash = data.password;
+  const passwordHash = await argon2.hash(data.password);
 
-  const result = await db
+  const newUser = await db
     .insert(schema.users)
     .values({
       ...data,
@@ -12,7 +14,5 @@ export async function createUser(data: typeof schema.users.$inferInsert) {
     .returning()
     .then((rows) => rows[0]);
 
-  const { password, ...user } = result;
-
-  return user;
+  return newUser;
 }
