@@ -7,14 +7,17 @@
   "scripts": {
     "migrate": "drizzle-kit generate:pg",
     "push": "drizzle-kit push:pg",
-    "studio": "drizzle-kit studio"
+    "studio": "drizzle-kit studio",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "eslintConfig": {
+    "root": true,
     "extends": "@eureka-bank/eslint-config/base"
   },
+  "prettier": "@eureka-bank/prettier-config",
   "dependencies": {
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.4",
@@ -23,6 +26,9 @@
   },
   "devDependencies": {
     "@eureka-bank/eslint-config": "^1.0.0",
-    "drizzle-kit": "^0.20.14"
+    "@eureka-bank/prettier-config": "^1.0.0",
+    "drizzle-kit": "^0.20.14",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
   }
 }
