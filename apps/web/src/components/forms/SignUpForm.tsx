@@ -74,7 +74,7 @@ function SignUpForm() {
     const body = JSON.stringify(data);
 
     const signup = async () => {
-      await fetch('http://localhost:3333/api/auth/signup', {
+      await fetch('http://localhost:3333/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,15 +1,15 @@
 import { FastifyPluginAsync } from 'fastify';
 
-import { signupHandler } from './auth.controller';
+import { registerHandler } from './auth.controller';
 import { registerJson } from './auth.schema';
 
 const authRoutes: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
   fastify.post(
-    '/signup',
+    '/register',
     {
       schema: registerJson,
     },
-    signupHandler,
+    registerHandler,
   );
 };
 
