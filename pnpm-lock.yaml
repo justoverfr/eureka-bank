@@ -56,6 +56,9 @@ importers:
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
+      drizzle-orm:
+        specifier: ^0.30.4
+        version: 0.30.6(pg@8.11.3)(postgres@3.4.4)
       fastify:
         specifier: ^4.26.1
         version: 4.26.2
@@ -248,9 +251,18 @@ importers:
       '@eureka-bank/eslint-config':
         specifier: ^1.0.0
         version: link:../../tools/eslint-config
+      '@eureka-bank/prettier-config':
+        specifier: ^1.0.0
+        version: link:../../tools/prettier-config
       drizzle-kit:
         specifier: ^0.20.14
         version: 0.20.14
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
 
   tools/eslint-config:
     devDependencies:
