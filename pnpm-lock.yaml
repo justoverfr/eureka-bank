@@ -18,7 +18,7 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(@types/node@20.12.2)(commitizen@4.3.0)(inquirer@9.2.17)(typescript@5.4.3)
       '@eureka-bank/prettier-config':
-        specifier: workspace:^
+        specifier: ^1.0.0
         version: link:tools/prettier-config
       commitizen:
         specifier: ^4.3.0
@@ -73,7 +73,7 @@ importers:
         specifier: ^1.0.0
         version: link:../../libs/db
       '@eureka-bank/eslint-config':
-        specifier: workspace:^
+        specifier: ^1.0.0
         version: link:../../tools/eslint-config
       '@types/node':
         specifier: ^20.4.4
@@ -194,7 +194,7 @@ importers:
         version: 3.22.4
     devDependencies:
       '@eureka-bank/eslint-config':
-        specifier: workspace:^
+        specifier: ^1.0.0
         version: link:../../tools/eslint-config
       '@tailwindcss/forms':
         specifier: ^0.5.7
@@ -255,7 +255,7 @@ importers:
   tools/eslint-config:
     devDependencies:
       '@eureka-bank/prettier-config':
-        specifier: workspace:^
+        specifier: ^1.0.0
         version: link:../prettier-config
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.3.1
