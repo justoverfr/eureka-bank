@@ -2,6 +2,7 @@ import express, { NextFunction, Request, Response } from 'express';
 
 import logger from 'pino-http';
 
+import errorHandler from './middlewares/errorHandler';
 import authRoutes from './modules/auth/auth.routes';
 
 const app = express();
@@ -35,19 +36,6 @@ app.use('/api/auth', authRoutes);
 // app.use(openAPIRouter);
 
 // Error handlers
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-  console.error(err.stack); // Log de l'erreur pour le débogage
-  res.status(500).json({
-    // Vous pouvez personnaliser le statut en fonction de l'erreur si vous le souhaitez
-    success: false,
-    error: {
-      message: err.message,
-      // Vous pouvez ajouter d'autres détails ici si nécessaire
-    },
-  });
-});
-
-// app.use(errorHandler());
+app.use(errorHandler());
 
 export { app };
