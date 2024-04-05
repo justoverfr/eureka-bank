@@ -15,6 +15,18 @@ const addErrorToRequestLog: ErrorRequestHandler = (err, _req, res, next) => {
       code: err.code,
       error: 'Internal Server Error',
       message: err.message,
+      detail: err.detail,
+    });
+
+    next(err);
+    return;
+  }
+  if (err instanceof Error) {
+    res.status(500).json({
+      statusCode: 500,
+      error: 'Internal Server Error',
+      message: err.message || 'An unexpected error occurred',
+      detail: err.name,
     });
 
     next(err);
