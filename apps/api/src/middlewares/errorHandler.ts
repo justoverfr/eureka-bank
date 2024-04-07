@@ -1,10 +1,14 @@
 import { ErrorRequestHandler, RequestHandler } from 'express';
 
-import { StatusCodes } from 'http-status-codes';
+import { getReasonPhrase, StatusCodes } from 'http-status-codes';
 import { PostgresError } from 'postgres';
 
-const unexpectedRequest: RequestHandler = (_req, res) => {
-  res.sendStatus(StatusCodes.NOT_FOUND);
+const unexpectedRequest: RequestHandler = (req, res) => {
+  res.status(StatusCodes.NOT_FOUND).json({
+    statusCode: StatusCodes.NOT_FOUND,
+    error: getReasonPhrase(StatusCodes.NOT_FOUND),
+    message: `Route ${req.method}:${req.url} not found`,
+  });
 };
 
 const addErrorToRequestLog: ErrorRequestHandler = (err, _req, res, next) => {
