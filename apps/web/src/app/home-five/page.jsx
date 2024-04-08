@@ -1,5 +1,6 @@
 import React from 'react';
 
+import ChatBot from '../../components/chatBot/chatBot';
 import Accordion from '../../components/homeFive/Accordion';
 import Features from '../../components/homeFive/Features';
 import Footer from '../../components/homeFive/Footer';
@@ -27,6 +28,7 @@ function HomeFive() {
       <SliderCom />
       <Accordion />
       <Pricing />
+      <ChatBot />
       <Footer />
     </>
   );
