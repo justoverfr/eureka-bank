@@ -1,16 +1,9 @@
-import { FastifyPluginAsync } from 'fastify';
+import { Router } from 'express';
 
 import { registerHandler } from './auth.controller';
-import { registerJson } from './auth.schema';
 
-const authRoutes: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
-  fastify.post(
-    '/register',
-    {
-      schema: registerJson,
-    },
-    registerHandler,
-  );
-};
+const authRoutes = Router();
+
+authRoutes.post('/register', registerHandler);
 
 export default authRoutes;
