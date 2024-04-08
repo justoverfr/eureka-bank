@@ -6,8 +6,6 @@ import { app, options } from './app';
 import { Environment, envToLogger } from './utils/logger';
 
 async function main() {
-  console.log('process.env.NODE_ENV', await process.env.NODE_ENV);
-
   const server = Fastify({
     logger: envToLogger[(await process.env.NODE_ENV) as Environment] ?? false,
   });

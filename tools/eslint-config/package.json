@@ -13,6 +13,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "./base.js"
+    ]
+  },
   "prettier": "@eureka-bank/prettier-config",
   "devDependencies": {
     "@eureka-bank/prettier-config": "workspace:^",
