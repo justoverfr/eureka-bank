@@ -12,7 +12,6 @@ const unexpectedRequest: RequestHandler = (req, res) => {
 };
 
 const addErrorToRequestLog: ErrorRequestHandler = (err, _req, res, next) => {
-  // Check if error is a PostgreSQL error
   if (err instanceof PostgresError) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
@@ -21,22 +20,16 @@ const addErrorToRequestLog: ErrorRequestHandler = (err, _req, res, next) => {
       message: err.message,
       detail: err.detail,
     });
-
-    next(err);
-    return;
-  }
-  if (err instanceof Error) {
+  } else if (err instanceof Error) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
       error: getReasonPhrase(StatusCodes.INTERNAL_SERVER_ERROR),
       message: err.message || 'An unexpected error occurred',
       detail: err.name,
     });
-
-    next(err);
-    return;
+  } else {
+    res.locals.err = err;
   }
-  res.locals.err = err;
   next(err);
 };
 

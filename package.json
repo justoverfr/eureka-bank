@@ -12,6 +12,7 @@
     "format": "prettier . --write",
     "db:migrate": "nx run @eureka-bank/db:migrate",
     "db:push": "nx run @eureka-bank/db:push",
+    "db:pull": "nx run @eureka-bank/db:pull",
     "db:studio": "nx run @eureka-bank/db:studio",
     "web:ui:add": "nx run @eureka-bank/web:ui:add",
     "clear": "nx clear-cache",
