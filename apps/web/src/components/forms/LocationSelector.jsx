@@ -12,9 +12,7 @@ function LocationSelector() {
         type="button"
         className="border-bgray-300 dark:border-darkblack-400 flex items-center space-x-1 overflow-hidden rounded-lg border p-3.5"
       >
-        <span className="text-bgray-900 text-sm font-medium dark:text-white">
-          This Year
-        </span>
+        <span className="text-bgray-900 text-sm font-medium dark:text-white">This Year</span>
         <span>
           <svg
             className="stroke-bgray-900 dark:stroke-white"

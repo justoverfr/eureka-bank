@@ -12,8 +12,8 @@ function ComingSoon() {
               We are coming soon
             </h1>
             <p className="text-bgray-600 dark:text-bgray-50 px-0 text-center text-base sm:text-xl lg:px-5">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry`s standard dummy text ever since the 1500s,
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry`s standard
+              dummy text ever since the 1500s,
             </p>
           </div>
           <div className="m-auto max-w-[564px]">
@@ -64,19 +64,8 @@ function ComingSoon() {
                     rx="4"
                     strokeWidth="1.5"
                   />
-                  <ellipse
-                    cx="14.9998"
-                    cy="5.00033"
-                    rx="0.833333"
-                    ry="0.833333"
-                    fill="white"
-                  />
-                  <circle
-                    cx="10.0002"
-                    cy="9.99967"
-                    r="4.16667"
-                    strokeWidth="1.5"
-                  />
+                  <ellipse cx="14.9998" cy="5.00033" rx="0.833333" ry="0.833333" fill="white" />
+                  <circle cx="10.0002" cy="9.99967" r="4.16667" strokeWidth="1.5" />
                 </svg>
               </a>
             </li>

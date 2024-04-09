@@ -8,9 +8,7 @@ function PaginationV1() {
   const page = 3;
   return (
     <div className="hidden items-center space-x-4 lg:flex">
-      <span className="text-bgray-600 dark:text-bgray-50 text-sm font-semibold">
-        Show result:
-      </span>
+      <span className="text-bgray-600 dark:text-bgray-50 text-sm font-semibold">Show result:</span>
       <div className="relative">
         <button
           aria-label="none"
@@ -18,9 +16,7 @@ function PaginationV1() {
           type="button"
           className="border-bgray-300 dark:border-darkblack-400 flex items-center space-x-6 rounded-lg border px-2.5 py-[14px]"
         >
-          <span className="text-bgray-900 dark:text-bgray-50 text-sm font-semibold">
-            3
-          </span>
+          <span className="text-bgray-900 dark:text-bgray-50 text-sm font-semibold">3</span>
           <span>
             <svg
               width="17"

@@ -25,8 +25,8 @@ function AddWalletModal({ isActive, handleClose }) {
                   Add new card
                 </h3>
                 <p className="text-bgray-600 dark:text-darkblack-300 text-sm">
-                  Manage where you collect taxes and duties. Check with a tax
-                  expert if you're unsure where you have a tax obligation.
+                  Manage where you collect taxes and duties. Check with a tax expert if you're
+                  unsure where you have a tax obligation.
                 </p>
               </div>
               <div className="absolute right-0 top-0 pr-5 pt-5">

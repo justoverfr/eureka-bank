@@ -5,11 +5,7 @@ import cardBg from '/public/static/images/cards/cardBg.png';
 
 function FeaturesCard({ title, category, desc, imgHover, img, categoryClass }) {
   return (
-    <div
-      className="overflow-hidden pt-4"
-      data-aos="flip-left"
-      data-aos-easing="ease-out-cubic"
-    >
+    <div className="overflow-hidden pt-4" data-aos="flip-left" data-aos-easing="ease-out-cubic">
       <div className="rounded-20 current:bg-primary hover:bg-primary group relative flex w-[306px] flex-col items-center justify-center border border-solid border-gray-200 p-6 drop-shadow-[10px_10px_40px_0px_rgba(39,218,104,0.10)] duration-500 ease-in-out">
         <Image
           src={cardBg.src}

@@ -10,9 +10,7 @@ function NotificationPopup({ active, handlePopup }) {
       <div
         onClick={() => handlePopup('notification')}
         id="noti-outside"
-        className={`fixed -left-[43px] top-0  h-full w-full ${
-          active ? 'block' : 'hidden'
-        }`}
+        className={`fixed -left-[43px] top-0  h-full w-full ${active ? 'block' : 'hidden'}`}
       ></div>
       <div
         id="notification-box"
@@ -24,9 +22,7 @@ function NotificationPopup({ active, handlePopup }) {
       >
         <div className="relative w-full pb-[75px] pt-[66px]">
           <div className="absolute left-0 top-0 flex h-[66px] w-full items-center justify-between px-8">
-            <h3 className="text-bgray-900 text-xl font-bold dark:text-white">
-              Notifications
-            </h3>
+            <h3 className="text-bgray-900 text-xl font-bold dark:text-white">Notifications</h3>
             <span>
               <svg
                 width="24"
@@ -57,19 +53,13 @@ function NotificationPopup({ active, handlePopup }) {
               <Link href="#">
                 <div className="noti-item">
                   <p className="text-bgray-600 dark:text-bgray-50 mb-1 text-sm font-medium">
-                    <strong className="text-bgray-900 dark:text-white">
-                      James Eusobio
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-white">James Eusobio</strong>
                     send a new payment for
-                    <strong className="text-bgray-900 dark:text-white">
-                      SEO writing
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-white">SEO writing</strong>
                     totaling
                     <span className="text-success-300">$199.00</span>
                   </p>
-                  <span className="text-bgray-500 text-xs font-medium">
-                    23 mins ago
-                  </span>
+                  <span className="text-bgray-500 text-xs font-medium">23 mins ago</span>
                 </div>
               </Link>
             </li>
@@ -77,19 +67,13 @@ function NotificationPopup({ active, handlePopup }) {
               <Link href="#">
                 <div className="noti-item">
                   <p className="text-bgray-600 mb-1 text-sm font-medium dark:text-white">
-                    <strong className="text-bgray-900 dark:text-bgray-50">
-                      James Eusobio
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-bgray-50">James Eusobio</strong>
                     send a new payment for
-                    <strong className="text-bgray-900 dark:text-bgray-50">
-                      SEO writing
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-bgray-50">SEO writing</strong>
                     totaling
                     <span className="text-error-200">$199.00</span>
                   </p>
-                  <span className="text-bgray-500 text-xs font-medium">
-                    23 mins ago
-                  </span>
+                  <span className="text-bgray-500 text-xs font-medium">23 mins ago</span>
                 </div>
               </Link>
             </li>
@@ -97,19 +81,13 @@ function NotificationPopup({ active, handlePopup }) {
               <Link href="#">
                 <div className="noti-item">
                   <p className="text-bgray-600 dark:text-bgray-50 mb-1 text-sm font-medium">
-                    <strong className="text-bgray-900 dark:text-white">
-                      James Eusobio
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-white">James Eusobio</strong>
                     send a new payment for
-                    <strong className="text-bgray-900 dark:text-white">
-                      SEO writing
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-white">SEO writing</strong>
                     totaling
                     <span className="text-success-300">$199.00</span>
                   </p>
-                  <span className="text-bgray-500 text-xs font-medium">
-                    23 mins ago
-                  </span>
+                  <span className="text-bgray-500 text-xs font-medium">23 mins ago</span>
                 </div>
               </Link>
             </li>
@@ -117,19 +95,13 @@ function NotificationPopup({ active, handlePopup }) {
               <Link href="#">
                 <div className="noti-item">
                   <p className="text-bgray-600 dark:text-bgray-50 mb-1 text-sm font-medium">
-                    <strong className="text-bgray-900 dark:text-white">
-                      James Eusobio
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-white">James Eusobio</strong>
                     send a new payment for
-                    <strong className="text-bgray-900 dark:text-white">
-                      SEO writing
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-white">SEO writing</strong>
                     totaling
                     <span className="text-success-300">$199.00</span>
                   </p>
-                  <span className="text-bgray-500 text-xs font-medium">
-                    23 mins ago
-                  </span>
+                  <span className="text-bgray-500 text-xs font-medium">23 mins ago</span>
                 </div>
               </Link>
             </li>
@@ -137,19 +109,13 @@ function NotificationPopup({ active, handlePopup }) {
               <Link href="#">
                 <div className="noti-item">
                   <p className="text-bgray-600 dark:text-bgray-50 mb-1 text-sm font-medium">
-                    <strong className="text-bgray-900 dark:text-white">
-                      James Eusobio
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-white">James Eusobio</strong>
                     send a new payment for
-                    <strong className="text-bgray-900 dark:text-white">
-                      SEO writing
-                    </strong>
+                    <strong className="text-bgray-900 dark:text-white">SEO writing</strong>
                     totaling
                     <span className="text-success-300">$199.00</span>
                   </p>
-                  <span className="text-bgray-500 text-xs font-medium">
-                    23 mins ago
-                  </span>
+                  <span className="text-bgray-500 text-xs font-medium">23 mins ago</span>
                 </div>
               </Link>
             </li>
@@ -175,9 +141,7 @@ function NotificationPopup({ active, handlePopup }) {
                       />
                     </svg>
                   </span>
-                  <span className="text-success-300 text-sm font-semibold">
-                    Mark all as read
-                  </span>
+                  <span className="text-success-300 text-sm font-semibold">Mark all as read</span>
                 </div>
               </Link>
             </div>

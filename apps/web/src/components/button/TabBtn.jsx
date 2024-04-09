@@ -5,9 +5,7 @@ import ProtoTypes from 'prop-types';
 function TabBtn({ title, name, text, handleTabActive, activeTab, children }) {
   return (
     <div
-      className={`tab flex gap-x-4 rounded-lg p-4 transition-all ${
-        activeTab === name && 'active'
-      }`}
+      className={`tab flex gap-x-4 rounded-lg p-4 transition-all ${activeTab === name && 'active'}`}
       data-tab="tab1"
       onClick={() => handleTabActive(name)}
     >
@@ -15,12 +13,8 @@ function TabBtn({ title, name, text, handleTabActive, activeTab, children }) {
         {children}
       </div>
       <div>
-        <h4 className="text-bgray-900 text-base font-bold dark:text-white">
-          {title}
-        </h4>
-        <p className="text-bgray-700 dark:text-darkblack-300 mt-0.5 text-sm font-medium">
-          {text}
-        </p>
+        <h4 className="text-bgray-900 text-base font-bold dark:text-white">{title}</h4>
+        <p className="text-bgray-700 dark:text-darkblack-300 mt-0.5 text-sm font-medium">{text}</p>
       </div>
     </div>
   );

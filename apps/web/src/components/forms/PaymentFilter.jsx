@@ -25,14 +25,10 @@ function PaymentFilter() {
               alt="master"
             />
           </span>
-          <span className="text-bgray-900 text-sm font-medium dark:text-white">
-            Debit
-          </span>
+          <span className="text-bgray-900 text-sm font-medium dark:text-white">Debit</span>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">
-            $10,431
-          </span>
+          <span className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">$10,431</span>
           <span className="text-bgray-900 text-sm font-medium">
             <svg
               width="16"

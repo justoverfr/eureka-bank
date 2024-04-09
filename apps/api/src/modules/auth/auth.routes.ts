@@ -13,4 +13,8 @@ authRoutes.post(
   registerHandler,
 );
 
-export default authRoutes;
+const text = 'fromage';
+
+export default text;
+
+export { authRoutes };

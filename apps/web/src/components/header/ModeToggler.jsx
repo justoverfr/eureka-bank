@@ -17,10 +17,7 @@ function ModeToggler() {
   };
 
   useEffect(() => {
-    if (
-      localStorage.getItem('theme') !== '' &&
-      localStorage.getItem('theme') !== 'dark'
-    ) {
+    if (localStorage.getItem('theme') !== '' && localStorage.getItem('theme') !== 'dark') {
       localStorage.setItem('theme', '');
     }
     document.querySelector('html').classList = theme;
@@ -62,26 +59,10 @@ function ModeToggler() {
           <circle cx="12" cy="12" r="5" strokeWidth="1.5" />
           <path d="M12 2V4" strokeWidth="1.5" strokeLinecap="round" />
           <path d="M12 20V22" strokeWidth="1.5" strokeLinecap="round" />
-          <path
-            d="M20.6602 7L18.9281 8"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M5.07178 16L3.33973 17"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M3.33984 7L5.07189 8"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M18.9282 16L20.6603 17"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
+          <path d="M20.6602 7L18.9281 8" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M5.07178 16L3.33973 17" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M3.33984 7L5.07189 8" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M18.9282 16L20.6603 17" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       </span>
     </button>

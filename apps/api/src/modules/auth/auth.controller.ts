@@ -8,9 +8,7 @@ export async function registerHandler(
   request: Request<object, object, RegisterBody>,
   reply: Response,
 ) {
-  const user = await createUser(request.body);
+  const newUser = await createUser(request.body);
 
-  const { password, ...userWithoutPassword } = user;
-
-  reply.send(userWithoutPassword);
+  reply.send(newUser);
 }

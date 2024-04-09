@@ -8,13 +8,7 @@ function Error() {
     <section className="bg-notfound bg-[url('/static/images/background/404-bg.png')] bg-cover bg-no-repeat dark:bg-[url('/static/images/background/404-dark.jpg')]">
       <div className="flex min-h-screen items-center justify-center">
         <div className="mx-auto max-w-2xl">
-          <Image
-            priority={true}
-            height={img.height}
-            width={img.width}
-            src={img.src}
-            alt=""
-          />
+          <Image priority={true} height={img.height} width={img.width} src={img.src} alt="" />
 
           <div className="mt-10 flex justify-center">
             <Link

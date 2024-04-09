@@ -121,10 +121,7 @@ function LeftSide() {
               className="text-bgray-800 border-bgray-300 dark:border-darkblack-400 dark:bg-darkblack-500 focus:border-success-300 placeholder:text-bgray-500 h-14 w-full rounded-lg border px-4 py-3.5 text-base placeholder:text-base focus:ring-0 dark:text-white"
               placeholder="Password"
             />
-            <button
-              aria-label="none"
-              className="absolute bottom-4 right-4 top-4"
-            >
+            <button aria-label="none" className="absolute bottom-4 right-4 top-4">
               <svg
                 width="22"
                 height="20"

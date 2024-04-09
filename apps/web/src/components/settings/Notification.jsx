@@ -26,9 +26,7 @@ function Notification({ name, activeTab }) {
 
   return (
     <div id="tab2" className={`tab-pane ${name === activeTab && 'active'}`}>
-      <h3 className="text-bgray-900 mb-5 text-2xl font-bold dark:text-white">
-        Notification
-      </h3>
+      <h3 className="text-bgray-900 mb-5 text-2xl font-bold dark:text-white">Notification</h3>
       <div className="space-y-5">
         <NotificationItem
           name="All Notifcation update off"
@@ -124,13 +122,7 @@ function Notification({ name, activeTab }) {
           activeNotification={activeNotification}
           handleNotification={handleNotification}
         >
-          <Image
-            priority={true}
-            height={ico.height}
-            width={ico.width}
-            src={ico.src}
-            alt=""
-          />
+          <Image priority={true} height={ico.height} width={ico.width} src={ico.src} alt="" />
         </NotificationItem>
         <NotificationItem
           name="Author level up"

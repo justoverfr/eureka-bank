@@ -6,13 +6,7 @@ import { allMassage } from '../../data/massage';
 
 export const Sender = ({ img, isOnline }) => (
   <div className="relative h-14 w-14">
-    <Image
-      priority={true}
-      height={img.height}
-      width={img.width}
-      src={img.src}
-      alt=""
-    />
+    <Image priority={true} height={img.height} width={img.width} src={img.src} alt="" />
     <span
       className={`${
         isOnline ? 'bg-success-300' : 'bg-gray-300'

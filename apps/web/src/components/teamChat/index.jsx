@@ -9,9 +9,7 @@ function TeamChat() {
   return (
     <div className="dark:border-darkblack-400 dark:bg-darkblack-600 flex w-full flex-col justify-between rounded-lg bg-white lg:w-1/2 2xl:w-full dark:border">
       <div className="border-bgray-300 dark:border-darkblack-400 flex justify-between border-b px-[26px] py-6">
-        <h1 className="text-bgray-900 text-2xl font-semibold dark:text-white">
-          Team Chat
-        </h1>
+        <h1 className="text-bgray-900 text-2xl font-semibold dark:text-white">Team Chat</h1>
         <div className="flex items-center space-x-3">
           <div>
             <Image
@@ -65,9 +63,7 @@ function TeamChat() {
                   </p>
                 </div>
               </div>
-              <span className="text-bgray-500 text-xs font-medium">
-                10:00 PM
-              </span>
+              <span className="text-bgray-500 text-xs font-medium">10:00 PM</span>
             </div>
           </div>
           <div className="flex justify-start">
@@ -102,16 +98,12 @@ function TeamChat() {
                   />
                 </div>
               </div>
-              <span className="text-bgray-500 text-xs font-medium">
-                10:00 PM
-              </span>
+              <span className="text-bgray-500 text-xs font-medium">10:00 PM</span>
             </div>
           </div>
           <div className="flex justify-end">
             <div className="flex items-end space-x-3">
-              <span className="text-bgray-500 text-xs font-medium">
-                10:00 PM
-              </span>
+              <span className="text-bgray-500 text-xs font-medium">10:00 PM</span>
               <div className="flex items-center space-x-2">
                 <div className="bg-bgray-100 dark:bg-darkblack-500 rounded-b-lg rounded-l-lg p-3">
                   <p className="text-bgray-900 text-sm font-medium dark:text-white">
@@ -150,9 +142,7 @@ function TeamChat() {
                   </p>
                 </div>
               </div>
-              <span className="text-bgray-500 text-xs font-medium">
-                10:00 PM
-              </span>
+              <span className="text-bgray-500 text-xs font-medium">10:00 PM</span>
             </div>
           </div>
         </div>

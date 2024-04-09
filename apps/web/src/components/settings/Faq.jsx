@@ -18,9 +18,7 @@ function Faq({ name, activeTab }) {
   return (
     <div id="tab5" className={`tab-pane ${name === activeTab && 'active'}`}>
       <div>
-        <h3 className="text-bgray-900 text-2xl font-bold dark:text-white">
-          FAQ
-        </h3>
+        <h3 className="text-bgray-900 text-2xl font-bold dark:text-white">FAQ</h3>
         <div>
           <FaqTab
             title="What is the most important part of a dashboard?"
