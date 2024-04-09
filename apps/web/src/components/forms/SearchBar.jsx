@@ -53,9 +53,7 @@ function SearchBar() {
               />
             </svg>
           </span>
-          <span className="text-bgray-900 dark:text-bgray-300 text-base">
-            K
-          </span>
+          <span className="text-bgray-900 dark:text-bgray-300 text-base">K</span>
         </div>
       </div>
     </div>

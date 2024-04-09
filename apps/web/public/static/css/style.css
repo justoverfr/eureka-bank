@@ -125,9 +125,7 @@ body {
 .mini-calender-wrapper .flatpickr-calendar {
   box-shadow: none;
 }
-.mini-calender-wrapper
-  .flatpickr-calendar
-  :is(.flatpickr-time, .flatpickr-months) {
+.mini-calender-wrapper .flatpickr-calendar :is(.flatpickr-time, .flatpickr-months) {
   display: none;
 }
 .mini-calender-wrapper
@@ -141,10 +139,7 @@ body {
   width: 100%;
   min-width: 100%;
 }
-.mini-calender-wrapper
-  .flatpickr-calendar
-  .flatpickr-innerContainer
-  .flatpickr-rContainer {
+.mini-calender-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer {
   padding: 26px;
   border-radius: 18px;
   background: #f7fafc;
@@ -153,11 +148,7 @@ body {
   background: #1d1e24;
 }
 
-.dark
-  .mini-calender-wrapper
-  .flatpickr-calendar
-  .flatpickr-innerContainer
-  .flatpickr-rContainer {
+.dark .mini-calender-wrapper .flatpickr-calendar .flatpickr-innerContainer .flatpickr-rContainer {
   background: #23262b;
   border-color: #2a313c;
 }
@@ -508,11 +499,7 @@ button.fc-button.fc-button-primary.fc-prev-button {
   height: 100% !important;
 }
 
-:is(.sidebar-wrapper, .sidebar-wrapper-collapse)
-  .sidebar-body
-  .item-wrapper
-  ul
-  li.item,
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse) .sidebar-body .item-wrapper ul li.item,
 :is(.sidebar-wrapper, .sidebar-wrapper-collapse)
   .sidebar-body
   .item-wrapper
@@ -540,11 +527,7 @@ button.fc-button.fc-button-primary.fc-prev-button {
   .item-ico
   svg
   .path-1,
-:is(.sidebar-wrapper, .sidebar-wrapper-collapse)
-  .sidebar-body
-  .item-wrapper
-  ul
-  li.item:hover {
+:is(.sidebar-wrapper, .sidebar-wrapper-collapse) .sidebar-body .item-wrapper ul li.item:hover {
   fill: #22c55e;
   color: #22c55e;
 }
@@ -585,12 +568,7 @@ button.fc-button.fc-button-primary.fc-prev-button {
   z-index: 10;
   display: none;
 }
-.sidebar-wrapper-collapse
-  .sidebar-body
-  .nav-wrapper
-  ul
-  li.item:hover
-  .sub-menu {
+.sidebar-wrapper-collapse .sidebar-body .nav-wrapper ul li.item:hover .sub-menu {
   display: block;
 }
 

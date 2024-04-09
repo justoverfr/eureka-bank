@@ -17,9 +17,7 @@ function LocationItem({ img, location, value, color }) {
       </div>
       <div className="flex-1">
         <div className="mb-2 flex justify-between">
-          <span className="text-bgray-900 text-sm font-medium dark:text-white">
-            {location}
-          </span>
+          <span className="text-bgray-900 text-sm font-medium dark:text-white">{location}</span>
           <span className="text-sm font-medium dark:text-white">{value}</span>
         </div>
         <div className="bg-bgray-100 relative h-[14px] w-full overflow-hidden rounded">

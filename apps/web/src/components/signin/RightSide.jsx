@@ -20,13 +20,7 @@ function RightSide({ img }) {
           />
         </li>
         <li className="absolute right-12 top-14">
-          <Image
-            priority={true}
-            height={vline.height}
-            width={vline.width}
-            src={vline.src}
-            alt=""
-          />
+          <Image priority={true} height={vline.height} width={vline.width} src={vline.src} alt="" />
         </li>
         <li className="absolute bottom-1 left-8">
           <Image
@@ -39,13 +33,7 @@ function RightSide({ img }) {
         </li>
       </ul>
       <div className="">
-        <Image
-          priority={true}
-          height={img.height}
-          width={img.width}
-          src={img.src}
-          alt=""
-        />
+        <Image priority={true} height={img.height} width={img.width} src={img.src} alt="" />
       </div>
       <div>
         <div className="m-auto max-w-lg px-1.5 text-center">
@@ -53,10 +41,10 @@ function RightSide({ img }) {
             Speady, Easy and Fast
           </h3>
           <p className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">
-            EurekaBank help you set saving goals, earn cash back offers, Go to
-            disclaimer for more details and get paychecks up to two days early.
-            Get a <span className="text-success-300 font-bold">$20</span> bonus
-            when you receive qualifying direct deposits
+            EurekaBank help you set saving goals, earn cash back offers, Go to disclaimer for more
+            details and get paychecks up to two days early. Get a{' '}
+            <span className="text-success-300 font-bold">$20</span> bonus when you receive
+            qualifying direct deposits
           </p>
         </div>
       </div>

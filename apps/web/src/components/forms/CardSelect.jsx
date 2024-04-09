@@ -23,9 +23,7 @@ function CardSelect({ currencyOptions }) {
         className="border-bgray-200 dark:border-darkblack-400 flex h-[56px] w-full items-center justify-between overflow-hidden rounded-lg border px-5"
       >
         <div className="flex items-center space-x-2">
-          <span>
-            {activeFilter ? currencyOptions[activeFilter] : currencyOptions[0]}
-          </span>
+          <span>{activeFilter ? currencyOptions[activeFilter] : currencyOptions[0]}</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-bgray-900 text-sm font-bold">$24,098.00</span>

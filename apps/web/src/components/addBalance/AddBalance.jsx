@@ -5,14 +5,9 @@ function AddBalance() {
   return (
     <div className="dark:bg-darkblack-600 mb-[48px] w-full rounded-xl bg-white px-7 py-11">
       <div className="border-bgray-300 dark:border-darkblack-400 rounded-lg border p-8 pb-12">
-        <h3 className="text-bgray-900 text-2xl font-semibold dark:text-white">
-          Total Balance
-        </h3>
+        <h3 className="text-bgray-900 text-2xl font-semibold dark:text-white">Total Balance</h3>
         <h2 className="font-poppins text-bgray-900 mb-2 text-4xl font-bold dark:text-white">
-          $88,232.00{' '}
-          <span className="text-bgray-500 text-base font-medium uppercase">
-            USD
-          </span>
+          $88,232.00 <span className="text-bgray-500 text-base font-medium uppercase">USD</span>
         </h2>
         <div className="flex gap-4">
           <span className="text-bgray-500 dark:text-darkblack-300 text-base font-medium">
@@ -34,9 +29,7 @@ function AddBalance() {
                 strokeLinejoin="round"
               />
             </svg>
-            <span className="text-success-300 text-base font-semibold">
-              2,05%
-            </span>
+            <span className="text-success-300 text-base font-semibold">2,05%</span>
           </span>
         </div>
       </div>

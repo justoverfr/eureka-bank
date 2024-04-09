@@ -23,17 +23,8 @@ function Conversions() {
             time="09:30 AM"
           />
 
-          <Conversion
-            img={uSm1}
-            text="Hi, how can I help you with?"
-            time="10:00 pM"
-            self={true}
-          />
-          <Conversion
-            img={uSm}
-            text=" HIs this possible to refund?"
-            time="09:30 AM"
-          />
+          <Conversion img={uSm1} text="Hi, how can I help you with?" time="10:00 pM" self={true} />
+          <Conversion img={uSm} text=" HIs this possible to refund?" time="09:30 AM" />
           <Conversion
             img={uSm1}
             text=" Of course, it is available in 38 and several other sizes which are very complete"

@@ -1,13 +1,16 @@
-import express, { NextFunction, Request, Response } from 'express';
+import express from 'express';
 
 import logger from 'pino-http';
 
 import errorHandler from './middlewares/errorHandler';
-import authRoutes from './modules/auth/auth.routes';
+import { authRoutes } from './modules/auth/auth.routes';
+import { blockedUserRoutes } from './modules/blocked-users/blocked-user.routes';
+import { contactRequestRoutes } from './modules/contact-requests/contact-request.routes';
+import { contactRoutes } from './modules/contacts/contact.routes';
 import { transactionRoutes } from './modules/transactions/transaction.routes';
+import { userRoutes } from './modules/users/user.routes';
 
 const app = express();
-
 // Set the application to trust the reverse proxy
 app.set('trust proxy', true);
 
@@ -30,6 +33,10 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/contacts', contactRoutes);
+app.use('/api/contact-requests', contactRequestRoutes);
+app.use('/api/block-list', blockedUserRoutes);
+app.use('api/users', userRoutes);
 app.use('/api/transactions', transactionRoutes);
 // app.use('/health-check', healthCheckRouter);
 // app.use('/users', userRouter);

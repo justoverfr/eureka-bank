@@ -1,9 +1,17 @@
 import { Router } from 'express';
 
-import { registerHandler } from './auth.controller';
+import { validateRequest } from '@/middlewares/validation';
+
+import { loginHandler, registerHandler } from './auth.controller';
+import { registerBodySchema } from './auth.schema';
 
 const authRoutes = Router();
 
-authRoutes.post('/register', registerHandler);
+authRoutes.post('/register', validateRequest({ body: registerBodySchema }), registerHandler);
+authRoutes.post('/login', loginHandler);
 
-export default authRoutes;
+const text = 'fromage';
+
+export default text;
+
+export { authRoutes };

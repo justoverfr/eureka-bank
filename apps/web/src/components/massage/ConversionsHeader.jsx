@@ -22,9 +22,7 @@ function ConversionsHeader({ toggleSetting }) {
           <span className="bg-success-300 dark:border-bgray-900 absolute bottom-1 right-0 block h-[14px] w-[14px] rounded-full border-2 border-white"></span>
         </div>
         <div>
-          <h4 className="text-bgray-900 text-base font-bold dark:text-white">
-            Ajoy Sarkar
-          </h4>
+          <h4 className="text-bgray-900 text-base font-bold dark:text-white">Ajoy Sarkar</h4>
           <span className="text-bgray-600 text-sm">Online</span>
         </div>
       </div>

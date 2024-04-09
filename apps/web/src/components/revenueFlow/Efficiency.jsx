@@ -8,18 +8,12 @@ function Efficiency({ width, height }) {
     <div className="hidden flex-1 xl:block">
       <div className="dark:bg-darkblack-600 rounded-lg bg-white">
         <div className="border-bgray-300 dark:border-darkblack-400 flex items-center justify-between border-b px-[20px] py-[12px]">
-          <h3 className="text-bgray-900 text-xl font-bold dark:text-white">
-            Efficiency
-          </h3>
+          <h3 className="text-bgray-900 text-xl font-bold dark:text-white">Efficiency</h3>
           <MonthFilter options={['January', 'February', 'March']} />
         </div>
         <div className="px-[20px] py-[12px]">
           <div className="mb-4 flex items-center space-x-8">
-            <div
-              className={`relative ${width ? width : 'w-[180px]'} ${
-                height && height
-              }`}
-            >
+            <div className={`relative ${width ? width : 'w-[180px]'} ${height && height}`}>
               <PieChart />
               <div
                 className="absolute z-0 h-[34px] w-[34px] rounded-full bg-[#EDF2F7]"
@@ -58,9 +52,7 @@ function Efficiency({ width, height }) {
               </div>
               <div>
                 <div className="flex items-center space-x-[2px]">
-                  <p className="text-bgray-900 text-lg font-bold dark:text-white">
-                    $6,230
-                  </p>
+                  <p className="text-bgray-900 text-lg font-bold dark:text-white">$6,230</p>
                   <span>
                     <svg
                       className="fill-bgray-900 dark:fill-bgray-50"
@@ -84,9 +76,7 @@ function Efficiency({ width, height }) {
                     </svg>
                   </span>
                 </div>
-                <p className="text-bgray-600 dark:text-bgray-50 text-base font-medium">
-                  Spending
-                </p>
+                <p className="text-bgray-600 dark:text-bgray-50 text-base font-medium">Spending</p>
               </div>
             </div>
           </div>
@@ -94,35 +84,23 @@ function Efficiency({ width, height }) {
             <div className="mb-1.5 flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="bg-success-300 h-2.5 w-2.5 rounded-full"></div>
-                <span className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">
-                  Goal
-                </span>
+                <span className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">Goal</span>
               </div>
-              <p className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">
-                13%
-              </p>
+              <p className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">13%</p>
             </div>
             <div className="mb-1.5 flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="bg-warning-300 h-2.5 w-2.5 rounded-full"></div>
-                <span className="text-bgray-600 text-sm font-medium dark:text-white">
-                  Spending
-                </span>
+                <span className="text-bgray-600 text-sm font-medium dark:text-white">Spending</span>
               </div>
-              <p className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">
-                28%
-              </p>
+              <p className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">28%</p>
             </div>
             <div className="mb-1.5 flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="bg-bgray-200 h-2.5 w-2.5 rounded-full"></div>
-                <span className="text-bgray-600 text-sm font-medium dark:text-white">
-                  Others
-                </span>
+                <span className="text-bgray-600 text-sm font-medium dark:text-white">Others</span>
               </div>
-              <p className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">
-                59%
-              </p>
+              <p className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">59%</p>
             </div>
           </div>
         </div>

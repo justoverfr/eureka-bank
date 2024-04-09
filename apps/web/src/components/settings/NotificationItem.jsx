@@ -2,23 +2,14 @@
 
 import ProtoTypes from 'prop-types';
 
-function NotificationItem({
-  name,
-  desc,
-  activeNotification,
-  handleNotification,
-  children,
-}) {
+function NotificationItem({ name, desc, activeNotification, handleNotification, children }) {
   const isActive = activeNotification[name];
   return (
     <div className="border-bgray-300 dark:border-darkblack-400 flex flex-col items-end justify-between border-b pb-5 sm:flex-row sm:items-center">
       <div className="flex gap-x-4">
         <span>{children}</span>
         <div className="flex-1">
-          <h4
-            className="text-bgray-900 text-lg font-bold dark:text-white"
-            id="availability-label"
-          >
+          <h4 className="text-bgray-900 text-lg font-bold dark:text-white" id="availability-label">
             {name}
           </h4>
           <p

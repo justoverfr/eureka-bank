@@ -1,12 +1,6 @@
 'use client';
 
-import {
-  ArcElement,
-  Chart as ChartJS,
-  Filler,
-  Legend,
-  Tooltip,
-} from 'chart.js';
+import { ArcElement, Chart as ChartJS, Filler, Legend, Tooltip } from 'chart.js';
 import ProtoTypes from 'prop-types';
 import { Doughnut } from 'react-chartjs-2';
 
@@ -64,9 +58,7 @@ function PieChart({ data, customDataLabels, options }) {
     },
   };
 
-  return (
-    <Doughnut data={dataSet} options={option} plugins={[customDatalabels]} />
-  );
+  return <Doughnut data={dataSet} options={option} plugins={[customDatalabels]} />;
 }
 
 PieChart.propTypes = {

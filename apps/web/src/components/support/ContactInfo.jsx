@@ -2,13 +2,8 @@ function ContactInfo() {
   return (
     <div className="py-6">
       <div className="mb-4 flex items-center justify-between">
-        <h4 className="text-bgray-900 text-base font-bold dark:text-white">
-          Contact Information
-        </h4>
-        <button
-          aria-label="none"
-          className="text-success-300 text-sm font-medium"
-        >
+        <h4 className="text-bgray-900 text-base font-bold dark:text-white">Contact Information</h4>
+        <button aria-label="none" className="text-success-300 text-sm font-medium">
           Edit
         </button>
       </div>
@@ -35,9 +30,7 @@ function ContactInfo() {
           />
         </svg>
 
-        <p className="text-bgray-600 text-base font-medium">
-          markparker@mail.com
-        </p>
+        <p className="text-bgray-600 text-base font-medium">markparker@mail.com</p>
       </div>
       <div className="flex space-x-3 py-2.5">
         <svg

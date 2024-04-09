@@ -18,9 +18,7 @@ function RightSidebar() {
           className="rounded-lg"
           alt=""
         />
-        <h3 className="text-bgray-700 mt-4 text-xl font-bold dark:text-white">
-          Abdur Rohman
-        </h3>
+        <h3 className="text-bgray-700 mt-4 text-xl font-bold dark:text-white">Abdur Rohman</h3>
         <p className="text-bgray-500 text-base font-medium dark:text-white">
           Finance managers • Jakarta, Indonesia • 2 days ago
         </p>
@@ -122,42 +120,24 @@ function RightSidebar() {
       </header>
       <ul className="dark:border-darkblack-400 space-y-6 border-b border-t border-gray-200 py-7">
         <li className="flex justify-between">
-          <span className="text-sm font-medium text-gray-500 dark:text-white">
-            Experience
-          </span>
-          <span className="text-bgray-900 text-sm font-semibold dark:text-white">
-            2-4 Years
-          </span>
+          <span className="text-sm font-medium text-gray-500 dark:text-white">Experience</span>
+          <span className="text-bgray-900 text-sm font-semibold dark:text-white">2-4 Years</span>
         </li>
         <li className="flex justify-between">
-          <span className="text-sm font-medium text-gray-500 dark:text-white">
-            Seniority Level
-          </span>
-          <span className="text-bgray-900 text-sm font-semibold dark:text-white">
-            Senior Level
-          </span>
+          <span className="text-sm font-medium text-gray-500 dark:text-white">Seniority Level</span>
+          <span className="text-bgray-900 text-sm font-semibold dark:text-white">Senior Level</span>
         </li>
         <li className="flex justify-between">
-          <span className="text-sm font-medium text-gray-500 dark:text-white">
-            Employment
-          </span>
-          <span className="text-bgray-900 text-sm font-semibold dark:text-white">
-            Full Time
-          </span>
+          <span className="text-sm font-medium text-gray-500 dark:text-white">Employment</span>
+          <span className="text-bgray-900 text-sm font-semibold dark:text-white">Full Time</span>
         </li>
         <li className="flex justify-between">
-          <span className="text-sm font-medium text-gray-500 dark:text-white">
-            Salary
-          </span>
-          <span className="text-bgray-900 text-sm font-semibold dark:text-white">
-            $250-300
-          </span>
+          <span className="text-sm font-medium text-gray-500 dark:text-white">Salary</span>
+          <span className="text-bgray-900 text-sm font-semibold dark:text-white">$250-300</span>
         </li>
       </ul>
       <div className="border-bgray-200 dark:border-darkblack-400 border-b py-6">
-        <h4 className="mb-3 text-sm font-medium text-gray-500 dark:text-white">
-          Files
-        </h4>
+        <h4 className="mb-3 text-sm font-medium text-gray-500 dark:text-white">Files</h4>
         <ul className="space-y-2.5">
           <li className="dark:bg-darkblack-500 flex items-center justify-between rounded-lg bg-[#E4FDED] px-2 py-3 pr-4">
             <div className="flex items-center gap-x-3">
@@ -330,28 +310,17 @@ function RightSidebar() {
         </ul>
       </div>
       <div className="pt-6">
-        <h4 className="mb-4 text-sm font-medium text-gray-500 dark:text-white">
-          Hiring Agent
-        </h4>
+        <h4 className="mb-4 text-sm font-medium text-gray-500 dark:text-white">Hiring Agent</h4>
         <div className="flex gap-x-4">
           <div>
-            <Image
-              priority={true}
-              height={hr.height}
-              width={hr.width}
-              src={hr.src}
-              alt=""
-            />
+            <Image priority={true} height={hr.height} width={hr.width} src={hr.src} alt="" />
           </div>
           <div>
             <h5 className="text-bgray-900 text-base font-semibold dark:text-white">
               Annette Black
             </h5>
             <span className="text-success-300 text-sm font-medium">
-              HR Specialist •
-              <span className="text-bgray-500 dark:text-bgray-50">
-                4 Yrs Exp
-              </span>
+              HR Specialist •<span className="text-bgray-500 dark:text-bgray-50">4 Yrs Exp</span>
             </span>
           </div>
         </div>

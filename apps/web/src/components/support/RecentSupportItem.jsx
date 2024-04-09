@@ -10,24 +10,14 @@ function RecentSupportItem({ img, name, time, question, answer, className }) {
       }`}
     >
       <div>
-        <Image
-          priority={true}
-          height={img.height}
-          width={img.width}
-          src={img.src}
-          alt=""
-        />
+        <Image priority={true} height={img.height} width={img.width} src={img.src} alt="" />
       </div>
       <div>
         <h4 className="text-bgray-600 mb-2 text-sm font-semibold dark:text-white">
           {name} <span>{time}</span>
         </h4>
-        <p className="text-bgray-600 dark:text-bgray-50 mb-3 text-base font-semibold">
-          {question}
-        </p>
-        <p className="text-bgray-600 dark:text-bgray-50 mb-4 text-sm">
-          {answer}
-        </p>
+        <p className="text-bgray-600 dark:text-bgray-50 mb-3 text-base font-semibold">{question}</p>
+        <p className="text-bgray-600 dark:text-bgray-50 mb-4 text-sm">{answer}</p>
         <ul className="flex gap-4">
           <li>
             <button

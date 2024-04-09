@@ -8,13 +8,9 @@ function Location() {
     <div className="hidden flex-1 xl:block">
       <div className="dark:bg-darkblack-600 h-full w-full rounded-lg bg-white p-5">
         <div className="flex items-center justify-between">
-          <h3 className="text-bgray-900 text-xl font-bold dark:text-white">
-            Most Location
-          </h3>
+          <h3 className="text-bgray-900 text-xl font-bold dark:text-white">Most Location</h3>
           <div className="flex items-center space-x-1.5">
-            <span className="text-bgray-900 text-2xl font-bold dark:text-white">
-              76,345
-            </span>
+            <span className="text-bgray-900 text-2xl font-bold dark:text-white">76,345</span>
             <div className="bg-success-400 flex h-[22px] w-[60px] items-center justify-center rounded-full">
               <div className="flex items-center space-x-1">
                 <span>
@@ -44,28 +40,11 @@ function Location() {
             </div>
           </div>
         </div>
-        <p className="text-bgray-600 dark:text-bgray-50 mb-8 text-sm">
-          Compared to last month
-        </p>
+        <p className="text-bgray-600 dark:text-bgray-50 mb-8 text-sm">Compared to last month</p>
         <div className="flex flex-col space-y-8">
-          <LocationItem
-            img={fe}
-            value={'65%'}
-            color="bg-success-300"
-            location="Italy"
-          />
-          <LocationItem
-            img={bra}
-            value={'85%'}
-            color="bg-warning-100"
-            location="Brazil"
-          />
-          <LocationItem
-            img={ita}
-            value={'95%'}
-            color="bg-orange"
-            location="Italy"
-          />
+          <LocationItem img={fe} value={'65%'} color="bg-success-300" location="Italy" />
+          <LocationItem img={bra} value={'85%'} color="bg-warning-100" location="Brazil" />
+          <LocationItem img={ita} value={'95%'} color="bg-orange" location="Italy" />
         </div>
       </div>
     </div>

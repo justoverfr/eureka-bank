@@ -136,10 +136,7 @@ function HeaderOne({ handleSidebar }) {
             <Author showProfile={handlePopup} />
           </div>
           {/* notification ,message, store */}
-          <NotificationPopup
-            active={popup.notification}
-            handlePopup={handlePopup}
-          />
+          <NotificationPopup active={popup.notification} handlePopup={handlePopup} />
           <MassagePopup active={popup.massage} handlePopup={handlePopup} />
           <StorePopUp active={popup.store} handlePopup={handlePopup} />
           <ProfilePopup active={popup.profile} handlePopup={handlePopup} />

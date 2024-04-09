@@ -151,28 +151,17 @@ function SummaryV3() {
         <div className="hidden items-center space-x-[28px] sm:flex">
           <div className="flex items-center space-x-2">
             <div className="bg-success-300 h-3 w-3 rounded-full"></div>
-            <span className="text-bgray-700 text-sm font-medium dark:text-white">
-              Signed
-            </span>
+            <span className="text-bgray-700 text-sm font-medium dark:text-white">Signed</span>
           </div>
           <div className="flex items-center space-x-2">
             <div className="bg-orange h-3 w-3 rounded-full"></div>
-            <span className="text-bgray-700 text-sm font-medium dark:text-white">
-              Lost
-            </span>
+            <span className="text-bgray-700 text-sm font-medium dark:text-white">Lost</span>
           </div>
         </div>
-        <DateFilter
-          options={['Jan 10 - Jan 16', 'Jan 11 - Jan 16', 'Jan 12 - Jan 16']}
-        />
+        <DateFilter options={['Jan 10 - Jan 16', 'Jan 11 - Jan 16', 'Jan 12 - Jan 16']} />
       </div>
       <div className="h-[280px] w-full">
-        <LineChart
-          dataSet={data}
-          option={options}
-          plugins={plugins}
-          refer={chartRef}
-        />
+        <LineChart dataSet={data} option={options} plugins={plugins} refer={chartRef} />
       </div>
     </div>
   );

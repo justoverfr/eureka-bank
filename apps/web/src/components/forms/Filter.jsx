@@ -54,9 +54,7 @@ function Filter({ options }) {
               />
             </svg>
           </span>
-          <span className="text-success-300 text-base font-medium">
-            Filters
-          </span>
+          <span className="text-success-300 text-base font-medium">Filters</span>
         </div>
       </button>
       <div
