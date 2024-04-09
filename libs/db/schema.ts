@@ -8,6 +8,7 @@ export const users = pgTable('users', {
   lastName: text('last_name').notNull(),
   phone: varchar('phone', { length: 256 }).unique().notNull(),
   walletAddress: varchar('wallet_address', { length: 256 }).unique(),
+  walletPrivateKey: text('wallet_private_key'),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at'),
   verifiedAt: timestamp('verified_at'),

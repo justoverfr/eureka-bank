@@ -4,6 +4,7 @@ import logger from 'pino-http';
 
 import errorHandler from './middlewares/errorHandler';
 import authRoutes from './modules/auth/auth.routes';
+import { transactionRoutes } from './modules/transactions/transaction.routes';
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/transactions', transactionRoutes);
 // app.use('/health-check', healthCheckRouter);
 // app.use('/users', userRouter);
 

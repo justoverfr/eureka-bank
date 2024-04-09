@@ -70,7 +70,10 @@ importers:
         version: 3.4.4
       web3:
         specifier: ^4.7.0
-        version: 4.7.0(typescript@5.4.3)
+        version: 4.7.0(typescript@5.4.3)(zod@3.22.4)
+      zod:
+        specifier: ^3.22.4
+        version: 3.22.4
     devDependencies:
       '@eureka-bank/db':
         specifier: ^1.0.0
@@ -4716,7 +4719,7 @@ packages:
       through: 2.3.8
     dev: true
 
-  /abitype@0.7.1(typescript@5.4.3):
+  /abitype@0.7.1(typescript@5.4.3)(zod@3.22.4):
     resolution: {integrity: sha512-VBkRHTDZf9Myaek/dO3yMmOzB/y2s3Zo6nVU7yaw1G+TvCHAjwaJzNGN9yo4K5D8bU/VZXKP1EJpRhFr862PlQ==}
     peerDependencies:
       typescript: '>=4.9.4'
@@ -4726,6 +4729,7 @@ packages:
         optional: true
     dependencies:
       typescript: 5.4.3
+      zod: 3.22.4
     dev: false
 
   /abort-controller@3.0.0:
@@ -12142,11 +12146,11 @@ packages:
       web3-types: 1.5.0
     dev: false
 
-  /web3-eth-abi@4.2.0(typescript@5.4.3):
+  /web3-eth-abi@4.2.0(typescript@5.4.3)(zod@3.22.4):
     resolution: {integrity: sha512-x7dUCmk6th+5N63s5kUusoNtsDJKUUQgl9+jECvGTBOTiyHe/V6aOY0120FUjaAGaapOnR7BImQdhqHv6yT2YQ==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
-      abitype: 0.7.1(typescript@5.4.3)
+      abitype: 0.7.1(typescript@5.4.3)(zod@3.22.4)
       web3-errors: 1.1.4
       web3-types: 1.5.0
       web3-utils: 4.2.2
@@ -12169,14 +12173,14 @@ packages:
       web3-validator: 2.0.5
     dev: false
 
-  /web3-eth-contract@4.3.0(typescript@5.4.3):
+  /web3-eth-contract@4.3.0(typescript@5.4.3)(zod@3.22.4):
     resolution: {integrity: sha512-4fzSklA65zUn6SthU3T3tbVJacfP8/wkJmCuvmPaf2ZTFdnhsF96G5IQtCRf0+wASb4yk0A6IBvXZfk1B4R4HA==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
       web3-core: 4.3.2
       web3-errors: 1.1.4
-      web3-eth: 4.5.0(typescript@5.4.3)
-      web3-eth-abi: 4.2.0(typescript@5.4.3)
+      web3-eth: 4.5.0(typescript@5.4.3)(zod@3.22.4)
+      web3-eth-abi: 4.2.0(typescript@5.4.3)(zod@3.22.4)
       web3-types: 1.5.0
       web3-utils: 4.2.2
       web3-validator: 2.0.5
@@ -12188,15 +12192,15 @@ packages:
       - zod
     dev: false
 
-  /web3-eth-ens@4.2.0(typescript@5.4.3):
+  /web3-eth-ens@4.2.0(typescript@5.4.3)(zod@3.22.4):
     resolution: {integrity: sha512-qYj34te2UctoObt8rlEIY/t2MuTMiMiiHhO2JAHRGqSLCQ7b8DM3RpvkiiSB0N0ZyEn+CetZqJCTYb8DNKBS/g==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
       '@adraffy/ens-normalize': 1.10.1
       web3-core: 4.3.2
       web3-errors: 1.1.4
-      web3-eth: 4.5.0(typescript@5.4.3)
-      web3-eth-contract: 4.3.0(typescript@5.4.3)
+      web3-eth: 4.5.0(typescript@5.4.3)(zod@3.22.4)
+      web3-eth-contract: 4.3.0(typescript@5.4.3)(zod@3.22.4)
       web3-net: 4.0.7
       web3-types: 1.5.0
       web3-utils: 4.2.2
@@ -12219,12 +12223,12 @@ packages:
       web3-validator: 2.0.5
     dev: false
 
-  /web3-eth-personal@4.0.8(typescript@5.4.3):
+  /web3-eth-personal@4.0.8(typescript@5.4.3)(zod@3.22.4):
     resolution: {integrity: sha512-sXeyLKJ7ddQdMxz1BZkAwImjqh7OmKxhXoBNF3isDmD4QDpMIwv/t237S3q4Z0sZQamPa/pHebJRWVuvP8jZdw==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
       web3-core: 4.3.2
-      web3-eth: 4.5.0(typescript@5.4.3)
+      web3-eth: 4.5.0(typescript@5.4.3)(zod@3.22.4)
       web3-rpc-methods: 1.2.0
       web3-types: 1.5.0
       web3-utils: 4.2.2
@@ -12237,14 +12241,14 @@ packages:
       - zod
     dev: false
 
-  /web3-eth@4.5.0(typescript@5.4.3):
+  /web3-eth@4.5.0(typescript@5.4.3)(zod@3.22.4):
     resolution: {integrity: sha512-crisE46o/SHMVm+XHAXEaR8k76NCImq+hi0QQEJ+VaLZbDobI/Gvog1HwTukDUDRgnYSAFGqD0cTRyAwDurwpA==}
     engines: {node: '>=14', npm: '>=6.12.0'}
     dependencies:
       setimmediate: 1.0.5
       web3-core: 4.3.2
       web3-errors: 1.1.4
-      web3-eth-abi: 4.2.0(typescript@5.4.3)
+      web3-eth-abi: 4.2.0(typescript@5.4.3)(zod@3.22.4)
       web3-eth-accounts: 4.1.1
       web3-net: 4.0.7
       web3-providers-ws: 4.0.7
@@ -12352,19 +12356,19 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /web3@4.7.0(typescript@5.4.3):
+  /web3@4.7.0(typescript@5.4.3)(zod@3.22.4):
     resolution: {integrity: sha512-3g+1e7B/IW0Nw9WP1dotrZKWD9o5IBfl27dxEnE1LxBZBax6ZkviiAwf18utIhlNBD07RgI+PPfKDXxfDBlHWA==}
     engines: {node: '>=14.0.0', npm: '>=6.12.0'}
     dependencies:
       web3-core: 4.3.2
       web3-errors: 1.1.4
-      web3-eth: 4.5.0(typescript@5.4.3)
-      web3-eth-abi: 4.2.0(typescript@5.4.3)
+      web3-eth: 4.5.0(typescript@5.4.3)(zod@3.22.4)
+      web3-eth-abi: 4.2.0(typescript@5.4.3)(zod@3.22.4)
       web3-eth-accounts: 4.1.1
-      web3-eth-contract: 4.3.0(typescript@5.4.3)
-      web3-eth-ens: 4.2.0(typescript@5.4.3)
+      web3-eth-contract: 4.3.0(typescript@5.4.3)(zod@3.22.4)
+      web3-eth-ens: 4.2.0(typescript@5.4.3)(zod@3.22.4)
       web3-eth-iban: 4.0.7
-      web3-eth-personal: 4.0.8(typescript@5.4.3)
+      web3-eth-personal: 4.0.8(typescript@5.4.3)(zod@3.22.4)
       web3-net: 4.0.7
       web3-providers-http: 4.1.0
       web3-providers-ws: 4.0.7

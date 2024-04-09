@@ -1,6 +1,11 @@
 import { Request, Response } from 'express';
 
-import { createUser } from '@/modules/users/user.service';
+import {
+  createUser,
+  updateUserWalletAddress,
+  updateUserWalletPrivateKey,
+} from '@/modules/users/user.service';
+import { blockchain } from '@/utils/blockchain';
 
 import { RegisterBody } from './auth.schema';
 
@@ -10,7 +15,10 @@ export async function registerHandler(
 ) {
   const user = await createUser(request.body);
 
-  const { password, ...userWithoutPassword } = user;
+  const web3Account = blockchain.eth.accounts.create();
 
-  reply.send(userWithoutPassword);
+  updateUserWalletAddress(user.id, web3Account.address);
+  const newUser = updateUserWalletPrivateKey(user.id, web3Account.privateKey);
+
+  reply.send(newUser);
 }
