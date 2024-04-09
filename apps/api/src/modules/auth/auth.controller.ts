@@ -17,8 +17,11 @@ export async function registerHandler(
 
   const web3Account = blockchain.eth.accounts.create();
 
-  updateUserWalletAddress(user.id, web3Account.address);
-  const newUser = updateUserWalletPrivateKey(user.id, web3Account.privateKey);
+  await updateUserWalletAddress(user.id, web3Account.address);
+  const newUser = await updateUserWalletPrivateKey(
+    user.id,
+    web3Account.privateKey,
+  );
 
   reply.send(newUser);
 }
