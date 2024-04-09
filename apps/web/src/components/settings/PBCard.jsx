@@ -4,9 +4,7 @@ function PBCard({ name, desc, children }) {
   return (
     <div className="dark:bg-darkblack-500 relative rounded-lg bg-gray-100 p-6">
       <div className="mb-5 flex gap-x-2">{children}</div>
-      <h4 className="text-bgray-900 mb-2 text-base font-bold dark:text-white">
-        {name}
-      </h4>
+      <h4 className="text-bgray-900 mb-2 text-base font-bold dark:text-white">{name}</h4>
       <p className="dark:text-bgray-50 text-sm">{desc}</p>
       <button aria-label="none" className="absolute right-5 top-5">
         <svg

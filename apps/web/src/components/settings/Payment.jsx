@@ -17,9 +17,7 @@ function Payment({ name, activeTab }) {
         <div className="items-center justify-between lg:flex">
           <div className="flex w-full flex-col items-center lg:w-[250px] 2xl:w-[400px]">
             <div className="mb-4 flex w-full justify-between">
-              <h4 className="text-bgray-900 text-lg font-bold dark:text-white">
-                My Wallet
-              </h4>
+              <h4 className="text-bgray-900 text-lg font-bold dark:text-white">My Wallet</h4>
               <button aria-label="none">
                 <svg
                   width="20"

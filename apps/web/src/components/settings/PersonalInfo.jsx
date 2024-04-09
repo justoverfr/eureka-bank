@@ -18,10 +18,8 @@ function PersonalInfo({ name, activeTab }) {
             </h4>
             <p className="text-bgray-500 mb-4">
               Profile of at least Size
-              <span className="text-bgray-900 dark:text-darkblack-300">
-                300x300.
-              </span>{' '}
-              Gifs work too.
+              <span className="text-bgray-900 dark:text-darkblack-300">300x300.</span> Gifs work
+              too.
               <span className="text-bgray-900">Max 5mb.</span>
             </p>
             <div className="relative m-auto h-40 w-40 text-center">
@@ -40,12 +38,7 @@ function PersonalInfo({ name, activeTab }) {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <circle
-                    cx="14.2414"
-                    cy="14.2414"
-                    r="14.2414"
-                    fill="#22C55E"
-                  />
+                  <circle cx="14.2414" cy="14.2414" r="14.2414" fill="#22C55E" />
                   <path
                     d="M14.6994 10.2363C15.7798 11.3167 16.8434 12.3803 17.9171 13.454C17.7837 13.584 17.6403 13.7174 17.5036 13.8574C15.5497 15.8114 13.5924 17.7653 11.6385 19.7192C11.5118 19.8459 11.3884 19.9726 11.2617 20.0927C11.2317 20.1193 11.185 20.1427 11.145 20.1427C10.1281 20.146 9.11108 20.1427 8.0941 20.146C8.02408 20.146 8.01074 20.1193 8.01074 20.0593C8.01074 19.049 8.01074 18.0354 8.01408 17.0251C8.01408 16.9784 8.03742 16.9217 8.06743 16.8917C9.26779 15.688 10.4682 14.4876 11.6685 13.2873C12.6655 12.2903 13.6591 11.2967 14.6561 10.2997C14.6761 10.2797 14.6861 10.253 14.6994 10.2363Z"
                     fill="white"
@@ -59,9 +52,7 @@ function PersonalInfo({ name, activeTab }) {
             </div>
           </header>
           <div>
-            <h4 className="text-bgray-800 mb-2 text-lg font-bold dark:text-white">
-              Update Cover
-            </h4>
+            <h4 className="text-bgray-800 mb-2 text-lg font-bold dark:text-white">Update Cover</h4>
             <p className="text-bgray-500 dark:text-bgray-50 mb-4">
               Cover of at least Size
               <span className="text-bgray-900">1170x920 </span>
@@ -83,12 +74,7 @@ function PersonalInfo({ name, activeTab }) {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <circle
-                    cx="14.2414"
-                    cy="14.2414"
-                    r="14.2414"
-                    fill="#22C55E"
-                  />
+                  <circle cx="14.2414" cy="14.2414" r="14.2414" fill="#22C55E" />
                   <path
                     d="M14.6994 10.2363C15.7798 11.3167 16.8434 12.3803 17.9171 13.454C17.7837 13.584 17.6403 13.7174 17.5036 13.8574C15.5497 15.8114 13.5924 17.7653 11.6385 19.7192C11.5118 19.8459 11.3884 19.9726 11.2617 20.0927C11.2317 20.1193 11.185 20.1427 11.145 20.1427C10.1281 20.146 9.11108 20.1427 8.0941 20.146C8.02408 20.146 8.01074 20.1193 8.01074 20.0593C8.01074 19.049 8.01074 18.0354 8.01408 17.0251C8.01408 16.9784 8.03742 16.9217 8.06743 16.8917C9.26779 15.688 10.4682 14.4876 11.6685 13.2873C12.6655 12.2903 13.6591 11.2967 14.6561 10.2997C14.6761 10.2797 14.6861 10.253 14.6994 10.2363Z"
                     fill="white"

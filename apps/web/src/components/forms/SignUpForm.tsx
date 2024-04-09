@@ -108,11 +108,7 @@ function SignUpForm() {
 
   return (
     <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        action=""
-        className="space-y-2"
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)} action="" className="space-y-2">
         <div className="mb-4 flex flex-col justify-between gap-4 md:flex-row">
           <FormField
             control={form.control}
@@ -335,10 +331,7 @@ function SignUpForm() {
                   <div className="space-y-1 leading-none">
                     <FormLabel className="text-bgray-600 dark:text-bgray-50 text-base">
                       By creating an account, you agreeing to our{' '}
-                      <span className="text-bgray-900 dark:text-white">
-                        Privacy Policy,
-                      </span>{' '}
-                      and{' '}
+                      <span className="text-bgray-900 dark:text-white">Privacy Policy,</span> and{' '}
                       <span className="text-bgray-900 dark:text-white">
                         Electronics Communication Policy
                       </span>
@@ -357,9 +350,7 @@ function SignUpForm() {
         >
           Sign Up
         </button>
-        {error && (
-          <div className="text-center text-sm text-red-500">{error}</div>
-        )}
+        {error && <div className="text-center text-sm text-red-500">{error}</div>}
       </form>
     </Form>
   );

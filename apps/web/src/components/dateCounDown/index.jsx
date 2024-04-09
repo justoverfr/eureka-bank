@@ -10,12 +10,8 @@ function DateCountDown() {
     const timeDifference = targetTimeInMilliseconds - currentTime;
 
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-    const minutes = Math.floor(
-      (timeDifference % (1000 * 60 * 60)) / (1000 * 60),
-    );
-    const hours = Math.floor(
-      (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-    );
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
     const total = days + hours + minutes + seconds;
 
@@ -59,9 +55,7 @@ function DateCountDown() {
         >
           {remainingTime.hours}
         </h2>
-        <span className="text-bgray-600 font-medium dark:text-white">
-          Hours
-        </span>
+        <span className="text-bgray-600 font-medium dark:text-white">Hours</span>
       </li>
       <li className="border-success-100 flex h-24 w-24 flex-col items-center justify-center rounded-lg border-2 sm:h-28 sm:w-28 dark:border-white">
         <h2
@@ -70,9 +64,7 @@ function DateCountDown() {
         >
           {remainingTime.minutes}
         </h2>
-        <span className="text-bgray-600 font-medium dark:text-white">
-          Minutes
-        </span>
+        <span className="text-bgray-600 font-medium dark:text-white">Minutes</span>
       </li>
       <li className="border-success-100 flex h-24 w-24 flex-col items-center justify-center rounded-lg border-2 sm:h-28 sm:w-28 dark:border-white">
         <h2
@@ -81,9 +73,7 @@ function DateCountDown() {
         >
           {remainingTime.seconds}
         </h2>
-        <span className="text-bgray-600 font-medium dark:text-white">
-          Seconds
-        </span>
+        <span className="text-bgray-600 font-medium dark:text-white">Seconds</span>
       </li>
     </ul>
   );

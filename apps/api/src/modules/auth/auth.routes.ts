@@ -6,4 +6,8 @@ const authRoutes = Router();
 
 authRoutes.post('/register', registerHandler);
 
-export default authRoutes;
+const text = 'fromage';
+
+export default text;
+
+export { authRoutes };

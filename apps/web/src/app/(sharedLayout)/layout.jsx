@@ -20,9 +20,7 @@ function Layout({ bg, overlay, children }) {
         {overlay ? overlay : <Overlay />}
         <SidebarV2 />
         <div
-          className={`body-wrapper flex-1 overflow-x-hidden ${
-            bg ? bg : 'dark:bg-darkblack-500'
-          } `}
+          className={`body-wrapper flex-1 overflow-x-hidden ${bg ? bg : 'dark:bg-darkblack-500'} `}
         >
           <HeaderOne handleSidebar={() => setSidebar(!sidebar)} />
           <HeaderTwo handleSidebar={() => setSidebar(!sidebar)} />

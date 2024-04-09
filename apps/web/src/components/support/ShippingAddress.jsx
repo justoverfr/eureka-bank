@@ -2,13 +2,8 @@ function ShippingAddress() {
   return (
     <div className="py-6">
       <div className="mb-4 flex items-center justify-between">
-        <h4 className="text-bgray-900 text-base font-bold dark:text-white">
-          Shipping Address
-        </h4>
-        <button
-          aria-label="none"
-          className="text-success-300 text-sm font-medium"
-        >
+        <h4 className="text-bgray-900 text-base font-bold dark:text-white">Shipping Address</h4>
+        <button aria-label="none" className="text-success-300 text-sm font-medium">
           Edit
         </button>
       </div>

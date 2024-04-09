@@ -50,9 +50,7 @@ function UserData({ userInfo, index }) {
             />
           </div>
           <div className="flex-1">
-            <h4 className="text-bgray-900 text-lg font-bold dark:text-white">
-              {name}
-            </h4>
+            <h4 className="text-bgray-900 text-lg font-bold dark:text-white">{name}</h4>
             <div>
               <span className="text-bgray-700 dark:text-bgray-50 text-base font-medium">
                 {designation} •{' '}
@@ -66,9 +64,7 @@ function UserData({ userInfo, index }) {
       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
         <span
           className={`bg-success-50 dark:bg-darkblack-500 text-sm ${
-            workingCategory === 'Full Time'
-              ? 'text-success-300'
-              : 'text-error-300'
+            workingCategory === 'Full Time' ? 'text-success-300' : 'text-error-300'
           } rounded-lg px-3 py-1 font-medium`}
         >
           {workingCategory}

@@ -84,9 +84,7 @@ function HeaderTwo({ handleSidebar }) {
               </div>
               <div className="hidden 2xl:block">
                 <div className="flex items-center space-x-2.5">
-                  <h3 className="text-bgray-900 text-base font-bold leading-[28px]">
-                    John Doe
-                  </h3>
+                  <h3 className="text-bgray-900 text-base font-bold leading-[28px]">John Doe</h3>
                   <span>
                     <svg
                       width="24"
@@ -105,9 +103,7 @@ function HeaderTwo({ handleSidebar }) {
                     </svg>
                   </span>
                 </div>
-                <p className="text-bgray-600 text-sm font-medium leading-[20px]">
-                  Super Admin
-                </p>
+                <p className="text-bgray-600 text-sm font-medium leading-[20px]">Super Admin</p>
               </div>
             </div>
 
@@ -162,9 +158,7 @@ function HeaderTwo({ handleSidebar }) {
                               </span>
                             </div>
                             <div className="flex-1">
-                              <span className="text-sm font-semibold">
-                                My Profile
-                              </span>
+                              <span className="text-sm font-semibold">My Profile</span>
                             </div>
                           </div>
                         </Link>
@@ -191,9 +185,7 @@ function HeaderTwo({ handleSidebar }) {
                               </span>
                             </div>
                             <div className="flex-1">
-                              <span className="text-sm font-semibold">
-                                Inbox
-                              </span>
+                              <span className="text-sm font-semibold">Inbox</span>
                             </div>
                           </div>
                         </Link>
@@ -220,9 +212,7 @@ function HeaderTwo({ handleSidebar }) {
                               </span>
                             </div>
                             <div className="flex-1">
-                              <span className="text-sm font-semibold">
-                                Log Out
-                              </span>
+                              <span className="text-sm font-semibold">Log Out</span>
                             </div>
                           </div>
                         </Link>
@@ -235,9 +225,7 @@ function HeaderTwo({ handleSidebar }) {
                       <li className="w-full">
                         <Link href="/settings">
                           <div className="text-bgray-600 hover:bg-bgray-100 hover:text-bgray-900 rounded-lg p-[14px]">
-                            <span className="text-sm font-semibold">
-                              Settings
-                            </span>
+                            <span className="text-sm font-semibold">Settings</span>
                           </div>
                         </Link>
                       </li>

@@ -17,14 +17,7 @@ import { Line } from 'react-chartjs-2';
 Chart.register(Filler);
 
 function LineChart({ option, dataSet, plugins, refer }) {
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Tooltip,
-    Legend,
-  );
+  ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
   const options = option || {
     layout: {
       padding: {

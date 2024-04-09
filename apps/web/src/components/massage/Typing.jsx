@@ -17,9 +17,7 @@ function Typing() {
           />
         </div>
         <div className="text-bgray-500 p-3 text-sm font-normal">
-          <span className="text-bgray-900 dark:text-bgray-50 font-semibold">
-            Eleanor Pena{' '}
-          </span>
+          <span className="text-bgray-900 dark:text-bgray-50 font-semibold">Eleanor Pena </span>
           is typing...
         </div>
       </div>

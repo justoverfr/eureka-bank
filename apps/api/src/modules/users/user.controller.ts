@@ -1,4 +1,4 @@
-import { FastifyReply, FastifyRequest } from 'fastify';
+import { Request, Response } from 'express';
 
 import {
   readReceivedRequests,
@@ -8,12 +8,17 @@ import {
 import { readUserById, readUsers, searchUsers } from './user.service';
 
 export async function getUsersHandler(
-  request: FastifyRequest<{ Querystring: { search: string } }>,
-  reply: FastifyReply,
+  req: Request<
+    { id: string },
+    object,
+    { senderId: number; receiverId: number },
+    { search: string }
+  >,
+  res: Response,
 ) {
-  if (!request.query.search) {
+  if (!req.query.search) {
     return await readUsers();
   }
 
-  return await searchUsers(request.query.search);
+  return await searchUsers(req.query.search);
 }

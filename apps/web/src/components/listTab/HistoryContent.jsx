@@ -26,20 +26,14 @@ function HistoryContent({ history }) {
               className="h-full w-full object-cover"
             />
           </div>
-          <p className="text-bgray-900 text-base font-semibold dark:text-white">
-            {name}
-          </p>
+          <p className="text-bgray-900 text-base font-semibold dark:text-white">{name}</p>
         </div>
       </td>
       <td className="px-6 py-5 xl:px-0">
-        <p className="text-bgray-900 text-base font-medium dark:text-white">
-          {date}
-        </p>
+        <p className="text-bgray-900 text-base font-medium dark:text-white">{date}</p>
       </td>
       <td className="px-6 py-5 xl:px-0">
-        <p className="text-bgray-900 text-base font-medium dark:text-white">
-          {amount}
-        </p>
+        <p className="text-bgray-900 text-base font-medium dark:text-white">{amount}</p>
       </td>
       <td className="px-6 py-5 xl:w-[165px] xl:px-0">
         <div className="flex w-full items-center">

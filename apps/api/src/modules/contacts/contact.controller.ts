@@ -1,6 +1,5 @@
-import { FastifyReply, FastifyRequest } from 'fastify';
+import { Request, Response } from 'express';
 
-import { readBlockedContacts } from '@/modules/blocked-users/blocked-user.service';
 import {
   createContactRequest,
   readReceivedRequests,
@@ -11,8 +10,8 @@ import { readUserById } from '@/modules/users/user.service';
 import { readContacts } from './contact.service';
 
 export async function getContactsHandler(
-  req: FastifyRequest<{ Body: { userId: number } }>,
-  reply: FastifyReply,
+  req: Request<object, object, { userId: number }>,
+  res: Response,
 ) {
   const contacts = await readContacts(req.body.userId);
 
@@ -30,65 +29,4 @@ export async function getContactsHandler(
   }
 
   return contactUsers;
-}
-
-export async function sendContactRequestHandler(
-  request: FastifyRequest<{
-    Body: { senderId: number; receiverId: number };
-    Params: { id: string };
-    Querystring: { search: string };
-  }>,
-  reply: FastifyReply,
-) {
-  return await createContactRequest({
-    senderId: request.body.senderId,
-    receiverId: request.body.receiverId,
-  });
-}
-
-export async function getBlockedContactsHandler(
-  req: FastifyRequest<{ Body: { blockerId: number } }>,
-  reply: FastifyReply,
-) {
-  const blockedContacts = await readBlockedContacts(req.body.blockerId);
-
-  const blockedUsers = [];
-  for (const contactPair of blockedContacts) {
-    const { blockedId } = contactPair;
-
-    const blockedUser = await readUserById(blockedId);
-    blockedUsers.push(blockedUser);
-  }
-
-  return blockedUsers;
-}
-
-export async function getReceivedRequestsHandler(
-  request: FastifyRequest<{ Params: { id: number } }>,
-  reply: FastifyReply,
-) {
-  const receivedRequests = await readReceivedRequests(request.params.id);
-
-  const users = [];
-  for (const request of receivedRequests) {
-    const senderUser = await readUserById(request.senderId);
-    users.push(senderUser);
-  }
-
-  reply.send(users);
-}
-
-export async function getSentRequestsHandler(
-  request: FastifyRequest<{ Params: { id: number } }>,
-  reply: FastifyReply,
-) {
-  const sentRequests = await readSentRequests(request.params.id);
-
-  const users = [];
-  for (const request of sentRequests) {
-    const receiverUser = await readUserById(request.receiverId);
-    users.push(receiverUser);
-  }
-
-  reply.send(users);
 }

@@ -98,9 +98,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Dashboards
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Dashboards</span>
                     </div>
                     <span>
                       <svg
@@ -244,9 +242,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Statistics
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Statistics</span>
                     </div>
                   </div>
                 </Link>
@@ -280,9 +276,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Analytics
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Analytics</span>
                     </div>
                   </div>
                 </Link>
@@ -311,9 +305,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        My Wallet
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">My Wallet</span>
                     </div>
                   </div>
                 </Link>
@@ -351,9 +343,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Inbox
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Inbox</span>
                     </div>
                     <div className="flex items-center space-x-2.5">
                       {/* edit */}
@@ -388,9 +378,7 @@ function Sidebar({ handleActive }) {
                       </div>
                       {/* counter */}
                       <div className="bg-success-300 flex h-5 w-5 items-center justify-center rounded-full">
-                        <span className="text-[10px] font-semibold text-white">
-                          5
-                        </span>
+                        <span className="text-[10px] font-semibold text-white">5</span>
                       </div>
                     </div>
                   </div>
@@ -470,9 +458,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        User
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">User</span>
                     </div>
                   </div>
                 </Link>
@@ -507,25 +493,11 @@ function Sidebar({ handleActive }) {
                             className="path-2"
                           />
                           <circle cx="9" cy="14" r="1" fill="#22C55E" />
-                          <circle
-                            cx="13"
-                            cy="14"
-                            r="1"
-                            fill="#22C55E"
-                            className="path-2"
-                          />
-                          <circle
-                            cx="5"
-                            cy="14"
-                            r="1"
-                            fill="#22C55E"
-                            className="path-2"
-                          />
+                          <circle cx="13" cy="14" r="1" fill="#22C55E" className="path-2" />
+                          <circle cx="5" cy="14" r="1" fill="#22C55E" className="path-2" />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Calender
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Calender</span>
                     </div>
                   </div>
                 </Link>
@@ -568,9 +540,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        History
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">History</span>
                     </div>
                   </div>
                 </Link>
@@ -625,9 +595,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Support
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Support</span>
                     </div>
                   </div>
                 </Link>
@@ -656,9 +624,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Setting
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Setting</span>
                     </div>
                   </div>
                 </Link>
@@ -699,9 +665,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Signin
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Signin</span>
                     </div>
                   </div>
                 </Link>
@@ -735,9 +699,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Signup
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Signup</span>
                     </div>
                   </div>
                 </Link>
@@ -765,9 +727,7 @@ function Sidebar({ handleActive }) {
                         />
                       </svg>
                     </span>
-                    <span className="item-text text-lg font-medium leading-none">
-                      Coming Soon
-                    </span>
+                    <span className="item-text text-lg font-medium leading-none">Coming Soon</span>
                   </div>
                 </Link>
               </li>
@@ -782,13 +742,7 @@ function Sidebar({ handleActive }) {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <circle
-                          cx="10"
-                          cy="10"
-                          r="10"
-                          fill="#1A202C"
-                          className="path-1"
-                        />
+                        <circle cx="10" cy="10" r="10" fill="#1A202C" className="path-1" />
                         <path
                           d="M9 15C9 14.4477 9.44772 14 10 14C10.5523 14 11 14.4477 11 15C11 15.5523 10.5523 16 10 16C9.44772 16 9 15.5523 9 15Z"
                           fill="#22C55E"
@@ -803,9 +757,7 @@ function Sidebar({ handleActive }) {
                         />
                       </svg>
                     </span>
-                    <span className="item-text text-lg font-medium leading-none">
-                      404
-                    </span>
+                    <span className="item-text text-lg font-medium leading-none">404</span>
                   </div>
                 </Link>
               </li>
@@ -844,9 +796,7 @@ function Sidebar({ handleActive }) {
                           />
                         </svg>
                       </span>
-                      <span className="item-text text-lg font-medium leading-none">
-                        Logout
-                      </span>
+                      <span className="item-text text-lg font-medium leading-none">Logout</span>
                     </div>
                   </div>
                 </Link>
@@ -916,9 +866,7 @@ function Sidebar({ handleActive }) {
               <a href="#">
                 <div className="bg-success-300 hover:bg-success-400 flex h-[36px] w-[134px] justify-center rounded-lg transition duration-300 ease-in-out">
                   <div className="flex items-center space-x-1.5">
-                    <span className="text-sm font-semibold text-white">
-                      Upgrade Now
-                    </span>
+                    <span className="text-sm font-semibold text-white">Upgrade Now</span>
                     <span>
                       <svg
                         width="12"
@@ -960,11 +908,7 @@ function Sidebar({ handleActive }) {
           <p className="text-sm text-[#969BA0]">© 2023 All Rights Reserved</p>
           <p className="text-bgray-700 text-sm font-medium">
             Made with ❤️ by
-            <a
-              href="#"
-              target="_blank"
-              className="border-b font-semibold hover:text-blue-600"
-            >
+            <a href="#" target="_blank" className="border-b font-semibold hover:text-blue-600">
               QuomodoTheme
             </a>
           </p>

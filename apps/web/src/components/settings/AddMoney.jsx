@@ -12,9 +12,7 @@ function AddMoney() {
       <div className="bg-bgray-200 dark:bg-darkblack-400 hidden h-[220px] w-[4px] rounded-lg lg:block"></div>
       <div className="w-full lg:w-[250px] 2xl:w-[400px]">
         <div className="w-full">
-          <h3 className="text-bgray-900 mb-4 text-lg font-bold dark:text-white">
-            Add money
-          </h3>
+          <h3 className="text-bgray-900 mb-4 text-lg font-bold dark:text-white">Add money</h3>
           <CardSelect
             currencyOptions={[
               <Image
@@ -49,9 +47,7 @@ function AddMoney() {
               Enter amount
             </p>
             <div className="flex h-[35px] w-full items-center justify-between">
-              <span className="text-bgray-900 text-2xl font-bold dark:text-white">
-                $
-              </span>
+              <span className="text-bgray-900 text-2xl font-bold dark:text-white">$</span>
               <label className="w-full">
                 <input
                   type="text"

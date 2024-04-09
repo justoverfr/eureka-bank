@@ -53,11 +53,10 @@ function Pricing() {
                 Money now!
               </span>
               <span className="leading-160 text-lg font-medium text-gray-600 xl:max-w-[478px] xl:text-xl">
-                Looking for a bank that aligns with your values of freedom,
-                security, and innovation? Eureka Bank is your answer. We offer a
-                fully decentralized banking experience that puts you in control.
-                Join Eureka Bank, where your financial journey transforms into
-                an adventure of possibilities.
+                Looking for a bank that aligns with your values of freedom, security, and
+                innovation? Eureka Bank is your answer. We offer a fully decentralized banking
+                experience that puts you in control. Join Eureka Bank, where your financial journey
+                transforms into an adventure of possibilities.
               </span>
             </div>
             <Image
@@ -133,9 +132,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="line-clamp-1">
-                    Permitted for personal use only.{' '}
-                  </span>
+                  <span className="line-clamp-1">Permitted for personal use only. </span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -234,9 +231,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="line-clamp-1">
-                    For Personal Projects only.{' '}
-                  </span>
+                  <span className="line-clamp-1">For Personal Projects only. </span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -246,9 +241,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="line-clamp-1">
-                    Permitted for personal use only.{' '}
-                  </span>
+                  <span className="line-clamp-1">Permitted for personal use only. </span>
                 </div>
                 <div className="flex gap-1">
                   <Image

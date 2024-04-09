@@ -87,30 +87,15 @@ function Widgets() {
           </span>
           <div className="leading-220 z-10 flex flex-col text-base font-normal text-gray-600 xl:text-xl">
             <div className="mt-3 flex gap-[10px]">
-              <Image
-                src={check.src}
-                height={check.height}
-                width={check.width}
-                alt=""
-              />
+              <Image src={check.src} height={check.height} width={check.width} alt="" />
               <span>Up to 5 staff members</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
-              <Image
-                src={check.src}
-                height={check.height}
-                width={check.width}
-                alt=""
-              />
+              <Image src={check.src} height={check.height} width={check.width} alt="" />
               <span>Fraud analysis</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
-              <Image
-                src={check.src}
-                height={check.height}
-                width={check.width}
-                alt=""
-              />
+              <Image src={check.src} height={check.height} width={check.width} alt="" />
               <span>Professional reports</span>
             </div>
             <a
