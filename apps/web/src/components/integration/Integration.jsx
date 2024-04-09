@@ -40,17 +40,11 @@ function Integration({ integration }) {
           />
         </div>
         <div>
-          <h3 className="text-bgray-900 text-2xl font-bold dark:text-white">
-            {title}
-          </h3>
-          <span className="text-bgray-600 dark:text-bgray-50 text-lg">
-            {category}
-          </span>
+          <h3 className="text-bgray-900 text-2xl font-bold dark:text-white">{title}</h3>
+          <span className="text-bgray-600 dark:text-bgray-50 text-lg">{category}</span>
         </div>
       </div>
-      <p className="text-bgray-600 dark:text-bgray-50 pb-8 pt-5 text-lg ">
-        {text}
-      </p>
+      <p className="text-bgray-600 dark:text-bgray-50 pb-8 pt-5 text-lg ">{text}</p>
       {status === 'connect' ? (
         <button
           aria-label="none"

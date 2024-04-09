@@ -117,11 +117,7 @@ function TaskSummary() {
               />
             </svg>
           </Task>
-          <Task
-            title="Completed"
-            value="40"
-            className="bg-bgray-50 dark:bg-darkblack-700"
-          >
+          <Task title="Completed" value="40" className="bg-bgray-50 dark:bg-darkblack-700">
             <svg
               width="40"
               height="40"
@@ -145,9 +141,7 @@ function TaskSummary() {
           </Task>
         </div>
         <div>
-          <p className="text-bgray-500 mb-2 text-xs dark:text-white">
-            On-time Completion Rate
-          </p>
+          <p className="text-bgray-500 mb-2 text-xs dark:text-white">On-time Completion Rate</p>
           <div className="flex items-end space-x-4">
             <span className="text-bgray-900 text-2xl font-bold leading-[30px] dark:text-white">
               95%

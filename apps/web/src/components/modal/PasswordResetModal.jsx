@@ -75,8 +75,8 @@ export const ResetPass = ({ close, handelModalData }) => {
             Reset your password
           </h3>
           <p className="text-bgray-600 dark:text-darkblack-300 mb-7 text-base font-medium">
-            Enter the email address associated with your account and we'll send
-            you a link to reset your password.
+            Enter the email address associated with your account and we'll send you a link to reset
+            your password.
           </p>
           <form action="">
             <div className="mb-8">
@@ -149,10 +149,7 @@ export const CodeVerify = ({ close, handelModalData }) => {
                 placeholder=""
               />
             </div>
-            <button
-              aria-label="none"
-              className="text-success-300 mb-8 block text-sm font-bold"
-            >
+            <button aria-label="none" className="text-success-300 mb-8 block text-sm font-bold">
               Send the code again
             </button>
             <button
@@ -183,8 +180,7 @@ export const NewPass = ({ close, handelModalData }) => {
             Create new password
           </h3>
           <p className="text-bgray-600 dark:text-darkblack-300 mb-7 text-base font-medium">
-            Please enter a new password. Your new password must be different
-            from previous password.
+            Please enter a new password. Your new password must be different from previous password.
           </p>
           <form action="">
             <div className="relative mb-6">
@@ -194,10 +190,7 @@ export const NewPass = ({ close, handelModalData }) => {
           w-full rounded-lg border px-4 py-3.5 text-base placeholder:text-base focus:border focus:ring-0 dark:border-0 dark:text-white"
                 placeholder="Password"
               />
-              <button
-                aria-label="none"
-                className="absolute bottom-4 right-4 top-4"
-              >
+              <button aria-label="none" className="absolute bottom-4 right-4 top-4">
                 <svg
                   width="22"
                   height="20"
@@ -235,10 +228,7 @@ export const NewPass = ({ close, handelModalData }) => {
                 className="text-bgray-800 border-bgray-300 focus:border-success-300 placeholder:text-bgray-500 dark:bg-darkblack-500 h-14 w-full rounded-lg border px-4 py-3.5 text-base placeholder:text-base focus:ring-0 dark:border-0"
                 placeholder="Confirm new Password"
               />
-              <button
-                aria-label="none"
-                className="absolute bottom-4 right-4 top-4"
-              >
+              <button aria-label="none" className="absolute bottom-4 right-4 top-4">
                 <svg
                   width="22"
                   height="20"
@@ -296,8 +286,7 @@ export const SuccessFull = ({ close }) => {
             Your successfully changed your password
           </h3>
           <p className="text-bgray-600 dark:text-darkblack-300 mb-7 text-base font-medium">
-            Commodo gravida eget ultricies sed in lacus. Commodo, tellus duis
-            eros pellentesque.
+            Commodo gravida eget ultricies sed in lacus. Commodo, tellus duis eros pellentesque.
           </p>
           <Link
             href="/signin"
@@ -313,12 +302,7 @@ export const SuccessFull = ({ close }) => {
   );
 };
 
-function PasswordResetModal({
-  isActive,
-  modalData,
-  handelModalData,
-  handleActive,
-}) {
+function PasswordResetModal({ isActive, modalData, handelModalData, handleActive }) {
   return (
     <div
       className={`modal fixed inset-0 z-50 flex items-center justify-center overflow-y-auto ${
@@ -329,22 +313,13 @@ function PasswordResetModal({
       <div className="modal-overlay dark:bg-bgray-900 absolute inset-0 bg-gray-500 opacity-75 dark:opacity-50"></div>
       <div className="modal-content mx-auto w-full max-w-lg px-4">
         {modalData === 'verify' ? (
-          <CodeVerify
-            close={() => handleActive(false)}
-            handelModalData={handelModalData}
-          />
+          <CodeVerify close={() => handleActive(false)} handelModalData={handelModalData} />
         ) : modalData === 'newPass' ? (
-          <NewPass
-            close={() => handleActive(false)}
-            handelModalData={handelModalData}
-          />
+          <NewPass close={() => handleActive(false)} handelModalData={handelModalData} />
         ) : modalData === 'success' ? (
           <SuccessFull close={() => handleActive(false)} />
         ) : (
-          <ResetPass
-            close={() => handleActive(false)}
-            handelModalData={handelModalData}
-          />
+          <ResetPass close={() => handleActive(false)} handelModalData={handelModalData} />
         )}
       </div>
     </div>

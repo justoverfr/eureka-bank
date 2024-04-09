@@ -261,13 +261,7 @@ function SidebarV2() {
                             fill="#1A202C"
                             className="path-1"
                           />
-                          <circle
-                            cx="13"
-                            cy="3"
-                            r="3"
-                            fill="#22C55E"
-                            className="path-2"
-                          />
+                          <circle cx="13" cy="3" r="3" fill="#22C55E" className="path-2" />
                         </svg>
                       </span>
                     </Link>
@@ -320,21 +314,8 @@ function SidebarV2() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <ellipse
-                            cx="7"
-                            cy="14"
-                            rx="7"
-                            ry="4"
-                            className="path-1"
-                            fill="#1A202C"
-                          />
-                          <circle
-                            cx="7"
-                            cy="4"
-                            r="4"
-                            fill="#22C55E"
-                            className="path-2"
-                          />
+                          <ellipse cx="7" cy="14" rx="7" ry="4" className="path-1" fill="#1A202C" />
+                          <circle cx="7" cy="4" r="4" fill="#22C55E" className="path-2" />
                         </svg>
                       </span>
                     </Link>
@@ -484,21 +465,8 @@ function SidebarV2() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <ellipse
-                            cx="7"
-                            cy="14"
-                            rx="7"
-                            ry="4"
-                            className="path-1"
-                            fill="#1A202C"
-                          />
-                          <circle
-                            cx="7"
-                            cy="4"
-                            r="4"
-                            fill="#22C55E"
-                            className="path-2"
-                          />
+                          <ellipse cx="7" cy="14" rx="7" ry="4" className="path-1" fill="#1A202C" />
+                          <circle cx="7" cy="4" r="4" fill="#22C55E" className="path-2" />
                         </svg>
                       </span>
                     </Link>
@@ -513,21 +481,8 @@ function SidebarV2() {
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
                         >
-                          <ellipse
-                            cx="7"
-                            cy="14"
-                            rx="7"
-                            ry="4"
-                            className="path-1"
-                            fill="#1A202C"
-                          />
-                          <circle
-                            cx="7"
-                            cy="4"
-                            r="4"
-                            fill="#22C55E"
-                            className="path-2"
-                          />
+                          <ellipse cx="7" cy="14" rx="7" ry="4" className="path-1" fill="#1A202C" />
+                          <circle cx="7" cy="4" r="4" fill="#22C55E" className="path-2" />
                         </svg>
                       </span>
                     </Link>

@@ -7,11 +7,11 @@ import { registerBodySchema } from './auth.schema';
 
 const authRoutes = Router();
 
-authRoutes.post(
-  '/register',
-  validateRequest({ body: registerBodySchema }),
-  registerHandler,
-);
+authRoutes.post('/register', validateRequest({ body: registerBodySchema }), registerHandler);
 authRoutes.post('/login', loginHandler);
 
-export default authRoutes;
+const text = 'fromage';
+
+export default text;
+
+export { authRoutes };

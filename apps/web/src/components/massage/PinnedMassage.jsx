@@ -3,20 +3,13 @@ import Image from 'next/image';
 import ProtoTypes from 'prop-types';
 
 function PinnedMassage({ pinnedMassage }) {
-  const { img, title, massage, time, isOnline, isTyping, status } =
-    pinnedMassage;
+  const { img, title, massage, time, isOnline, isTyping, status } = pinnedMassage;
 
   return (
     <li className="hover:bg-bgray-100 hover:dark:bg-darkblack-500 flex cursor-pointer justify-between p-3.5 transition-all hover:rounded-lg">
       <div className="flex grow space-x-3">
         <div className="relative h-14 w-14">
-          <Image
-            priority={true}
-            height={img.height}
-            width={img.width}
-            src={img.src}
-            alt=""
-          />
+          <Image priority={true} height={img.height} width={img.width} src={img.src} alt="" />
           <span
             className={`${
               isOnline ? 'bg-success-300' : 'bg-gray-300'
@@ -24,9 +17,7 @@ function PinnedMassage({ pinnedMassage }) {
           ></span>
         </div>
         <div>
-          <h4 className="text-bgray-900 text-xl font-bold dark:text-white">
-            {title}
-          </h4>
+          <h4 className="text-bgray-900 text-xl font-bold dark:text-white">{title}</h4>
           <span
             className={`text-sm font-medium ${
               isTyping
@@ -45,9 +36,7 @@ function PinnedMassage({ pinnedMassage }) {
         </div>
       </div>
       <div className="flex flex-col items-center gap-2">
-        <span className="text-bgray-700 dark:text-bgray-50 text-lg font-semibold">
-          {time}
-        </span>
+        <span className="text-bgray-700 dark:text-bgray-50 text-lg font-semibold">{time}</span>
         <span>
           {status === '' ? (
             <svg

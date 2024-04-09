@@ -117,9 +117,7 @@ function TotalWidgetCard({ title, amount, groth, memberImg, totalEarnImg }) {
               />
             </span>
           </div>
-          <span className="text-bgray-900 text-lg font-semibold dark:text-white">
-            {title}
-          </span>
+          <span className="text-bgray-900 text-lg font-semibold dark:text-white">{title}</span>
         </div>
         <div>
           <Image
@@ -156,9 +154,7 @@ function TotalWidgetCard({ title, amount, groth, memberImg, totalEarnImg }) {
                 />
               </svg>
             </span>
-            <span className="text-success-300 text-sm font-medium">
-              {groth}
-            </span>
+            <span className="text-success-300 text-sm font-medium">{groth}</span>
             <span className="text-bgray-700 dark:text-bgray-50 text-sm font-medium">
               from last week
             </span>

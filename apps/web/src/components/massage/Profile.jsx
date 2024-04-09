@@ -16,9 +16,7 @@ function Profile({ isOpen, close }) {
     >
       <header className="border-bgray-300 dark:border-darkblack-400 border-b pb-8">
         <div className="flex justify-between">
-          <h3 className="text-bgray-900 text-2xl font-bold dark:text-white">
-            User Info
-          </h3>
+          <h3 className="text-bgray-900 text-2xl font-bold dark:text-white">User Info</h3>
           <button
             aria-label="none"
             type="button"
@@ -57,9 +55,7 @@ function Profile({ isOpen, close }) {
             className="mb-4 rounded-full bg-[#EFF6FF] p-2"
             alt=""
           />
-          <h4 className="text-bgray-900 mb-2 text-xl font-bold dark:text-white">
-            Ajoy Sarker
-          </h4>
+          <h4 className="text-bgray-900 mb-2 text-xl font-bold dark:text-white">Ajoy Sarker</h4>
           <span className="text-bgray-500 dark:text-bgray-50 text-sm font-medium">
             UX Researcher
           </span>
@@ -122,20 +118,12 @@ function Profile({ isOpen, close }) {
                 </svg>
               </div>
               <div>
-                <h5 className="text-base font-semibold dark:text-white">
-                  Reference.zip
-                </h5>
-                <span className="text-bgray-500 dark:text-bgray-50 text-sm">
-                  2 MB
-                </span>
+                <h5 className="text-base font-semibold dark:text-white">Reference.zip</h5>
+                <span className="text-bgray-500 dark:text-bgray-50 text-sm">2 MB</span>
               </div>
             </div>
             <div>
-              <button
-                aria-label="none"
-                type="button"
-                className="text-bgray-500 hover:text-red-500"
-              >
+              <button aria-label="none" type="button" className="text-bgray-500 hover:text-red-500">
                 <svg
                   width="20"
                   height="21"
@@ -152,12 +140,7 @@ function Profile({ isOpen, close }) {
                   </g>
                   <defs>
                     <clipPath id="clip0_1568_17087">
-                      <rect
-                        width="20"
-                        height="20"
-                        fill="white"
-                        transform="translate(0 0.5)"
-                      />
+                      <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
                     </clipPath>
                   </defs>
                 </svg>
@@ -212,20 +195,12 @@ function Profile({ isOpen, close }) {
                 </svg>
               </div>
               <div>
-                <h5 className="text-base font-semibold dark:text-white">
-                  Doc0001.docx
-                </h5>
-                <span className="text-bgray-500 dark:text-bgray-50 text-sm">
-                  1,025 KB
-                </span>
+                <h5 className="text-base font-semibold dark:text-white">Doc0001.docx</h5>
+                <span className="text-bgray-500 dark:text-bgray-50 text-sm">1,025 KB</span>
               </div>
             </div>
             <div>
-              <button
-                aria-label="none"
-                type="button"
-                className="text-bgray-500 hover:text-red-500"
-              >
+              <button aria-label="none" type="button" className="text-bgray-500 hover:text-red-500">
                 <svg
                   width="20"
                   height="21"
@@ -242,12 +217,7 @@ function Profile({ isOpen, close }) {
                   </g>
                   <defs>
                     <clipPath id="clip0_1568_17087">
-                      <rect
-                        width="20"
-                        height="20"
-                        fill="white"
-                        transform="translate(0 0.5)"
-                      />
+                      <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
                     </clipPath>
                   </defs>
                 </svg>
@@ -302,20 +272,12 @@ function Profile({ isOpen, close }) {
                 </svg>
               </div>
               <div>
-                <h5 className="text-base font-semibold dark:text-white">
-                  Filex.pdf
-                </h5>
-                <span className="text-bgray-500 dark:text-bgray-50 text-sm">
-                  2,25 KB
-                </span>
+                <h5 className="text-base font-semibold dark:text-white">Filex.pdf</h5>
+                <span className="text-bgray-500 dark:text-bgray-50 text-sm">2,25 KB</span>
               </div>
             </div>
             <div>
-              <button
-                aria-label="none"
-                type="button"
-                className="text-bgray-500 hover:text-red-500"
-              >
+              <button aria-label="none" type="button" className="text-bgray-500 hover:text-red-500">
                 <svg
                   width="20"
                   height="21"
@@ -332,12 +294,7 @@ function Profile({ isOpen, close }) {
                   </g>
                   <defs>
                     <clipPath id="clip0_1568_17087">
-                      <rect
-                        width="20"
-                        height="20"
-                        fill="white"
-                        transform="translate(0 0.5)"
-                      />
+                      <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
                     </clipPath>
                   </defs>
                 </svg>
@@ -375,20 +332,14 @@ function Profile({ isOpen, close }) {
                 </svg>
               </div>
               <div>
-                <h5 className="text-base font-semibold dark:text-white">
-                  muz.li
-                </h5>
+                <h5 className="text-base font-semibold dark:text-white">muz.li</h5>
                 <span className="text-bgray-500 dark:text-bgray-50 text-sm">
                   https://muz.li.com
                 </span>
               </div>
             </div>
             <div>
-              <button
-                aria-label="none"
-                type="button"
-                className="text-bgray-500 hover:text-red-500"
-              >
+              <button aria-label="none" type="button" className="text-bgray-500 hover:text-red-500">
                 <svg
                   width="20"
                   height="21"
@@ -405,12 +356,7 @@ function Profile({ isOpen, close }) {
                   </g>
                   <defs>
                     <clipPath id="clip0_1568_17087">
-                      <rect
-                        width="20"
-                        height="20"
-                        fill="white"
-                        transform="translate(0 0.5)"
-                      />
+                      <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
                     </clipPath>
                   </defs>
                 </svg>
@@ -443,20 +389,12 @@ function Profile({ isOpen, close }) {
                 </svg>
               </div>
               <div>
-                <h5 className="text-base font-semibold dark:text-white">
-                  Dribbble
-                </h5>
-                <span className="text-bgray-500 text-sm">
-                  https://dribbble.com/rf...
-                </span>
+                <h5 className="text-base font-semibold dark:text-white">Dribbble</h5>
+                <span className="text-bgray-500 text-sm">https://dribbble.com/rf...</span>
               </div>
             </div>
             <div>
-              <button
-                aria-label="none"
-                type="button"
-                className="text-bgray-500 hover:text-red-500"
-              >
+              <button aria-label="none" type="button" className="text-bgray-500 hover:text-red-500">
                 <svg
                   width="20"
                   height="21"
@@ -473,12 +411,7 @@ function Profile({ isOpen, close }) {
                   </g>
                   <defs>
                     <clipPath id="clip0_1568_17087">
-                      <rect
-                        width="20"
-                        height="20"
-                        fill="white"
-                        transform="translate(0 0.5)"
-                      />
+                      <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
                     </clipPath>
                   </defs>
                 </svg>
@@ -495,17 +428,11 @@ function Profile({ isOpen, close }) {
               <div className="bonus-outer">
                 <div className="bonus-inner">
                   <div className="number">
-                    <span className="text-bgray-900 text-sm font-medium">
-                      26%
-                    </span>
+                    <span className="text-bgray-900 text-sm font-medium">26%</span>
                   </div>
                 </div>
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="80px"
-                height="80px"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px">
                 <circle
                   style={{
                     strokeDashoffset: 'calc(215 - 215 * (26 / 100))',
@@ -519,9 +446,7 @@ function Profile({ isOpen, close }) {
             </div>
           </div>
           <div>
-            <h4 className="text-bgray-900 text-base font-bold dark:text-white">
-              Complete profile
-            </h4>
+            <h4 className="text-bgray-900 text-base font-bold dark:text-white">Complete profile</h4>
             <span className="dark:text-bgray-50 text-bgray-700 text-sm font-medium">
               Complete your profile to unlock all features
             </span>

@@ -24,13 +24,7 @@ function PaymentAndBilling() {
           desc="Offers payment processing software for e-commerce websites and
             mobile applications."
         >
-          <Image
-            priority={true}
-            height={visa.height}
-            width={visa.width}
-            src={visa.src}
-            alt=""
-          />
+          <Image priority={true} height={visa.height} width={visa.width} src={visa.src} alt="" />
           <Image
             priority={true}
             height={master.height}
@@ -38,13 +32,7 @@ function PaymentAndBilling() {
             src={master.src}
             alt=""
           />
-          <Image
-            priority={true}
-            height={visa.height}
-            width={visa.width}
-            src={ae.src}
-            alt=""
-          />
+          <Image priority={true} height={visa.height} width={visa.width} src={ae.src} alt="" />
         </PBCard>
         <PBCard
           name="PayPal"
@@ -64,13 +52,7 @@ function PaymentAndBilling() {
           desc="Offers payment processing software for e-commerce websites and
             mobile applications."
         >
-          <Image
-            priority={true}
-            height={ael.height}
-            width={ael.width}
-            src={ael.src}
-            alt=""
-          />
+          <Image priority={true} height={ael.height} width={ael.width} src={ael.src} alt="" />
         </PBCard>
         <PBCard
           name="Amazon"

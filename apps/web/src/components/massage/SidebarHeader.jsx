@@ -2,9 +2,7 @@ function SidebarHeader() {
   return (
     <header>
       <div className="mb-6 flex items-center justify-between">
-        <h3 className="text-bgray-900 text-3xl font-semibold dark:text-white">
-          Messages (22)
-        </h3>
+        <h3 className="text-bgray-900 text-3xl font-semibold dark:text-white">Messages (22)</h3>
         <button aria-label="none">
           <svg
             className="stroke-darkblack-400 dark:stroke-bgray-50"

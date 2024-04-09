@@ -32,10 +32,7 @@ function MobileMenu() {
             <span className="text-gray-900">EUREKA</span> BANK
           </span>
         </Link>
-        <div
-          className="`flex m-menu-btn w-6 lg:w-10"
-          onClick={() => setMenuActive(!menuActive)}
-        >
+        <div className="`flex m-menu-btn w-6 lg:w-10" onClick={() => setMenuActive(!menuActive)}>
           <Image
             src={barIcon.src}
             height={barIcon.height}
@@ -48,9 +45,7 @@ function MobileMenu() {
             height={xmark.height}
             width={xmark.width}
             alt=""
-            className={`${
-              menuActive ? 'block' : 'hidden'
-            } xmark transition-all`}
+            className={`${menuActive ? 'block' : 'hidden'} xmark transition-all`}
           />
         </div>
       </div>

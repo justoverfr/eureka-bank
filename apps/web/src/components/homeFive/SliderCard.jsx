@@ -16,9 +16,7 @@ function SliderCard({ author, authorLocation, post }) {
             alt="quotation"
             className="pb-10"
           />
-          <span className="leading-150 text-lg font-normal text-gray-900 xl:text-2xl">
-            {post}
-          </span>
+          <span className="leading-150 text-lg font-normal text-gray-900 xl:text-2xl">{post}</span>
         </div>
         <div>
           <div className="flex w-full items-center justify-between">
@@ -26,12 +24,7 @@ function SliderCard({ author, authorLocation, post }) {
               {author}
               <span className="text-stockColor"> {authorLocation}</span>
             </span>
-            <Image
-              src={star.src}
-              height={star.height}
-              width={star.width}
-              alt=""
-            />
+            <Image src={star.src} height={star.height} width={star.width} alt="" />
           </div>
         </div>
       </div>

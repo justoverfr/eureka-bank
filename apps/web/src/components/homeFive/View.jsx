@@ -41,8 +41,8 @@ function View() {
               Make the coolest Dashboard Designs directly in Template!
             </span>
             <span className="leading-160 pb-12 pt-7 text-lg font-medium text-white 2xl:text-xl">
-              Customize and stylize your dashboard and all widgets easily with
-              the Global Styles for typography & colors!
+              Customize and stylize your dashboard and all widgets easily with the Global Styles for
+              typography & colors!
             </span>
             <div className="flex gap-3 xl:gap-8">
               <a
@@ -61,12 +61,7 @@ function View() {
               >
                 <div className="bg-primary absolute bottom-0 right-0 z-0 h-0 w-0 transition-all group-hover:h-full group-hover:w-full"></div>
                 <div className="z-10 flex gap-2 text-center text-xl font-semibold leading-8 text-white group-hover:text-white">
-                  <Image
-                    src={figmaW.src}
-                    height={figmaW.height}
-                    width={figmaW.width}
-                    alt="figma"
-                  />{' '}
+                  <Image src={figmaW.src} height={figmaW.height} width={figmaW.width} alt="figma" />{' '}
                   Get Figma
                 </div>
               </a>

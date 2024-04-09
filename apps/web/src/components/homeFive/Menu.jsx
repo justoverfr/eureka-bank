@@ -10,12 +10,7 @@ function Menu() {
     <section className="b-gray-300 fixed top-0 z-[9999] hidden w-full items-center justify-center gap-9 border-b bg-white p-6 xl:flex">
       <Link href="/">
         <div className="flex h-fit cursor-pointer gap-1.5">
-          <Image
-            src={logoBlack.src}
-            height={logoBlack.height}
-            width={logoBlack.width}
-            alt="logo"
-          />
+          <Image src={logoBlack.src} height={logoBlack.height} width={logoBlack.width} alt="logo" />
 
           <span className="leading-extra-loose text-primary flex h-full items-center justify-center gap-3 pr-16 text-4xl font-extrabold tracking-tight">
             <span className="text-gray-900">EUREKA</span> BANK

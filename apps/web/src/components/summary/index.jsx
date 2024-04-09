@@ -116,8 +116,7 @@ function Summary() {
         beginAtZero: true,
         border: { dash: [5, 5] },
         grid: {
-          color:
-            theme === '' ? 'rgba(244, 244, 244, 1)' : 'rgba(42, 49, 60, 0.3)',
+          color: theme === '' ? 'rgba(244, 244, 244, 1)' : 'rgba(42, 49, 60, 0.3)',
 
           borderDashOffset: 2,
         },
@@ -134,8 +133,7 @@ function Summary() {
       x: {
         border: { dash: [5, 5] },
         grid: {
-          color:
-            theme === '' ? 'rgba(244, 244, 244, 1)' : 'rgba(42, 49, 60, 0.3)',
+          color: theme === '' ? 'rgba(244, 244, 244, 1)' : 'rgba(42, 49, 60, 0.3)',
           borderDash: [5, 5],
           borderDashOffset: 2,
         },
@@ -156,26 +154,18 @@ function Summary() {
   return (
     <div className="xl:w-66 dark:bg-darkblack-600 flex w-full flex-col justify-between rounded-lg bg-white px-[24px] py-3">
       <div className="border-bgray-300 dark:border-darkblack-400 mb-2 flex items-center justify-between border-b pb-2">
-        <h3 className="text-bgray-900 text-xl font-bold sm:text-2xl dark:text-white">
-          Summary
-        </h3>
+        <h3 className="text-bgray-900 text-xl font-bold sm:text-2xl dark:text-white">Summary</h3>
         <div className="hidden items-center space-x-[28px] sm:flex">
           <div className="flex items-center space-x-2">
             <div className="bg-orange h-3 w-3 rounded-full"></div>
-            <span className="text-bgray-700 text-sm font-medium dark:text-white">
-              Lost
-            </span>
+            <span className="text-bgray-700 text-sm font-medium dark:text-white">Lost</span>
           </div>
           <div className="flex items-center space-x-2">
             <div className="bg-success-300 h-3 w-3 rounded-full"></div>
-            <span className="text-bgray-700 text-sm font-medium dark:text-white">
-              Signed
-            </span>
+            <span className="text-bgray-700 text-sm font-medium dark:text-white">Signed</span>
           </div>
         </div>
-        <DateFilter
-          options={['Jan 11 - Jan 16', 'Jan 12 - Jan 16', 'Jan 13 - Jan 16']}
-        />
+        <DateFilter options={['Jan 11 - Jan 16', 'Jan 12 - Jan 16', 'Jan 13 - Jan 16']} />
       </div>
       <div className="h-[255px] w-full">
         <BarChart data={data} options={options} />

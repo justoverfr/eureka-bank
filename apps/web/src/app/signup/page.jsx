@@ -114,28 +114,16 @@ function SignUp() {
               </Link>
             </p>
             <nav className="flex flex-wrap items-center justify-center gap-x-11 pt-24">
-              <Link
-                href="#"
-                className="text-bgray-700 dark:text-bgray-50 text-sm"
-              >
+              <Link href="#" className="text-bgray-700 dark:text-bgray-50 text-sm">
                 Terms & Condition
               </Link>
-              <Link
-                href="#"
-                className="text-bgray-700 dark:text-bgray-50 text-sm"
-              >
+              <Link href="#" className="text-bgray-700 dark:text-bgray-50 text-sm">
                 Privacy Policy
               </Link>
-              <Link
-                href="#"
-                className="text-bgray-700 dark:text-bgray-50 text-sm"
-              >
+              <Link href="#" className="text-bgray-700 dark:text-bgray-50 text-sm">
                 Help
               </Link>
-              <Link
-                href="#"
-                className="text-bgray-700 dark:text-bgray-50 text-sm"
-              >
+              <Link href="#" className="text-bgray-700 dark:text-bgray-50 text-sm">
                 English
               </Link>
             </nav>

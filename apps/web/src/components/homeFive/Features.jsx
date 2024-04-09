@@ -33,8 +33,8 @@ function Features() {
       </div>
       <div className="w-full max-w-[527px] pt-3 text-center">
         <span className="font-urbanist leading-160 text-lg font-normal text-gray-800 2xl:text-xl">
-          Venus main features. Most important and useful features of Template in
-          a single design system tool.
+          Venus main features. Most important and useful features of Template in a single design
+          system tool.
         </span>
       </div>
       <div className="flex w-full max-w-[1320px] flex-wrap items-center justify-center gap-x-7 gap-y-3 pt-20">

@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import { getReasonPhrase, StatusCodes } from 'http-status-codes';
 import { SignJWT } from 'jose';
 
-import { createUser, getUserByEmail } from '@/modules/users/user.service';
+import { createUser, readUserByEmail } from '@/modules/users/user.service';
 
 import { validateUser } from './auth';
 import { RegisterBody } from './auth.schema';
@@ -15,23 +15,17 @@ export async function registerHandler(
   request: Request<object, object, RegisterBody>,
   reply: Response,
 ) {
-  const user = await createUser(request.body);
+  const newUser = await createUser(request.body);
 
-  const { password, ...userWithoutPassword } = user;
-
-  reply.status(StatusCodes.CREATED).send(userWithoutPassword);
+  reply.status(StatusCodes.CREATED).send(newUser);
 }
 
 export async function loginHandler(
-  req: Request<
-    object,
-    object,
-    { email: string; password: string; rememberMe: boolean }
-  >,
+  req: Request<object, object, { email: string; password: string; rememberMe: boolean }>,
 
   res: Response,
 ) {
-  const user = await getUserByEmail(req.body.email);
+  const user = await readUserByEmail(req.body.email);
 
   try {
     await validateUser(user, req.body.password);
@@ -42,26 +36,21 @@ export async function loginHandler(
         error: getReasonPhrase(StatusCodes.UNAUTHORIZED),
         message: error.message,
       });
-
-      return;
+    } else {
+      res.status(StatusCodes.INTERNAL_SERVER_ERROR).send({
+        statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
+        error: getReasonPhrase(StatusCodes.INTERNAL_SERVER_ERROR),
+        message: 'An unexpected error occurred',
+      });
     }
-    res.status(StatusCodes.INTERNAL_SERVER_ERROR).send({
-      statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
-      error: getReasonPhrase(StatusCodes.INTERNAL_SERVER_ERROR),
-      message: 'An unexpected error occurred',
-    });
-
-    return;
   }
 
-  const { password, ...userWithoutPassword } = user!;
-
-  const accessToken = await new SignJWT(userWithoutPassword)
+  const accessToken = await new SignJWT(user)
     .setExpirationTime('5m')
     .setProtectedHeader({ alg: 'HS256' })
     .sign(new TextEncoder().encode(process.env.ACCESS_TOKEN_SECRET as string));
 
-  const refreshToken = await new SignJWT(userWithoutPassword)
+  const refreshToken = await new SignJWT(user)
     .setExpirationTime(req.body.rememberMe ? '30d' : '1d')
     .setProtectedHeader({ alg: 'HS256' })
     .sign(new TextEncoder().encode(process.env.REFRESH_TOKEN_SECRET as string));
@@ -75,7 +64,7 @@ export async function loginHandler(
         : new Date(Date.now() + 24 * 60 * 60 * 1000),
     })
     .send({
-      user: userWithoutPassword,
+      user: user,
       accessToken,
     });
 }

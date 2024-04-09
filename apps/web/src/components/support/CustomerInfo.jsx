@@ -5,27 +5,17 @@ import img from '/public/static/images/avatar/purple-a.png';
 function CustomerInfo() {
   return (
     <div>
-      <h4 className="text-bgray-900 mb-4 text-xl font-bold dark:text-white">
-        Customer
-      </h4>
+      <h4 className="text-bgray-900 mb-4 text-xl font-bold dark:text-white">Customer</h4>
       <div className="flex items-center justify-between pb-6">
         <div className="flex space-x-4">
           <div>
-            <Image
-              priority={true}
-              height={img.height}
-              width={img.width}
-              src={img.src}
-              alt=""
-            />
+            <Image priority={true} height={img.height} width={img.width} src={img.src} alt="" />
           </div>
           <div>
             <h4 className="text-bgray-900 text-base font-semibold dark:text-white">
               Darcel Ballentine
             </h4>
-            <span className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">
-              10 orders
-            </span>
+            <span className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">10 orders</span>
           </div>
         </div>
         <div>

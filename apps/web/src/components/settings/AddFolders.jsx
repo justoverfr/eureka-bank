@@ -18,9 +18,7 @@ function AddFolders() {
             />
           </svg>
         </span>
-        <span className="text-bgray-500 mt-4 block text-base font-medium">
-          Add Folder
-        </span>
+        <span className="text-bgray-500 mt-4 block text-base font-medium">Add Folder</span>
       </button>
     </div>
   );
