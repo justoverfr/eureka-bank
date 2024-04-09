@@ -7,6 +7,7 @@ const userColumns = getTableColumns(schema.users);
 const { password, ...passwordlessUserColumns } = userColumns;
 
 export async function createUser(data: typeof schema.users.$inferInsert) {
+  console.log('data', data);
   const passwordHash = await argon2.hash(data.password);
 
   const newUser = await db

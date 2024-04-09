@@ -1,12 +1,12 @@
-import { FastifyReply, FastifyRequest } from 'fastify';
+import { Request, Response } from 'express';
 
 import { createUser } from '@/modules/users/user.service';
 
 import { RegisterBody } from './auth.schema';
 
 export async function registerHandler(
-  request: FastifyRequest<{ Body: RegisterBody }>,
-  reply: FastifyReply,
+  request: Request<object, object, RegisterBody>,
+  reply: Response,
 ) {
   const newUser = await createUser(request.body);
 

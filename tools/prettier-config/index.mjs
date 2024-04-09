@@ -13,7 +13,7 @@ export default {
     '^(react/(.*)$)|^(react$)|^(react-native(.*)$)',
     '^(next/(.*)$)|^(next$)',
     '^(expo(.*)$)|^(expo$)',
-    '^(@fastify(.*)$)|^(fastify(.*)$)',
+    '^(express/(.*)$)|^(express$)',
     '',
     '<THIRD_PARTY_MODULES>',
     '',
