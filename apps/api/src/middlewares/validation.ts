@@ -10,8 +10,7 @@ interface IValidation {
 }
 
 export const validateRequest =
-  (schemas: IValidation) =>
-  async (req: Request, res: Response, next: NextFunction) => {
+  (schemas: IValidation) => async (req: Request, res: Response, next: NextFunction) => {
     let errorSource = '';
 
     try {

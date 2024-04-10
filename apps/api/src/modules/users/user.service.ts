@@ -4,10 +4,9 @@ import { and, eq, getTableColumns, ilike, or } from 'drizzle-orm';
 import { db, schema } from '@eureka-bank/db';
 
 const userColumns = getTableColumns(schema.users);
-const { password, ...passwordlessUserColumns } = userColumns;
+const { password, createdAt, updatedAt, verifiedAt, ...passwordlessUserColumns } = userColumns;
 
 export async function createUser(data: typeof schema.users.$inferInsert) {
-  console.log('data', data);
   const passwordHash = await argon2.hash(data.password);
 
   const newUser = await db
@@ -25,6 +24,16 @@ export async function readUserById(id: number) {
     .select(passwordlessUserColumns)
     .from(schema.users)
     .where(eq(schema.users.id, id))
+    .then((rows) => rows[0]);
+
+  return user;
+}
+
+export async function readUserByEmail(email: string) {
+  const user = await db
+    .select()
+    .from(schema.users)
+    .where(eq(schema.users.email, email))
     .then((rows) => rows[0]);
 
   return user;
