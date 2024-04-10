@@ -38,6 +38,16 @@ export async function readUserByEmail(email: string) {
   return user;
 }
 
+export async function readUserByWalletAddress(walletAddress: string) {
+  const user = await db
+    .select()
+    .from(schema.users)
+    .where(eq(schema.users.walletAddress, walletAddress))
+    .then((rows) => rows[0]);
+
+  return user;
+}
+
 export async function readUsers() {
   const users = await db.select().from(schema.users);
   return users;

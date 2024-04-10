@@ -40,6 +40,7 @@ apiRoutes.use('/contacts', contactRoutes);
 apiRoutes.use('/contact-requests', contactRequestRoutes);
 apiRoutes.use('/blocked-users', blockedUserRoutes);
 apiRoutes.use('/users', userRoutes);
+apiRoutes.use('/transactions', transactionRoutes);
 // app.use('/health-check', healthCheckRouter);
 // app.use('/users', userRouter);
 
