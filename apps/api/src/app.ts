@@ -7,6 +7,7 @@ import { authRoutes } from './modules/auth/auth.routes';
 import { blockedUserRoutes } from './modules/blocked-users/blocked-user.routes';
 import { contactRequestRoutes } from './modules/contact-requests/contact-request.routes';
 import { contactRoutes } from './modules/contacts/contact.routes';
+import { transactionRoutes } from './modules/transactions/transaction.routes';
 import { userRoutes } from './modules/users/user.routes';
 
 const app = express();
@@ -39,6 +40,7 @@ apiRoutes.use('/contacts', contactRoutes);
 apiRoutes.use('/contact-requests', contactRequestRoutes);
 apiRoutes.use('/blocked-users', blockedUserRoutes);
 apiRoutes.use('/users', userRoutes);
+apiRoutes.use('/transactions', transactionRoutes);
 // app.use('/health-check', healthCheckRouter);
 // app.use('/users', userRouter);
 

@@ -4,20 +4,28 @@ import dotenv from 'dotenv';
 import { getReasonPhrase, StatusCodes } from 'http-status-codes';
 import { SignJWT } from 'jose';
 
-import { createUser, readUserByEmail } from '@/modules/users/user.service';
+import {
+  createUser,
+  readUserByEmail,
+  updateUserWalletAddress,
+  updateUserWalletPrivateKey,
+} from '@/modules/users/user.service';
+import { blockchain } from '@/utils/blockchain';
 
 import { validateUser } from './auth';
 import { RegisterBody } from './auth.schema';
 
 dotenv.config();
 
-export async function registerHandler(
-  request: Request<object, object, RegisterBody>,
-  reply: Response,
-) {
-  const newUser = await createUser(request.body);
+export async function registerHandler(req: Request<object, object, RegisterBody>, res: Response) {
+  const user = await createUser(req.body);
 
-  reply.status(StatusCodes.CREATED).send(newUser);
+  const web3Account = blockchain.eth.accounts.create();
+
+  await updateUserWalletAddress(user.id, web3Account.address);
+  const newUser = await updateUserWalletPrivateKey(user.id, web3Account.privateKey);
+
+  res.status(StatusCodes.CREATED).send(newUser);
 }
 
 export async function loginHandler(

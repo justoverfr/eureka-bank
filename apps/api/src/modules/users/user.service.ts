@@ -12,11 +12,10 @@ export async function createUser(data: typeof schema.users.$inferInsert) {
   const newUser = await db
     .insert(schema.users)
     .values({ ...data, password: passwordHash })
-    .returning()
+    .returning(passwordlessUserColumns)
     .then((rows) => rows[0]);
 
-  const { password, ...passwordlessNewUser } = newUser;
-  return passwordlessNewUser;
+  return newUser;
 }
 
 export async function readUserById(id: number) {
@@ -34,6 +33,16 @@ export async function readUserByEmail(email: string) {
     .select()
     .from(schema.users)
     .where(eq(schema.users.email, email))
+    .then((rows) => rows[0]);
+
+  return user;
+}
+
+export async function readUserByWalletAddress(walletAddress: string) {
+  const user = await db
+    .select()
+    .from(schema.users)
+    .where(eq(schema.users.walletAddress, walletAddress))
     .then((rows) => rows[0]);
 
   return user;
@@ -65,4 +74,26 @@ export async function searchUsers(searchInput: string) {
     .where(and(...searchConditions));
 
   return users;
+}
+
+export async function updateUserWalletAddress(userId: number, newAddress: string) {
+  const user = await db
+    .update(schema.users)
+    .set({ walletAddress: newAddress })
+    .where(eq(schema.users.id, userId))
+    .returning()
+    .then((rows) => rows[0]);
+
+  return user;
+}
+
+export async function updateUserWalletPrivateKey(userId: number, newPrivateKey: string) {
+  const user = await db
+    .update(schema.users)
+    .set({ walletPrivateKey: newPrivateKey })
+    .where(eq(schema.users.id, userId))
+    .returning()
+    .then((rows) => rows[0]);
+
+  return user;
 }

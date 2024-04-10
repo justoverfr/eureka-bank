@@ -1,6 +1,6 @@
 {
-  "id": "1b7e9533-3564-4f84-bfbc-2a2b89d9d3b0",
-  "prevId": "6c23c7f8-78ac-4731-b362-3960702ee1b7",
+  "id": "67162bed-e74d-48b4-9552-b7732529210b",
+  "prevId": "1b7e9533-3564-4f84-bfbc-2a2b89d9d3b0",
   "version": "5",
   "dialect": "pg",
   "tables": {
@@ -171,6 +171,12 @@
           "name": "id",
           "type": "serial",
           "primaryKey": true,
+          "notNull": true
+        },
+        "address": {
+          "name": "address",
+          "type": "text",
+          "primaryKey": false,
           "notNull": true
         },
         "sender_id": {

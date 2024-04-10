@@ -64,6 +64,29 @@ function Wallet() {
         <h3 className="text-bgray-900 mb-4 text-lg font-bold dark:text-white">Quick Transfer</h3>
         <PaymentFilter />
         <div className="border-bgray-200 focus-within:border-success-300 dark:border-darkblack-400 flex h-[98px] w-full flex-col justify-between rounded-lg border p-4">
+          <p className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">
+            Enter crypto account hash
+          </p>
+          <div className="flex h-[35px] w-full items-center justify-between">
+            <label className="w-full">
+              <input
+                type="text"
+                className="text-bgray-900 dark:border-darkblack-400 dark:bg-darkblack-600 w-full border-none p-0 text-2xl font-bold focus:outline-none focus:ring-0 dark:text-white"
+              />
+            </label>
+            <div>
+              <Image
+                priority={true}
+                height={member.height}
+                width={member.width}
+                src={member.src}
+                alt="members"
+              />
+            </div>
+          </div>
+        </div>
+        <br />
+        <div className="border-bgray-200 focus-within:border-success-300 dark:border-darkblack-400 flex h-[98px] w-full flex-col justify-between rounded-lg border p-4">
           <p className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">Enter amount</p>
           <div className="flex h-[35px] w-full items-center justify-between">
             <span className="text-bgray-900 text-2xl font-bold dark:text-white">$</span>
