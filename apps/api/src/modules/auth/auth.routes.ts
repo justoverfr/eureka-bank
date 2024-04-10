@@ -10,8 +10,4 @@ const authRoutes = Router();
 authRoutes.post('/register', validateRequest({ body: registerBodySchema }), registerHandler);
 authRoutes.post('/login', loginHandler);
 
-const text = 'fromage';
-
-export default text;
-
 export { authRoutes };
