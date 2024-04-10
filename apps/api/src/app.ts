@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Router } from 'express';
 
 import logger from 'pino-http';
 
@@ -32,14 +32,18 @@ app.use(express.json());
 // app.use(requestLogger());
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/contacts', contactRoutes);
-app.use('/api/contact-requests', contactRequestRoutes);
-app.use('/api/block-list', blockedUserRoutes);
-app.use('api/users', userRoutes);
-app.use('/api/transactions', transactionRoutes);
+const apiRoutes = Router();
+const apiVersion = '1';
+
+apiRoutes.use('/auth', authRoutes);
+apiRoutes.use('/contacts', contactRoutes);
+apiRoutes.use('/contact-requests', contactRequestRoutes);
+apiRoutes.use('/blocked-users', blockedUserRoutes);
+apiRoutes.use('/users', userRoutes);
 // app.use('/health-check', healthCheckRouter);
 // app.use('/users', userRouter);
+
+app.use(`/api/v${apiVersion}`, apiRoutes);
 
 // Swagger UI
 // app.use(openAPIRouter);
