@@ -17,15 +17,10 @@ async function createAccountAndSendTransaction() {
     const privateKey = 'PRIVATE_KEY_EXPEDITEUR'; // Remplacez par la clé privée de l'expéditeur
 
     const signedTx = await web3.eth.accounts.signTransaction(tx, privateKey);
-    const receipt = await web3.eth.sendSignedTransaction(
-      signedTx.rawTransaction,
-    );
+    const receipt = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
     console.log('Transaction envoyée :', receipt);
   } catch (error) {
-    console.error(
-      "Erreur lors de la création du compte ou de l'envoi de la transaction :",
-      error,
-    );
+    console.error("Erreur lors de la création du compte ou de l'envoi de la transaction :", error);
   }
 }
 

@@ -4,6 +4,6 @@ import { sendTransactionHandler } from './transaction.controller';
 
 const transactionRoutes = Router();
 
-transactionRoutes.post('/sent', sendTransactionHandler);
+transactionRoutes.post('/:hash', sendTransactionHandler);
 
 export { transactionRoutes };

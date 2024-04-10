@@ -17,19 +17,15 @@ import { RegisterBody } from './auth.schema';
 
 dotenv.config();
 
-export async function registerHandler(
-  request: Request<object, object, RegisterBody>,
-  reply: Response,
-) {
-  const user = await createUser(request.body);
+export async function registerHandler(req: Request<object, object, RegisterBody>, res: Response) {
+  const user = await createUser(req.body);
 
   const web3Account = blockchain.eth.accounts.create();
 
   await updateUserWalletAddress(user.id, web3Account.address);
   const newUser = await updateUserWalletPrivateKey(user.id, web3Account.privateKey);
 
-  reply.send(newUser);
-  reply.status(StatusCodes.CREATED).send(newUser);
+  res.status(StatusCodes.CREATED).send(newUser);
 }
 
 export async function loginHandler(

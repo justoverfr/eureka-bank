@@ -153,9 +153,7 @@ async function deposit(amount: number): Promise<void> {
   try {
     const accounts = await web3.eth.getAccounts();
     const valueInWei = web3.utils.toWei(amount.toString(), 'ether');
-    await bankContract.methods
-      .deposit()
-      .send({ from: accounts[0], value: valueInWei });
+    await bankContract.methods.deposit().send({ from: accounts[0], value: valueInWei });
   } catch (error) {
     console.error('Deposit failed:', error);
   }
