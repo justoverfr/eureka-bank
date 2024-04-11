@@ -21,3 +21,11 @@ export async function deleteBlockedUser(blockerId: number, blockedId: number) {
       ),
     );
 }
+
+export async function addBlockedUser(blockerId: number, blockedId: number) {
+  await db
+    .insert(schema.blockedUsers)
+    .values({ blockerId, blockedId })
+    .returning()
+    .then((rows) => rows[0]);
+}
