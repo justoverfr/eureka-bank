@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import '../chatBot/styleBot.css';
+import './style.css';
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 
 import {
@@ -23,7 +23,7 @@ const systemMessage = {
   content: 'ui ',
 };
 
-function ChatBot() {
+function Chatbot() {
   const [isChatVisible, setIsChatVisible] = useState(false);
 
   const [messages, setMessages] = useState([
@@ -116,4 +116,4 @@ function ChatBot() {
   );
 }
 
-export default ChatBot;
+export default Chatbot;
