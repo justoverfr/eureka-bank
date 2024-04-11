@@ -19,15 +19,15 @@ function WhyUs() {
           <div className="z-10 flex flex-col text-sm font-normal text-[#4f4f4f] xl:text-xl xl:leading-[42px]">
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>Responsive layout (desktops, tablets, mobile devices)</span>
+              <span>Ethereum Blockchain (btc, eth, erfb)</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>2 Different Dashbaord layout</span>
+              <span>Wide choice of cryptocurrencies</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>5 Different App</span>
+              <span></span>
             </div>
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />

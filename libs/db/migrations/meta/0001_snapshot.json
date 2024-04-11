@@ -34,12 +34,8 @@
           "name": "blocked_contacts_blocker_id_users_id_fk",
           "tableFrom": "blocked_contacts",
           "tableTo": "users",
-          "columnsFrom": [
-            "blocker_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["blocker_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -47,12 +43,8 @@
           "name": "blocked_contacts_blocked_id_users_id_fk",
           "tableFrom": "blocked_contacts",
           "tableTo": "users",
-          "columnsFrom": [
-            "blocked_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["blocked_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -60,10 +52,7 @@
       "compositePrimaryKeys": {
         "blocked_contacts_blocker_id_blocked_id_pk": {
           "name": "blocked_contacts_blocker_id_blocked_id_pk",
-          "columns": [
-            "blocker_id",
-            "blocked_id"
-          ]
+          "columns": ["blocker_id", "blocked_id"]
         }
       },
       "uniqueConstraints": {}
@@ -98,12 +87,8 @@
           "name": "contact_requests_sender_id_users_id_fk",
           "tableFrom": "contact_requests",
           "tableTo": "users",
-          "columnsFrom": [
-            "sender_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["sender_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -111,12 +96,8 @@
           "name": "contact_requests_receiver_id_users_id_fk",
           "tableFrom": "contact_requests",
           "tableTo": "users",
-          "columnsFrom": [
-            "receiver_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["receiver_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -124,10 +105,7 @@
       "compositePrimaryKeys": {
         "contact_requests_sender_id_receiver_id_pk": {
           "name": "contact_requests_sender_id_receiver_id_pk",
-          "columns": [
-            "sender_id",
-            "receiver_id"
-          ]
+          "columns": ["sender_id", "receiver_id"]
         }
       },
       "uniqueConstraints": {}
@@ -162,12 +140,8 @@
           "name": "contacts_user1_id_users_id_fk",
           "tableFrom": "contacts",
           "tableTo": "users",
-          "columnsFrom": [
-            "user1_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user1_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -175,12 +149,8 @@
           "name": "contacts_user2_id_users_id_fk",
           "tableFrom": "contacts",
           "tableTo": "users",
-          "columnsFrom": [
-            "user2_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user2_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -188,10 +158,7 @@
       "compositePrimaryKeys": {
         "contacts_user1_id_user2_id_pk": {
           "name": "contacts_user1_id_user2_id_pk",
-          "columns": [
-            "user1_id",
-            "user2_id"
-          ]
+          "columns": ["user1_id", "user2_id"]
         }
       },
       "uniqueConstraints": {}
@@ -256,12 +223,8 @@
           "name": "transactions_sender_id_users_id_fk",
           "tableFrom": "transactions",
           "tableTo": "users",
-          "columnsFrom": [
-            "sender_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["sender_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -269,12 +232,8 @@
           "name": "transactions_receiver_id_users_id_fk",
           "tableFrom": "transactions",
           "tableTo": "users",
-          "columnsFrom": [
-            "receiver_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["receiver_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -361,23 +320,17 @@
         "users_email_unique": {
           "name": "users_email_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "email"
-          ]
+          "columns": ["email"]
         },
         "users_phone_unique": {
           "name": "users_phone_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "phone"
-          ]
+          "columns": ["phone"]
         },
         "users_wallet_address_unique": {
           "name": "users_wallet_address_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "wallet_address"
-          ]
+          "columns": ["wallet_address"]
         }
       }
     }

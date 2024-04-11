@@ -28,53 +28,52 @@ function Features() {
       {/* <!-- heading  --> */}
       <div className="w-full max-w-[614px] text-center">
         <span className="leading-big-loose font-poppins text-center text-3xl font-bold text-gray-800 sm:text-4xl xl:text-4xl 2xl:text-5xl">
-          All features included in a single Design Tool
+          Discover the world of decentralization.
         </span>
       </div>
       <div className="w-full max-w-[527px] pt-3 text-center">
         <span className="font-urbanist leading-160 text-lg font-normal text-gray-800 2xl:text-xl">
-          Venus main features. Most important and useful features of Template in a single design
-          system tool.
+          The finance of the future is in your hands
         </span>
       </div>
       <div className="flex w-full max-w-[1320px] flex-wrap items-center justify-center gap-x-7 gap-y-3 pt-20">
         <FeaturesCard
-          title="Fully Responsive"
-          desc="Components / assets are fully responsive"
+          title="All devices "
+          desc="IOS / Android"
           img={friendlyW}
           imgHover={friendly}
         />
         <FeaturesCard
-          title="Atomic Design"
-          desc="Themeforest is based on Atomic Design Methodology"
+          title="Blockchain"
+          desc="Based on the ethereum blockchain"
           img={reactW}
           imgHover={react}
         />
         <FeaturesCard
-          title="Variants & Auto Layout"
-          desc="All compontents states are made as variants"
+          title="Crypto"
+          desc="Large selection of cryptocurrencies & stablecoin"
           img={appsRectangleW}
           imgHover={appsRectangle}
         />
         <FeaturesCard
           title="Free Support"
-          desc=" You receive Free Support for Pro, Team & Company License"
+          desc=" Free professional support"
           img={customerServiceW}
           imgHover={customerService}
         />
         <FeaturesCard
           category="Upcoming"
           categoryClass="top-10"
-          title="React Library"
-          desc=" Bankco come with a specific library based on React"
+          title="Decentralized"
+          desc=" Decentralized bank"
           img={scienceW}
           imgHover={science}
         />
         <FeaturesCard
           category="Upcoming"
           categoryClass="top-10"
-          title=" Native Ready"
-          desc="All elements are Android & IOS Native Ready"
+          title=" Free updates"
+          desc="Free updates on all IOS / Android devices"
           img={friendly2W}
           imgHover={friendly2}
         />
@@ -87,8 +86,8 @@ function Features() {
           imgHover={darkMode}
         />
         <FeaturesCard
-          title="Global Styles"
-          desc=" More than 250+ Global Styles for typography & colors."
+          title="Choice"
+          desc=" More than 20,000+ cryptocurrencies & stablecoin"
           img={fontW}
           imgHover={font}
         />

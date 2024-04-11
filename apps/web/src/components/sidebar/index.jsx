@@ -905,11 +905,11 @@ function Sidebar({ handleActive }) {
           </div>
         </div>
         <div className="copy-write-text">
-          <p className="text-sm text-[#969BA0]">© 2023 All Rights Reserved</p>
+          <p className="text-sm text-[#969BA0]">© 2024 All Rights Reserved</p>
           <p className="text-bgray-700 text-sm font-medium">
-            Made with ❤️ by
+            Made by
             <a href="#" target="_blank" className="border-b font-semibold hover:text-blue-600">
-              QuomodoTheme
+              EurekaBank
             </a>
           </p>
         </div>
