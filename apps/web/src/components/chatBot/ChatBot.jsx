@@ -97,29 +97,19 @@ function ChatBot() {
           <MainContainer>
             <ChatContainer>
               <MessageList
-                typingIndicator={
-                  isTyping ? (
-                    <TypingIndicator content="ChatGPT is typing" />
-                  ) : null
-                }
+                typingIndicator={isTyping ? <TypingIndicator content="ChatGPT is typing" /> : null}
               >
                 {messages.map((message, i) => (
                   <Message key={i} model={message} />
                 ))}
               </MessageList>
-              <MessageInput
-                placeholder="Type message here"
-                onSend={handleSend}
-              />
+              <MessageInput placeholder="Type message here" onSend={handleSend} />
             </ChatContainer>
           </MainContainer>
         </div>
       )}
       {/* j'utilise les coponent de button pour mon bouton */}
-      <button
-        onClick={() => setIsChatVisible(!isChatVisible)}
-        className="chatbot-toggle-btn"
-      >
+      <button onClick={() => setIsChatVisible(!isChatVisible)} className="chatbot-toggle-btn">
         {isChatVisible ? 'X' : 'Chat'}
       </button>
     </div>
