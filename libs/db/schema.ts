@@ -72,6 +72,7 @@ export const blockedUsers = pgTable(
 
 export const transactions = pgTable('transactions', {
   id: serial('id').primaryKey(),
+  address: text('address').notNull(),
   senderId: integer('sender_id').references(() => users.id, { onDelete: 'cascade' }),
   senderWalletAddress: text('sender_wallet_address'),
   receiverId: integer('receiver_id').references(() => users.id, { onDelete: 'cascade' }),

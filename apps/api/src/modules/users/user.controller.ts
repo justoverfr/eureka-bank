@@ -1,11 +1,6 @@
 import { Request, Response } from 'express';
 
-import {
-  readReceivedRequests,
-  readSentRequests,
-} from '@/modules/contact-requests/contact-request.service';
-
-import { readUserById, readUsers, searchUsers } from './user.service';
+import { readUsers, searchUsers } from './user.service';
 
 export async function getUsersHandler(
   req: Request<
