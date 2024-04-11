@@ -14,6 +14,7 @@ import {
 import { blockchain } from '@/utils/blockchain';
 
 import { LoginBody, RegisterBody } from './auth.schema';
+import { getTokens } from './utils';
 
 dotenv.config();
 
@@ -36,17 +37,7 @@ export async function loginHandler(
   try {
     const user = await validateUserCredentials(req.body.email, req.body.password);
 
-    const accessToken = await new SignJWT(user)
-      .setIssuedAt()
-      .setExpirationTime('5m')
-      .setProtectedHeader({ alg: 'HS256' })
-      .sign(new TextEncoder().encode(process.env.ACCESS_TOKEN_SECRET as string));
-
-    const refreshToken = await new SignJWT(user)
-      .setIssuedAt()
-      .setExpirationTime(req.body.rememberMe ? '30d' : '1d')
-      .setProtectedHeader({ alg: 'HS256' })
-      .sign(new TextEncoder().encode(process.env.REFRESH_TOKEN_SECRET as string));
+    const { accessToken, refreshToken } = await getTokens(user, req.body.rememberMe);
 
     res
       .cookie('refreshToken', refreshToken, {
@@ -76,4 +67,26 @@ export async function loginHandler(
       });
     }
   }
+}
+
+export async function refreshHandler(req: Request, res: Response) {
+  const user = req.user;
+
+  const rememberMe = req.jwt.payload.exp - req.jwt.payload.iat > 60 * 60 * 24 * 30;
+
+  const { accessToken, refreshToken } = await getTokens(user, rememberMe);
+
+  res
+    .cookie('refreshToken', refreshToken, {
+      httpOnly: true,
+      path: '/',
+      expires: rememberMe
+        ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
+        : new Date(Date.now() + 24 * 60 * 60 * 1000),
+    })
+    .send({
+      user,
+      accessToken,
+      refreshToken,
+    });
 }
