@@ -25,10 +25,6 @@ export async function blockUserHandler(
   req: Request<{ id: string }, object, { blockerId: number; blockedId: number }>,
   res: Response,
 ) {
-  // return await createBlockedContact({
-  //   blockerId: req.body.blockerId,
-  //   blockedId: req.body.blockedId,
-  // });
   return req.body;
 }
 
