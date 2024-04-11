@@ -3,14 +3,62 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import z from 'zod';
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 
 import PasswordResetModal from '../modal/PasswordResetModal';
 import logoColor from '/public/static/images/logo/logo-color.svg';
 import logoWhite from '/public/static/images/logo/logo-white.svg';
 
+const loginFormSchema = z.object({
+  email: z
+    .string({
+      required_error: 'Email required',
+    })
+    .email('Invalid email'),
+  password: z.string({
+    required_error: 'Password required',
+  }),
+  rememberMe: z.boolean(),
+});
+
+const loginError = {
+  invalid_credentials: 'Email or password is incorrect',
+  unexpected: 'An error occurred. Please try again.',
+};
+
 function LeftSide() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState('');
+
+  const [error, setError] = useState<string | null>(null);
+
+  const form = useForm({
+    resolver: zodResolver(loginFormSchema),
+    defaultValues: {
+      email: '',
+      password: '',
+      rememberMe: false,
+    },
+  });
+
+  const router = useRouter();
+
+  const onSubmit = (data: z.infer<typeof loginFormSchema>) => {
+    console.log(data);
+  };
 
   return (
     <div className="px-5 pt-10 lg:w-1/2 xl:pl-12">
@@ -107,84 +155,120 @@ function LeftSide() {
             </span>
           </div>
         </div>
-        <form action="">
-          <div className="mb-4">
-            <input
-              type="text"
-              className="text-bgray-800 border-bgray-300 dark:border-darkblack-400 dark:bg-darkblack-500 focus:border-success-300 placeholder:text-bgray-500 h-14 w-full rounded-lg border px-4 py-3.5 text-base placeholder:text-base focus:ring-0 dark:text-white"
-              placeholder="Username or email"
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} action="" className="space-y-2">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <input
+                      type="text"
+                      className="text-bgray-800 border-bgray-300 dark:border-darkblack-400 dark:bg-darkblack-500 focus:border-success-300 placeholder:text-bgray-500 h-14 w-full rounded-lg border px-4 py-3.5 text-base placeholder:text-base focus:ring-0 dark:text-white"
+                      placeholder="Email"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-          </div>
-          <div className="relative mb-6">
-            <input
-              type="text"
-              className="text-bgray-800 border-bgray-300 dark:border-darkblack-400 dark:bg-darkblack-500 focus:border-success-300 placeholder:text-bgray-500 h-14 w-full rounded-lg border px-4 py-3.5 text-base placeholder:text-base focus:ring-0 dark:text-white"
-              placeholder="Password"
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <div className="relative mb-6">
+                      <input
+                        type="password"
+                        className="text-bgray-800 border-bgray-300 dark:border-darkblack-400 dark:bg-darkblack-500 focus:border-success-300 placeholder:text-bgray-500 h-14 w-full rounded-lg border px-4 py-3.5 text-base placeholder:text-base focus:ring-0 dark:text-white"
+                        placeholder="Password"
+                        {...field}
+                      />
+                      <button aria-label="none" className="absolute bottom-4 right-4 top-4">
+                        <svg
+                          width="22"
+                          height="20"
+                          viewBox="0 0 22 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M2 1L20 19"
+                            stroke="#718096"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M9.58445 8.58704C9.20917 8.96205 8.99823 9.47079 8.99805 10.0013C8.99786 10.5319 9.20844 11.0408 9.58345 11.416C9.95847 11.7913 10.4672 12.0023 10.9977 12.0024C11.5283 12.0026 12.0372 11.7921 12.4125 11.417"
+                            stroke="#718096"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M8.363 3.36506C9.22042 3.11978 10.1082 2.9969 11 3.00006C15 3.00006 18.333 5.33306 21 10.0001C20.222 11.3611 19.388 12.5241 18.497 13.4881M16.357 15.3491C14.726 16.4491 12.942 17.0001 11 17.0001C7 17.0001 3.667 14.6671 1 10.0001C2.369 7.60506 3.913 5.82506 5.632 4.65906"
+                            stroke="#718096"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-            <button aria-label="none" className="absolute bottom-4 right-4 top-4">
-              <svg
-                width="22"
-                height="20"
-                viewBox="0 0 22 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 1L20 19"
-                  stroke="#718096"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M9.58445 8.58704C9.20917 8.96205 8.99823 9.47079 8.99805 10.0013C8.99786 10.5319 9.20844 11.0408 9.58345 11.416C9.95847 11.7913 10.4672 12.0023 10.9977 12.0024C11.5283 12.0026 12.0372 11.7921 12.4125 11.417"
-                  stroke="#718096"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M8.363 3.36506C9.22042 3.11978 10.1082 2.9969 11 3.00006C15 3.00006 18.333 5.33306 21 10.0001C20.222 11.3611 19.388 12.5241 18.497 13.4881M16.357 15.3491C14.726 16.4491 12.942 17.0001 11 17.0001C7 17.0001 3.667 14.6671 1 10.0001C2.369 7.60506 3.913 5.82506 5.632 4.65906"
-                  stroke="#718096"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="mb-7 flex justify-between">
-            <div className="flex items-center space-x-3">
-              <input
-                type="checkbox"
-                className="dark:bg-darkblack-500 border-bgray-300 focus:accent-success-300 text-success-300 h-5 w-5 rounded-full border focus:ring-transparent"
-                name="remember"
-                id="remember"
+            <div className="mb-7 flex justify-between">
+              <FormField
+                control={form.control}
+                name="rememberMe"
+                render={({ field }) => (
+                  <FormItem>
+                    <div className="flex items-center space-x-3">
+                      <FormControl>
+                        <input
+                          type="checkbox"
+                          className="dark:bg-darkblack-500 border-bgray-300 focus:accent-success-300 text-success-300 h-5 w-5 rounded-full border focus:ring-transparent"
+                          checked={field.value}
+                          onChange={field.onChange}
+                          id="rememberMe"
+                        />
+                      </FormControl>
+                      <FormLabel
+                        htmlFor="rememberMe"
+                        className="text-bgray-900 text-base font-semibold dark:text-white"
+                      >
+                        Remember me
+                      </FormLabel>
+                    </div>
+                  </FormItem>
+                )}
               />
-              <label
-                htmlFor="remember"
-                className="text-bgray-900 text-base font-semibold dark:text-white"
-              >
-                Remember me
-              </label>
+              <div>
+                <a
+                  onClick={() => setModalOpen(true)}
+                  data-target="#multi-step-modal"
+                  className="modal-open text-success-300 text-base font-semibold underline"
+                >
+                  Forgot Password?
+                </a>
+              </div>
             </div>
-            <div>
-              <a
-                onClick={() => setModalOpen(true)}
-                data-target="#multi-step-modal"
-                className="modal-open text-success-300 text-base font-semibold underline"
-              >
-                Forgot Password?
-              </a>
-            </div>
-          </div>
-          <Link
-            href="/"
-            className="bg-success-300 hover:bg-success-400 flex w-full items-center justify-center rounded-lg py-3.5 font-bold text-white transition-all"
-          >
-            Sign In
-          </Link>
-        </form>
+            <button
+              type="submit"
+              className="bg-success-300 hover:bg-success-400 flex w-full items-center justify-center rounded-lg py-3.5 font-bold text-white transition-all"
+            >
+              Sign In
+            </button>
+          </form>
+        </Form>
+        {error && <div className="text-center text-sm text-red-500">{error}</div>}
         <p className="text-bgray-900 dark:text-bgray-50 pt-7 text-center text-base font-medium">
           Don’t have an account?{' '}
           <Link href="/signup" className="font-semibold underline">
