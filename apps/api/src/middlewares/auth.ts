@@ -20,10 +20,10 @@ export const verifyAccessToken = async (req: Request, res: Response, next: NextF
           message: 'Invalid token',
         });
       } else {
-        req.jwt = await jwtVerify(
+        req.jwt = (await jwtVerify(
           authorization[1],
           new TextEncoder().encode(process.env.ACCESS_TOKEN_SECRET),
-        );
+        )) as unknown as { payload: JWTPayload };
         req.user = await readUserById(req.jwt.payload.id);
         return next();
       }
@@ -57,10 +57,10 @@ export const verifyRefreshToken = async (req: Request, res: Response, next: Next
           message: 'Invalid token',
         });
       } else {
-        req.jwt = await jwtVerify(
+        req.jwt = (await jwtVerify(
           authorization[1],
           new TextEncoder().encode(process.env.REFRESH_TOKEN_SECRET),
-        );
+        )) as unknown as { payload: JWTPayload };
         req.user = await readUserById(req.jwt.payload.id);
         return next();
       }
@@ -83,10 +83,11 @@ export const verifyRefreshToken = async (req: Request, res: Response, next: Next
 };
 
 declare global {
+  type JWTPayload = Awaited<ReturnType<typeof readUserById>> & { iat: number; exp: number };
   namespace Express {
     interface Request {
       jwt: {
-        payload: Awaited<ReturnType<typeof readUserById>> & { iat: number; exp: number };
+        payload: JWTPayload;
       };
       user: Awaited<ReturnType<typeof readUserById>>;
     }
