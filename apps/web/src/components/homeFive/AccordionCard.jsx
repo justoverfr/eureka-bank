@@ -1,21 +1,13 @@
 import React from 'react';
 
-function AccordionCard({
-  activeAccordion,
-  setActiveAccordion,
-  id,
-  title,
-  desc,
-}) {
+function AccordionCard({ activeAccordion, setActiveAccordion, id, title, desc }) {
   return (
     <div className="flex flex-col gap-8 bg-[#F6F9FB] px-6 py-6 transition-all">
       <div
         className="accordion-header flex cursor-pointer justify-between"
         onClick={() => setActiveAccordion(activeAccordion === id ? false : id)}
       >
-        <span className="leading-150 text-lg font-normal text-gray-900 xl:text-2xl">
-          {title}
-        </span>
+        <span className="leading-150 text-lg font-normal text-gray-900 xl:text-2xl">{title}</span>
 
         <span
           className={`accordion-icon ${
@@ -43,9 +35,7 @@ function AccordionCard({
           activeAccordion === id ? 'introAnimation' : 'hidden'
         }`}
       >
-        <span className="leading-175 text-sm text-gray-600 xl:text-base">
-          {desc}
-        </span>
+        <span className="leading-175 text-sm text-gray-600 xl:text-base">{desc}</span>
       </div>
     </div>
   );

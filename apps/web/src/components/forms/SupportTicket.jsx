@@ -69,13 +69,8 @@ function SupportTicket() {
         </div>
       </div>
       <div className="mb-6 mt-10">
-        <h4 className="text-bgray-900 mb-4 text-lg font-bold dark:text-white">
-          Support issues
-        </h4>
-        <label
-          htmlFor=""
-          className="mb-2 block text-base font-semibold dark:text-white"
-        >
+        <h4 className="text-bgray-900 mb-4 text-lg font-bold dark:text-white">Support issues</h4>
+        <label htmlFor="" className="mb-2 block text-base font-semibold dark:text-white">
           Title
         </label>
         <input
@@ -84,10 +79,7 @@ function SupportTicket() {
         />
       </div>
       <div className="custom-quill mb-6 mt-10">
-        <label
-          htmlFor=""
-          className="mb-2 block text-base font-semibold dark:text-white"
-        >
+        <label htmlFor="" className="mb-2 block text-base font-semibold dark:text-white">
           Description
         </label>
         <Quill

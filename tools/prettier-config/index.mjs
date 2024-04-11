@@ -5,17 +5,15 @@
 /** @type { PrettierConfig | SortImportsConfig | TailwindConfig } */
 export default {
   endOfLine: 'auto',
+  printWidth: 100,
   semi: true,
   singleQuote: true,
-  plugins: [
-    '@ianvs/prettier-plugin-sort-imports',
-    'prettier-plugin-tailwindcss',
-  ],
+  plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-tailwindcss'],
   importOrder: [
     '^(react/(.*)$)|^(react$)|^(react-native(.*)$)',
     '^(next/(.*)$)|^(next$)',
     '^(expo(.*)$)|^(expo$)',
-    '^(@fastify(.*)$)|^(fastify(.*)$)',
+    '^(express/(.*)$)|^(express$)',
     '',
     '<THIRD_PARTY_MODULES>',
     '',

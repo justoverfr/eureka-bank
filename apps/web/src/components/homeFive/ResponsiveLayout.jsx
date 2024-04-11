@@ -23,8 +23,8 @@ function ResponsiveLayout() {
           </span>
           <br />
           <span className="text-secondary-200 leading-130 mt-3 text-center text-lg font-medium tracking-[-0.356] xl:max-w-[473px] xl:text-left xl:text-xl">
-            The layout is responsive and looks gorgeous and professional on any
-            major devices and this Theme comes with custom page Themes.
+            The layout is responsive and looks gorgeous and professional on any major devices and
+            this Theme comes with custom page Themes.
           </span>
           <div className="mt-10 flex w-full items-center justify-center gap-6 text-lg font-normal leading-7 tracking-[-0.4] text-white xl:w-fit xl:gap-10">
             <a
@@ -32,10 +32,7 @@ function ResponsiveLayout() {
               className="group relative z-40 inline-flex h-[60px] shrink-0 items-center justify-center gap-3 overflow-hidden rounded-[28px] border-solid border-white border-opacity-60 px-9 py-2.5 transition-all hover:border"
             >
               <div className="bg-primary absolute bottom-0 right-0 z-0 h-full w-full transition-all group-hover:h-0 group-hover:w-0"></div>
-              <span
-                className="z-10 text-center text-lg leading-8 text-white"
-                href="#"
-              >
+              <span className="z-10 text-center text-lg leading-8 text-white" href="#">
                 Check Demos
               </span>
             </a>

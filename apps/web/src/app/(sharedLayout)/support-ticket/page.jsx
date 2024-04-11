@@ -9,12 +9,9 @@ import PresentAddress from '@/components/support/PresentAddress';
 import RecentSupport from '@/components/support/RecentSupport';
 import ShippingAddress from '@/components/support/ShippingAddress';
 
-const SupportTicket = dynamic(
-  () => import('@/components/forms/SupportTicket'),
-  {
-    ssr: false,
-  },
-);
+const SupportTicket = dynamic(() => import('@/components/forms/SupportTicket'), {
+  ssr: false,
+});
 
 function Support() {
   return (

@@ -6,9 +6,7 @@ function EfficiencyV2() {
   return (
     <div className="dark:bg-darkblack-600 mb-12 rounded-lg bg-white">
       <div className="border-bgray-300 dark:border-darkblack-400 flex items-center justify-between border-b px-5 py-3">
-        <h3 className="text-bgray-900 text-xl font-bold dark:text-white">
-          Efficiency
-        </h3>
+        <h3 className="text-bgray-900 text-xl font-bold dark:text-white">Efficiency</h3>
         <MonthFilter options={['January', 'February', 'March']} />
       </div>
       <div className="px-[55px] py-6">
@@ -52,9 +50,7 @@ function EfficiencyV2() {
             </div>
             <div>
               <div className="flex items-center space-x-[2px]">
-                <p className="text-bgray-900 text-lg font-bold dark:text-white">
-                  $6,230
-                </p>
+                <p className="text-bgray-900 text-lg font-bold dark:text-white">$6,230</p>
                 <span>
                   <svg
                     className="fill:stroke-bgray-900  dark:fill-stroke-bgray-50"

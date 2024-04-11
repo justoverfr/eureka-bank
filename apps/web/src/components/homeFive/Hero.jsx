@@ -192,10 +192,8 @@ function Hero() {
               Unleash
             </span>
             <span className="leading-big-loose"> Financial </span>
-            <span className="bg-primary-new leading-big-loose px-2">
-              Sovereignty
-            </span>{' '}
-            with Cutting-Edge Decentralized Banking
+            <span className="bg-primary-new leading-big-loose px-2">Sovereignty</span> with
+            Cutting-Edge Decentralized Banking
           </span>
         </div>
         <div className="mt-5 w-full max-w-[784px] text-center">
@@ -231,12 +229,7 @@ function Hero() {
         {/* <!-- image start  --> */}
         <div className="relative z-0 flex items-center justify-center">
           <div className="absolute -left-6 top-[50px] w-[50px] sm:w-[80px] xl:left-[-110px] xl:top-[-20px] xl:w-[175px]">
-            <Image
-              src={shape.src}
-              height={shape.height}
-              width={shape.width}
-              alt="shape"
-            />
+            <Image src={shape.src} height={shape.height} width={shape.width} alt="shape" />
           </div>
           <div className="rounded-20 mt-[70px] box-border flex w-full max-w-[1320px] items-center justify-center border-[15px] border-[#F3F7F8] bg-[#F3F7F8] sm:p-7 xl:p-14">
             <Image

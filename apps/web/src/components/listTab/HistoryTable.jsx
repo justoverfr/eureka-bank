@@ -208,9 +208,7 @@ function HistoryTable() {
                 </td>
                 <td className="px-6 py-5 xl:w-[165px] xl:px-0">
                   <div className="flex w-full items-center space-x-2.5">
-                    <span className="text-bgray-600 text-base font-medium">
-                      Status
-                    </span>
+                    <span className="text-bgray-600 text-base font-medium">Status</span>
                     <span>
                       <svg
                         width="14"

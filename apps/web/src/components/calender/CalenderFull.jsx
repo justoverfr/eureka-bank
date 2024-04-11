@@ -10,10 +10,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 
 function CalenderFull() {
   const date = new Date();
-  const month =
-    date.getMonth() + 1 < 10
-      ? '0' + (date.getMonth() + 1)
-      : date.getMonth() + 1;
+  const month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1;
   const [events, setEvents] = useState([
     {
       title: 'Business',
@@ -88,12 +85,7 @@ function CalenderFull() {
               <FullCalendar
                 selectable
                 select={handleSelect}
-                plugins={[
-                  daygridPlugin,
-                  interactionPlugin,
-                  timeGridPlugin,
-                  listPlugin,
-                ]}
+                plugins={[daygridPlugin, interactionPlugin, timeGridPlugin, listPlugin]}
                 views={['dayGridDay', 'timeGridMonth', 'dayGridWeek']}
                 headerToolbar={{
                   start: 'dayGridMonth timeGridWeek timeGridDay listMonth',

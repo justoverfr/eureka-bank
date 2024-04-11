@@ -74,9 +74,7 @@ function LocationV2() {
             <div className="bg-bgray-100 dark:bg-darkblack-500 flex h-[32px] w-full items-center justify-between rounded-lg px-2">
               <div className="flex items-center space-x-2">
                 <div className="bg-purple h-2 w-2 rounded-full"></div>
-                <span className="text-bgray-900 text-sm font-medium dark:text-white">
-                  Dhaka
-                </span>
+                <span className="text-bgray-900 text-sm font-medium dark:text-white">Dhaka</span>
               </div>
               <span className="text-bgray-600 text-sm font-medium">15,732</span>
             </div>

@@ -43,8 +43,7 @@ function Footer() {
             </span>
           </div>
           <span className="leading-180 text-base font-normal text-white xl:text-lg">
-            We work with a passion of taking challenges and creating new ones in
-            advertising sector.
+            We work with a passion of taking challenges and creating new ones in advertising sector.
           </span>
           <div className="flex gap-[10px] pt-5">
             <div className="group relative flex h-10 w-10 items-center justify-center rounded-full transition-all">
@@ -224,13 +223,7 @@ function Footer() {
             </span>
           </div>
           <div className="flex items-start gap-2">
-            <Image
-              src={call.src}
-              height={call.height}
-              width={call.width}
-              alt=""
-              className=""
-            />
+            <Image src={call.src} height={call.height} width={call.width} alt="" className="" />
             <span className="text-basicInterface2 text-base font-medium xl:text-lg">
               1-888-452-1505
             </span>

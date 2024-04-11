@@ -18,39 +18,19 @@ function WhyUs() {
           </span>
           <div className="z-10 flex flex-col text-sm font-normal text-[#4f4f4f] xl:text-xl xl:leading-[42px]">
             <div className="mt-3 flex gap-[10px]">
-              <Image
-                src={check.src}
-                height={check.height}
-                width={check.width}
-                alt=""
-              />
+              <Image src={check.src} height={check.height} width={check.width} alt="" />
               <span>Responsive layout (desktops, tablets, mobile devices)</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
-              <Image
-                src={check.src}
-                height={check.height}
-                width={check.width}
-                alt=""
-              />
+              <Image src={check.src} height={check.height} width={check.width} alt="" />
               <span>2 Different Dashbaord layout</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
-              <Image
-                src={check.src}
-                height={check.height}
-                width={check.width}
-                alt=""
-              />
+              <Image src={check.src} height={check.height} width={check.width} alt="" />
               <span>5 Different App</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
-              <Image
-                src={check.src}
-                height={check.height}
-                width={check.width}
-                alt=""
-              />
+              <Image src={check.src} height={check.height} width={check.width} alt="" />
               <span>Clean and Flat design & more ...</span>
             </div>
             <a

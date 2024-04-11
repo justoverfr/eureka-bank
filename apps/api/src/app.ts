@@ -1,46 +1,55 @@
-import * as path from 'path';
-import { fileURLToPath } from 'url';
-import AutoLoad, { AutoloadPluginOptions } from '@fastify/autoload';
-import { FastifyPluginAsync } from 'fastify';
+import express, { Router } from 'express';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import logger from 'pino-http';
 
-export type AppOptions = {
-  // Place your custom options for app below here.
-} & Partial<AutoloadPluginOptions>;
+import errorHandler from './middlewares/errorHandler';
+import { authRoutes } from './modules/auth/auth.routes';
+import { blockedUserRoutes } from './modules/blocked-users/blocked-user.routes';
+import { contactRequestRoutes } from './modules/contact-requests/contact-request.routes';
+import { contactRoutes } from './modules/contacts/contact.routes';
+import { transactionRoutes } from './modules/transactions/transaction.routes';
+import { userRoutes } from './modules/users/user.routes';
 
-// Pass --options via CLI arguments in command to enable these options.
-const options: AppOptions = {};
+const app = express();
+// Set the application to trust the reverse proxy
+app.set('trust proxy', true);
 
-const app: FastifyPluginAsync<AppOptions> = async (
-  fastify,
-  opts,
-): Promise<void> => {
-  // Place here your custom code!
-
-  // Do not touch the following lines
-
-  // This loads all plugins defined in plugins
-  // those should be support plugins that are reused
-  // through your application
-  void fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'plugins'),
-    options: opts,
-    forceESM: true,
-  });
-
-  // This loads all plugins from .routes.ts files defined in modules
-  // define your routes in one of these
-  void fastify.register(AutoLoad, {
-    dir: path.join(__dirname, 'modules'),
-    options: {
-      prefix: '/api',
-      ...opts,
+// Middlewares
+app.use(
+  logger({
+    transport: {
+      target: 'pino-pretty',
+      options: { translateTime: 'HH:MM:ss Z', ignore: 'pid,hostname' },
     },
-    forceESM: true,
-    matchFilter: /\.routes\.(ts|js)$/,
-  });
-};
+  }),
+);
+app.use(express.json());
+// app.use(cors({ origin: env.CORS_ORIGIN, credentials: true }));
+// app.use(helmet());
+// app.use(rateLimiter);
 
-export { app, options };
+// Request logging
+// app.use(requestLogger());
+
+// Routes
+const apiRoutes = Router();
+const apiVersion = '1';
+
+apiRoutes.use('/auth', authRoutes);
+apiRoutes.use('/contacts', contactRoutes);
+apiRoutes.use('/contact-requests', contactRequestRoutes);
+apiRoutes.use('/blocked-users', blockedUserRoutes);
+apiRoutes.use('/users', userRoutes);
+apiRoutes.use('/transactions', transactionRoutes);
+// app.use('/health-check', healthCheckRouter);
+// app.use('/users', userRouter);
+
+app.use(`/api/v${apiVersion}`, apiRoutes);
+
+// Swagger UI
+// app.use(openAPIRouter);
+
+// Error handlers
+app.use(errorHandler());
+
+export { app };

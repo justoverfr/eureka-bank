@@ -131,35 +131,22 @@ function SummaryV2() {
   return (
     <div className="xl:w-66 dark:bg-darkblack-600 flex w-full flex-col justify-between rounded-lg bg-white px-6 py-3">
       <div className="border-bgray-300 mb-2 flex items-center justify-between border-b pb-2">
-        <h3 className="text-bgray-900 text-xl font-bold sm:text-2xl dark:text-white">
-          Summary
-        </h3>
+        <h3 className="text-bgray-900 text-xl font-bold sm:text-2xl dark:text-white">Summary</h3>
         <div className="hidden items-center space-x-[28px] sm:flex">
           <div className="flex items-center space-x-2">
             <div className="bg-success-300 h-3 w-3 rounded-full"></div>
-            <span className="text-bgray-700 dark:text-bgray-50 text-sm font-medium">
-              Signed
-            </span>
+            <span className="text-bgray-700 dark:text-bgray-50 text-sm font-medium">Signed</span>
           </div>
           <div className="flex items-center space-x-2">
             <div className="bg-orange h-3 w-3 rounded-full"></div>
-            <span className="text-bgray-700 dark:text-bgray-50 text-sm font-medium">
-              Lost
-            </span>
+            <span className="text-bgray-700 dark:text-bgray-50 text-sm font-medium">Lost</span>
           </div>
         </div>
-        <DateFilter
-          options={['Jan 11 - Jan 16', 'Jan 12 - Jan 16', 'Jan 13 - Jan 16']}
-        />
+        <DateFilter options={['Jan 11 - Jan 16', 'Jan 12 - Jan 16', 'Jan 13 - Jan 16']} />
       </div>
       <div className="h-[255px] w-full">
         {/* <canvas id="revenueFlowLine" height="255"></canvas> */}
-        <LineChart
-          plugins={plugins}
-          dataSet={data}
-          option={options}
-          refer={chartRef}
-        />
+        <LineChart plugins={plugins} dataSet={data} option={options} refer={chartRef} />
       </div>
     </div>
   );

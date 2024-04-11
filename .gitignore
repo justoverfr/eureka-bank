@@ -370,4 +370,6 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,node,linux,macos,windows,jetbrains,visualstudiocode
 
+*/db/migrations/schema.ts
+
 .nx/cache

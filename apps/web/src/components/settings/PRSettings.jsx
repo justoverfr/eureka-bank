@@ -22,21 +22,9 @@ function PRSettings() {
         Settings
       </h3>
       <div className="flex flex-col space-y-5">
-        <SlideBtn
-          name="File Sharing"
-          handleBtn={handleNotification}
-          status={activeSharing}
-        />
-        <SlideBtn
-          name="Backup"
-          handleBtn={handleNotification}
-          status={activeSharing}
-        />
-        <SlideBtn
-          name="Sync"
-          handleBtn={handleNotification}
-          status={activeSharing}
-        />
+        <SlideBtn name="File Sharing" handleBtn={handleNotification} status={activeSharing} />
+        <SlideBtn name="Backup" handleBtn={handleNotification} status={activeSharing} />
+        <SlideBtn name="Sync" handleBtn={handleNotification} status={activeSharing} />
       </div>
     </div>
   );

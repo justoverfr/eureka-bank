@@ -1,18 +1,99 @@
 import argon2 from 'argon2';
+import { and, eq, getTableColumns, ilike, or } from 'drizzle-orm';
 
 import { db, schema } from '@eureka-bank/db';
+
+const userColumns = getTableColumns(schema.users);
+const { password, createdAt, updatedAt, verifiedAt, ...passwordlessUserColumns } = userColumns;
 
 export async function createUser(data: typeof schema.users.$inferInsert) {
   const passwordHash = await argon2.hash(data.password);
 
   const newUser = await db
     .insert(schema.users)
-    .values({
-      ...data,
-      password: passwordHash,
-    })
-    .returning()
+    .values({ ...data, password: passwordHash })
+    .returning(passwordlessUserColumns)
     .then((rows) => rows[0]);
 
   return newUser;
+}
+
+export async function readUserById(id: number) {
+  const user = await db
+    .select(passwordlessUserColumns)
+    .from(schema.users)
+    .where(eq(schema.users.id, id))
+    .then((rows) => rows[0]);
+
+  return user;
+}
+
+export async function readUserByEmail(email: string) {
+  const user = await db
+    .select()
+    .from(schema.users)
+    .where(eq(schema.users.email, email))
+    .then((rows) => rows[0]);
+
+  return user;
+}
+
+export async function readUserByWalletAddress(walletAddress: string) {
+  const user = await db
+    .select()
+    .from(schema.users)
+    .where(eq(schema.users.walletAddress, walletAddress))
+    .then((rows) => rows[0]);
+
+  return user;
+}
+
+export async function readUsers() {
+  const users = await db.select().from(schema.users);
+  return users;
+}
+
+export async function searchUsers(searchInput: string) {
+  const searchParts = searchInput.split(' ');
+
+  const searchConditions = [];
+  for (const part of searchParts) {
+    searchConditions.push(
+      or(
+        ilike(schema.users.firstName, `%${part}%`),
+        ilike(schema.users.lastName, `%${part}%`),
+        ilike(schema.users.email, `%${part}%`),
+        ilike(schema.users.phone, `%${part}%`),
+      ),
+    );
+  }
+
+  const users = await db
+    .select(passwordlessUserColumns)
+    .from(schema.users)
+    .where(and(...searchConditions));
+
+  return users;
+}
+
+export async function updateUserWalletAddress(userId: number, newAddress: string) {
+  const user = await db
+    .update(schema.users)
+    .set({ walletAddress: newAddress })
+    .where(eq(schema.users.id, userId))
+    .returning()
+    .then((rows) => rows[0]);
+
+  return user;
+}
+
+export async function updateUserWalletPrivateKey(userId: number, newPrivateKey: string) {
+  const user = await db
+    .update(schema.users)
+    .set({ walletPrivateKey: newPrivateKey })
+    .where(eq(schema.users.id, userId))
+    .returning()
+    .then((rows) => rows[0]);
+
+  return user;
 }

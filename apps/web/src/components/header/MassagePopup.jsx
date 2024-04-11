@@ -15,9 +15,7 @@ function MassagePopup({ active, handlePopup }) {
       <div
         onClick={() => handlePopup('massage')}
         id="mes-outside"
-        className={`fixed -left-[43px] top-0  h-full w-full ${
-          active ? 'block' : 'hidden'
-        }`}
+        className={`fixed -left-[43px] top-0  h-full w-full ${active ? 'block' : 'hidden'}`}
       ></div>
       <div
         id="message-box"
@@ -29,9 +27,7 @@ function MassagePopup({ active, handlePopup }) {
       >
         <div className="relative w-full pb-[75px] pt-[66px]">
           <div className="absolute left-0 top-0 flex h-[66px] w-full items-center justify-between px-8">
-            <h3 className="text-bgray-900 text-xl font-bold dark:text-white">
-              Message
-            </h3>
+            <h3 className="text-bgray-900 text-xl font-bold dark:text-white">Message</h3>
             <span>
               <svg
                 width="24"
@@ -120,9 +116,7 @@ function MassagePopup({ active, handlePopup }) {
                       <p className="text-bgray-500 text-sm font-medium">
                         Hi, how are you? nedd help! .......
                       </p>
-                      <span className="text-bgray-500 text-sm font-medium">
-                        23 mins ago
-                      </span>
+                      <span className="text-bgray-500 text-sm font-medium">23 mins ago</span>
                     </div>
                   </div>
                 </Link>
@@ -148,9 +142,7 @@ function MassagePopup({ active, handlePopup }) {
                       <p className="text-bgray-500 text-sm font-medium">
                         Hi, how are you? nedd help! .......
                       </p>
-                      <span className="text-bgray-500 text-sm font-medium">
-                        23 mins ago
-                      </span>
+                      <span className="text-bgray-500 text-sm font-medium">23 mins ago</span>
                     </div>
                   </div>
                 </Link>
@@ -176,9 +168,7 @@ function MassagePopup({ active, handlePopup }) {
                       <p className="text-bgray-500 text-sm font-medium">
                         Hi, how are you? nedd help! .......
                       </p>
-                      <span className="text-bgray-500 text-sm font-medium">
-                        23 mins ago
-                      </span>
+                      <span className="text-bgray-500 text-sm font-medium">23 mins ago</span>
                     </div>
                   </div>
                 </Link>
@@ -204,9 +194,7 @@ function MassagePopup({ active, handlePopup }) {
                       <p className="text-bgray-500 text-sm font-medium">
                         Hi, how are you? nedd help! .......
                       </p>
-                      <span className="text-bgray-500 text-sm font-medium">
-                        23 mins ago
-                      </span>
+                      <span className="text-bgray-500 text-sm font-medium">23 mins ago</span>
                     </div>
                   </div>
                 </Link>
@@ -232,9 +220,7 @@ function MassagePopup({ active, handlePopup }) {
                       <p className="text-bgray-500 text-sm font-medium">
                         Hi, how are you? nedd help! .......
                       </p>
-                      <span className="text-bgray-500 text-sm font-medium">
-                        23 mins ago
-                      </span>
+                      <span className="text-bgray-500 text-sm font-medium">23 mins ago</span>
                     </div>
                   </div>
                 </Link>
@@ -260,9 +246,7 @@ function MassagePopup({ active, handlePopup }) {
                       <p className="text-bgray-500 text-sm font-medium">
                         Hi, how are you? nedd help! .......
                       </p>
-                      <span className="text-bgray-500 text-sm font-medium">
-                        23 mins ago
-                      </span>
+                      <span className="text-bgray-500 text-sm font-medium">23 mins ago</span>
                     </div>
                   </div>
                 </Link>
@@ -291,9 +275,7 @@ function MassagePopup({ active, handlePopup }) {
                       />
                     </svg>
                   </span>
-                  <span className="text-success-300 text-sm font-semibold">
-                    Mark all as read
-                  </span>
+                  <span className="text-success-300 text-sm font-semibold">Mark all as read</span>
                 </div>
               </Link>
             </div>
