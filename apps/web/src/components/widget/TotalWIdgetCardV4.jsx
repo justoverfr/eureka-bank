@@ -19,7 +19,7 @@ function TotalWIdgetCardV2({ logo, activeMember }) {
         );
         const data = response.data;
 
-        const highestCrypto = data[0];
+        const highestCrypto = data[2];
         const {
           name,
           current_price: currentPrice,
