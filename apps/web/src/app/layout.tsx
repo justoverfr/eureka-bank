@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import 'react-quill/dist/quill.snow.css';
 
 import ServiceWorker from '@/components/sw/sw';
+import { NextAuthProvider } from '@/providers/next-auth-provider';
 import ThemeProvider from '@/providers/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -36,7 +37,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ServiceWorker />
-        <ThemeProvider>{children}</ThemeProvider>
+        <NextAuthProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </NextAuthProvider>
       </body>
     </html>
   );

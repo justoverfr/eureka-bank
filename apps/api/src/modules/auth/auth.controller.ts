@@ -49,8 +49,10 @@ export async function loginHandler(
       })
       .send({
         user,
-        accessToken,
-        refreshToken,
+        tokens: {
+          accessToken,
+          refreshToken,
+        },
       });
   } catch (error) {
     if (error instanceof Error) {
@@ -86,7 +88,9 @@ export async function refreshHandler(req: Request, res: Response) {
     })
     .send({
       user,
-      accessToken,
-      refreshToken,
+      tokens: {
+        accessToken,
+        refreshToken,
+      },
     });
 }
