@@ -9,11 +9,11 @@ import {
   readUserByEmail,
   updateUserWalletAddress,
   updateUserWalletPrivateKey,
+  validateUserCredentials,
 } from '@/modules/users/user.service';
 import { blockchain } from '@/utils/blockchain';
 
-import { validateUser } from './auth';
-import { RegisterBody } from './auth.schema';
+import { LoginBody, RegisterBody } from './auth.schema';
 
 dotenv.config();
 
@@ -29,14 +29,38 @@ export async function registerHandler(req: Request<object, object, RegisterBody>
 }
 
 export async function loginHandler(
-  req: Request<object, object, { email: string; password: string; rememberMe: boolean }>,
+  req: Request<object, object, LoginBody>,
 
   res: Response,
 ) {
-  const user = await readUserByEmail(req.body.email);
-
   try {
-    await validateUser(user, req.body.password);
+    const user = await validateUserCredentials(req.body.email, req.body.password);
+
+    const accessToken = await new SignJWT(user)
+      .setIssuedAt()
+      .setExpirationTime('5m')
+      .setProtectedHeader({ alg: 'HS256' })
+      .sign(new TextEncoder().encode(process.env.ACCESS_TOKEN_SECRET as string));
+
+    const refreshToken = await new SignJWT(user)
+      .setIssuedAt()
+      .setExpirationTime(req.body.rememberMe ? '30d' : '1d')
+      .setProtectedHeader({ alg: 'HS256' })
+      .sign(new TextEncoder().encode(process.env.REFRESH_TOKEN_SECRET as string));
+
+    res
+      .cookie('refreshToken', refreshToken, {
+        httpOnly: true,
+        path: '/',
+        expires: req.body.rememberMe
+          ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
+          : new Date(Date.now() + 24 * 60 * 60 * 1000),
+      })
+      .send({
+        user,
+        accessToken,
+        refreshToken,
+      });
   } catch (error) {
     if (error instanceof Error) {
       res.status(StatusCodes.UNAUTHORIZED).send({
@@ -52,27 +76,4 @@ export async function loginHandler(
       });
     }
   }
-
-  const accessToken = await new SignJWT(user)
-    .setExpirationTime('5m')
-    .setProtectedHeader({ alg: 'HS256' })
-    .sign(new TextEncoder().encode(process.env.ACCESS_TOKEN_SECRET as string));
-
-  const refreshToken = await new SignJWT(user)
-    .setExpirationTime(req.body.rememberMe ? '30d' : '1d')
-    .setProtectedHeader({ alg: 'HS256' })
-    .sign(new TextEncoder().encode(process.env.REFRESH_TOKEN_SECRET as string));
-
-  res
-    .cookie('refreshToken', refreshToken, {
-      httpOnly: true,
-      path: '/',
-      expires: req.body.rememberMe
-        ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
-        : new Date(Date.now() + 24 * 60 * 60 * 1000),
-    })
-    .send({
-      user,
-      accessToken,
-    });
 }
