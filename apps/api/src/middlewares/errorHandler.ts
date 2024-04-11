@@ -1,7 +1,7 @@
 import { ErrorRequestHandler, RequestHandler } from 'express';
 
 import { getReasonPhrase, StatusCodes } from 'http-status-codes';
-import { PostgresError } from 'postgres';
+import postgres from 'postgres';
 
 const unexpectedRequest: RequestHandler = (req, res) => {
   res.status(StatusCodes.NOT_FOUND).json({
@@ -12,7 +12,7 @@ const unexpectedRequest: RequestHandler = (req, res) => {
 };
 
 const addErrorToRequestLog: ErrorRequestHandler = (err, _req, res, next) => {
-  if (err instanceof PostgresError) {
+  if (err instanceof postgres.PostgresError) {
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
       code: err.code,
