@@ -54,7 +54,7 @@ export default function QuickTransfer({ session }: { session: Session }) {
                   Transaction hash:{' '}
                   <Link
                     href={`https://sepolia.etherscan.io/tx/${data.address}`}
-                    className="text-blue-500 dark:text-blue-400"
+                    className="text-blue-500 underline dark:text-blue-400"
                   >
                     {data.address}
                   </Link>
@@ -75,28 +75,6 @@ export default function QuickTransfer({ session }: { session: Session }) {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} action="">
           <PaymentFilter />
-          {/* <div className="border-bgray-200 focus-within:border-success-300 dark:border-darkblack-400 flex h-[98px] w-full flex-col justify-between rounded-lg border p-4">
-        <p className="text-bgray-600 dark:text-bgray-50 text-sm font-medium">
-          Enter recipient's wallet address
-        </p>
-        <div className="flex h-[35px] w-full items-center justify-between">
-          <label className="w-full">
-            <input
-              type="text"
-              className="text-bgray-900 dark:border-darkblack-400 dark:bg-darkblack-600 w-full border-none p-0 text-2xl font-bold focus:outline-none focus:ring-0 dark:text-white"
-            />
-          </label>
-          <div>
-            <Image
-              priority={true}
-              height={member.height}
-              width={member.width}
-              src={member.src}
-              alt="members"
-            />
-          </div>
-        </div>
-      </div> */}
           <FormField
             control={form.control}
             name="receiverWalletAddress"
