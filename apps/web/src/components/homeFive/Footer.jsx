@@ -39,7 +39,7 @@ function Footer() {
               />
             </svg>
             <span className="leading-big-loose text-3xl font-extrabold text-white xl:text-4xl">
-              Bank<span className="text-primary">Co</span>
+              Eureka<span className="text-primary">Bank</span>
             </span>
           </div>
           <span className="leading-180 text-base font-normal text-white xl:text-lg">
@@ -218,14 +218,15 @@ function Footer() {
               className=""
             />
             <span className="text-basicInterface2 text-base font-medium xl:text-lg">
-              30 Commercial Road <br />
-              Fratton, Australia
+              3 Rue Armand Moisant,
+              <br />
+              75015 Paris
             </span>
           </div>
           <div className="flex items-start gap-2">
             <Image src={call.src} height={call.height} width={call.width} alt="" className="" />
             <span className="text-basicInterface2 text-base font-medium xl:text-lg">
-              1-888-452-1505
+              01 55 65 53 57
             </span>
           </div>
           <div className="flex">

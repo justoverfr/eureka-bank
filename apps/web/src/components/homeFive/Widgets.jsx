@@ -2,12 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 
 import bg from '/public/static/images/cards/bg.png';
-import dashboard from '/public/static/images/cards/dashboard.jpg';
 import earning from '/public/static/images/cards/earning.png';
 import efficiency from '/public/static/images/cards/efficiency.png';
 import offer from '/public/static/images/cards/offer.png';
 import revenue from '/public/static/images/cards/revenue.png';
 import vector from '/public/static/images/cards/vector.png';
+import dashboard from '/public/static/images/DashboardEurekaBank.png';
 import check from '/public/static/images/icon/check.svg';
 
 function Widgets() {
@@ -77,26 +77,29 @@ function Widgets() {
           data-aos-easing="fade-right"
         >
           <span className="font-poppins leading-big-loose z-10 text-3xl font-bold text-black xl:text-4xl 2xl:text-5xl">
-            120+ Widgets &<br />
-            UI Cards in BankCo
+            Live Price Tracking
+            <br />
+            in real-time
+            <br />
           </span>
           <br />
           <span className="leading-160 z-10 mt-[14px] text-lg font-medium text-gray-500 xl:text-xl">
-            Design dashboards quickly with 400+ Widgets &<br />
-            Cards world-class standards out-of-the-box
+            You'll be able to track cryptocurrency prices.
+            <br />
+            Our growth rates displayed in percentage form will enable you to make informed decisions
           </span>
           <div className="leading-220 z-10 flex flex-col text-base font-normal text-gray-600 xl:text-xl">
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>Up to 5 staff members</span>
+              <span>Real-time</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>Fraud analysis</span>
+              <span>Percentage</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>Professional reports</span>
+              <span>2M+Coins</span>
             </div>
             <a
               href="#"
@@ -104,7 +107,7 @@ function Widgets() {
             >
               <div className="bg-primary absolute bottom-0 right-0 z-0 h-full w-full transition-all group-hover:h-0 group-hover:w-0"></div>
               <span className="group-hover:text-primary z-10 text-center text-xl font-semibold leading-8 text-white">
-                Live Preview
+                SignUp
               </span>
             </a>
           </div>

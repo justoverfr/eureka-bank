@@ -14,6 +14,7 @@ import {
   MessageModel,
   TypingIndicator,
 } from '@chatscope/chat-ui-kit-react';
+import dotenv from 'dotenv';
 
 import GreenBtnV2 from '../button/GreenBtnV2';
 
@@ -29,7 +30,7 @@ function Chatbot() {
 
   const [messages, setMessages] = useState<MessageModel[]>([
     {
-      message: 'Hello,im the bot of  EurokaBank',
+      message: "Hello, I'm your virutal assistant at Eureka Bank",
       sentTime: 'just now',
       sender: 'ChatGPT',
       direction: 'incoming',
@@ -88,6 +89,7 @@ function Chatbot() {
           ...chatMessages,
           {
             message: data.choices[0].message.content,
+            sentTime: 'just now',
             sender: 'ChatGPT',
             sentTime: 'just now',
             direction: 'incoming',

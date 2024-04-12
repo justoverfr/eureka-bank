@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import dashboard from '/public/static/images/dashboard/dashboard2.jpg';
+import dashboard from '/public/static/images/DashboardEurekaBank.png';
 import figmaW from '/public/static/images/icon/figmaW.svg';
 import rectangle from '/public/static/images/shape/rectangle.svg';
 
@@ -38,11 +38,10 @@ function View() {
         <div className="z-10 pr-5">
           <div className="flex w-full max-w-[513px] flex-col">
             <span className="font-poppins leading-big-loose text-xl font-bold text-white sm:text-3xl xl:text-4xl 2xl:text-5xl">
-              Make the coolest Dashboard Designs directly in Template!
+              The very first decentralized bank with a wide choice of cryptocurrencies!
             </span>
             <span className="leading-160 pb-12 pt-7 text-lg font-medium text-white 2xl:text-xl">
-              Customize and stylize your dashboard and all widgets easily with the Global Styles for
-              typography & colors!
+              Over 20,000 crypto and stablecoin choices with special Rate Accounts!
             </span>
             <div className="flex gap-3 xl:gap-8">
               <a
@@ -51,7 +50,7 @@ function View() {
               >
                 <div className="bg-primary absolute bottom-0 right-0 z-0 h-full w-full transition-all group-hover:h-0 group-hover:w-0"></div>
                 <span className="group-hover:text-primary z-10 text-center text-lg font-semibold leading-8 text-white xl:text-xl">
-                  Live Preview
+                  Login
                 </span>
               </a>
 
@@ -61,8 +60,8 @@ function View() {
               >
                 <div className="bg-primary absolute bottom-0 right-0 z-0 h-0 w-0 transition-all group-hover:h-full group-hover:w-full"></div>
                 <div className="z-10 flex gap-2 text-center text-xl font-semibold leading-8 text-white group-hover:text-white">
-                  <Image src={figmaW.src} height={figmaW.height} width={figmaW.width} alt="figma" />{' '}
-                  Get Figma
+                  {/*<Image src={figmaW.src} height={figmaW.height} width={figmaW.width} alt="figma" />{' '} */}
+                  SignUp
                 </div>
               </a>
             </div>

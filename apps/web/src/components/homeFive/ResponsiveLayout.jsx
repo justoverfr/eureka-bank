@@ -19,12 +19,11 @@ function ResponsiveLayout() {
           data-aos-easing="fade-left"
         >
           <span className="font-poppins leading-big-loose text-center text-3xl font-bold text-white xl:text-left xl:text-5xl">
-            Responsive Layout for any Device
+            Available on all your devices
           </span>
           <br />
           <span className="text-secondary-200 leading-130 mt-3 text-center text-lg font-medium tracking-[-0.356] xl:max-w-[473px] xl:text-left xl:text-xl">
-            The layout is responsive and looks gorgeous and professional on any major devices and
-            this Theme comes with custom page Themes.
+            Regular updates, with new features. Available on Android, IOS, Windows, Linux..
           </span>
           <div className="mt-10 flex w-full items-center justify-center gap-6 text-lg font-normal leading-7 tracking-[-0.4] text-white xl:w-fit xl:gap-10">
             <a
@@ -33,7 +32,7 @@ function ResponsiveLayout() {
             >
               <div className="bg-primary absolute bottom-0 right-0 z-0 h-full w-full transition-all group-hover:h-0 group-hover:w-0"></div>
               <span className="z-10 text-center text-lg leading-8 text-white" href="#">
-                Check Demos
+                Download now
               </span>
             </a>
 
@@ -43,7 +42,7 @@ function ResponsiveLayout() {
             >
               <div className="bg-primary absolute bottom-0 right-0 z-0 h-0 w-0 transition-all group-hover:h-full group-hover:w-full"></div>
               <span className="z-10" href="#">
-                Purchase now!
+                SignUp
               </span>
             </a>
           </div>

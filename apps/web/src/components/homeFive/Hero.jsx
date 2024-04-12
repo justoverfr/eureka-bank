@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import dashboard from '/public/static/images/dashboard/dashboard.jpg';
+import dashboard from '/public/static/images/Dashboard3EurekaBank.png';
 import fill3 from '/public/static/images/shape/fill3.svg';
 import group5 from '/public/static/images/shape/group5.svg';
 import path from '/public/static/images/shape/path.svg';
@@ -226,7 +226,7 @@ function Hero() {
             </div>
           </Link>
         </div>
-        {/* <!-- image start  --> */}
+        {/* <!-- image start  --> */}*{' '}
         <div className="relative z-0 flex items-center justify-center">
           <div className="absolute -left-6 top-[50px] w-[50px] sm:w-[80px] xl:left-[-110px] xl:top-[-20px] xl:w-[175px]">
             <Image src={shape.src} height={shape.height} width={shape.width} alt="shape" />

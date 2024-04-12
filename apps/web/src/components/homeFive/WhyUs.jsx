@@ -19,19 +19,16 @@ function WhyUs() {
           <div className="z-10 flex flex-col text-sm font-normal text-[#4f4f4f] xl:text-xl xl:leading-[42px]">
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>Responsive layout (desktops, tablets, mobile devices)</span>
+              <span>Wide choice of cryptocurrencies</span>
             </div>
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>2 Different Dashbaord layout</span>
+              <span>Ethereum Blockchain</span>
             </div>
+
             <div className="mt-3 flex gap-[10px]">
               <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>5 Different App</span>
-            </div>
-            <div className="mt-3 flex gap-[10px]">
-              <Image src={check.src} height={check.height} width={check.width} alt="" />
-              <span>Clean and Flat design & more ...</span>
+              <span>Simple Transfers</span>
             </div>
             <a
               href="#"
@@ -48,28 +45,31 @@ function WhyUs() {
         {/* <!-- Left side start  --> */}
         <div className="flex max-w-[649px] flex-wrap gap-6">
           <span className="xl:leading-160 bg-primaryNew rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
-            Great Interface
+            BTC
           </span>
           <span className="xl:leading-160 bg-othersTeal rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
-            Experienced
+            ETH
           </span>
           <span className="xl:leading-160 bg-othersOrange rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
-            Low Price
+            ERFB
           </span>
           <span className="xl:leading-160 bg-alertsWarningLight rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
-            Customizable
+            USDT
           </span>
           <span className="xl:leading-160 bg-primaryNew rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
-            Marketing
+            Security
+          </span>
+          <span className="xl:leading-160 bg-primaryNew rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
+            Safety
           </span>
           <span className="xl:leading-160 bg-alertsWarningLight rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
-            Great Support
+            Decentralized
+          </span>
+          <span className="xl:leading-160 bg-primaryNew rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
+            Live
           </span>
           <span className="xl:leading-160 bg-primaryNew rounded-xl px-[20px] py-[12px] text-lg font-medium text-gray-700 xl:px-[46px] xl:py-[22px] xl:text-xl">
             Safe
-          </span>
-          <span className="font-poppins px-[10px] py-[12px] text-xl font-normal text-gray-900 xl:px-[18px] xl:py-[22px] xl:text-2xl">
-            & more…
           </span>
         </div>
 

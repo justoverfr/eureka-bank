@@ -21,7 +21,7 @@ function Sidebar({ handleActive }) {
             priority={true}
             height={logo.height}
             width={logo.width}
-            src={logo.src}
+            src={require('../../images/EurekaBanklogo.png')}
             className="block dark:hidden"
             alt="logo"
           />
@@ -29,7 +29,7 @@ function Sidebar({ handleActive }) {
             priority={true}
             height={logoW.height}
             width={logoW.width}
-            src={logoW.src}
+            src={require('../../images/EurekaBanklogo.png')}
             className="hidden dark:block"
             alt="logo"
           />
@@ -905,11 +905,11 @@ function Sidebar({ handleActive }) {
           </div>
         </div>
         <div className="copy-write-text">
-          <p className="text-sm text-[#969BA0]">© 2023 All Rights Reserved</p>
+          <p className="text-sm text-[#969BA0]">© 2024 All Rights Reserved</p>
           <p className="text-bgray-700 text-sm font-medium">
-            Made with ❤️ by
+            Made by
             <a href="#" target="_blank" className="border-b font-semibold hover:text-blue-600">
-              QuomodoTheme
+              EurekaBank
             </a>
           </p>
         </div>

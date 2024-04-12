@@ -76,9 +76,7 @@ function Pricing() {
               data-aos-easing="ease-out-cubic"
             >
               <div className="flex flex-col pb-6 pt-7">
-                <span className="tracking-40 text-3xl font-bold text-white xl:text-5xl">
-                  Regular
-                </span>
+                <span className="tracking-40 text-3xl font-bold text-white xl:text-5xl">Free</span>
                 <span className="text-secondary-200 leading-150 tracking-40 text-base font-medium xl:text-lg">
                   License
                 </span>
@@ -86,7 +84,7 @@ function Pricing() {
               <hr className="bg-[#E7E5EA] opacity-10" />
               <div className="flex flex-col pb-6 pt-3">
                 <span className="text-center text-3xl font-bold leading-[116,667%] tracking-[-2px] text-white xl:text-5xl">
-                  $12.00
+                  $00.00
                 </span>
                 <span className="text-secondary-200 leading-150 tracking-40 text-base font-medium xl:text-lg">
                   License
@@ -102,7 +100,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="">Quality checked by Envato. </span>
+                  <span className="">Access to EurekaBank</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -112,7 +110,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="">Lifetime support. </span>
+                  <span className="line-clamp-1">Basic Customer Support</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -122,7 +120,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="">For Personal Projects only. </span>
+                  <span className="line-clamp-1">Special Rate Accounts</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -132,7 +130,17 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="line-clamp-1">Permitted for personal use only. </span>
+                  <span className="line-clamp-1">Friend Additions</span>
+                </div>
+                <div className="flex gap-1">
+                  <Image
+                    src={greenCheck.src}
+                    height={greenCheck.height}
+                    width={greenCheck.width}
+                    alt=""
+                    className=""
+                  />
+                  <span className="line-clamp-1">Live Price Tracking</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -142,7 +150,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="">Skype support. </span>
+                  <span className="">Personalized physical card</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -152,17 +160,9 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="">Anydesk/Teamviewer support. </span>
-                </div>
-                <div className="flex gap-1">
-                  <Image
-                    src={removeCircle.src}
-                    height={removeCircle.height}
-                    width={removeCircle.width}
-                    alt=""
-                    className=""
-                  />
-                  <span className="">Free installation. </span>
+                  <span className="text-left">
+                    Currency conversion free of charge with physical card
+                  </span>
                 </div>
               </div>
               <div className="flex items-center justify-center">
@@ -195,7 +195,7 @@ function Pricing() {
               <hr className="bg-secondary-300" />
               <div className="flex flex-col pb-6 pt-3">
                 <span className="text-basicSecondary text-center text-3xl font-bold leading-[116,667%] tracking-[-2px] xl:text-5xl">
-                  $12.00
+                  $10.00
                 </span>
                 <span className="text-basicSecondary leading-150 tracking-40 text-base font-medium xl:text-lg">
                   License
@@ -211,7 +211,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="">Quality checked by Envato. </span>
+                  <span className="">Access to EurekaBank</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -221,7 +221,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="">Lifetime support. </span>
+                  <span className="line-clamp-1">Basic Customer Support</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -231,7 +231,7 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="line-clamp-1">For Personal Projects only. </span>
+                  <span className="line-clamp-1">Special Rate Accounts</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -241,7 +241,27 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="line-clamp-1">Permitted for personal use only. </span>
+                  <span className="line-clamp-1">Friend Additions</span>
+                </div>
+                <div className="flex gap-1">
+                  <Image
+                    src={greenCheck.src}
+                    height={greenCheck.height}
+                    width={greenCheck.width}
+                    alt=""
+                    className=""
+                  />
+                  <span className="line-clamp-1">Live Price Tracking</span>
+                </div>
+                <div className="flex gap-1">
+                  <Image
+                    src={greenCheck.src}
+                    height={greenCheck.height}
+                    width={greenCheck.width}
+                    alt=""
+                    className=""
+                  />
+                  <span className="">Personalized physical card</span>
                 </div>
                 <div className="flex gap-1">
                   <Image
@@ -251,27 +271,9 @@ function Pricing() {
                     alt=""
                     className=""
                   />
-                  <span className="">Skype support. </span>
-                </div>
-                <div className="flex gap-1">
-                  <Image
-                    src={removeCircle.src}
-                    height={removeCircle.height}
-                    width={removeCircle.width}
-                    alt=""
-                    className=""
-                  />
-                  <span className="">Anydesk/Teamviewer support. </span>
-                </div>
-                <div className="flex gap-1">
-                  <Image
-                    src={removeCircle.src}
-                    height={removeCircle.height}
-                    width={removeCircle.width}
-                    alt=""
-                    className=""
-                  />
-                  <span className="">Free installation. </span>
+                  <span className="text-left">
+                    Currency conversion free of charge with physical card
+                  </span>
                 </div>
               </div>
               <div className="flex items-center justify-center">

@@ -23,9 +23,9 @@ function SliderCom() {
               <div className="bg-primaryNew absolute bottom-3 left-0 -z-10 h-3 w-full"></div>
               Trusted and
             </span>
-            used by the top
+            used by leading
             <br className="hidden xl:block" />
-            Developers & Designers
+            Traders and Investors
           </span>
         </div>
       </div>
@@ -72,42 +72,34 @@ function SliderCom() {
           }}
         >
           <SliderCard
-            author="Martin Jonas."
-            authorLocation="USA"
-            post=" Latin derived from Cicero's 1st-century BC text De Finibus
-              Bonor et Malorum print."
+            author="Leo Li"
+            authorLocation="Canada"
+            post="Eureka Bank transformed my financial dealings with its revolutionary approach. The security and ease of transactions are unparalleled."
           />
           <SliderCard
-            author="RI Shovo."
-            authorLocation="BD"
-            post="The passage experienced a surgu popularity during the ios
-              when Letraset used it on their lor bonord dry-transfer
-              sheets & again during the sample."
+            author="Samira Nasr"
+            authorLocation="France"
+            post="Since joining Eureka Bank, I've experienced a new level of financial freedom. Their decentralized system offers transparency like never before."
           />
           <SliderCard
-            author=" Jubayer Hasan."
-            authorLocation="KSA"
-            post="From its medieval origins digital print everything there is
-              know about ubiquitous lorem ip surgue cicer elit."
+            author="Liu Yang"
+            authorLocation="China"
+            post="Eureka Bank is at the forefront of banking innovation. Their services have significantly simplified my investments and asset management."
           />
           <SliderCard
-            author="Martin Jonas."
-            authorLocation="USA"
-            post="Latin derived from Cicero's 1st-century BC text De Finibus
-              Bonor et Malorum print."
+            author="Isabella Rossi"
+            authorLocation="Italy"
+            post="I've been with Eureka Bank for over a year, and their customer-centric approach has made all the difference in my banking experience."
           />
           <SliderCard
-            author="RI Shovo"
-            authorLocation="BD"
-            post="  The passage experienced a surgu popularity during the ios
-              when Letraset used it on their lor bonord dry-transfer
-              sheets & again during the sample."
+            author="John Smith"
+            authorLocation="UK"
+            post="Eureka Bank's use of blockchain technology has revolutionized the way I think about banking. Safe, secure, and straightforward."
           />
           <SliderCard
-            author="Jubayer Hasan"
-            authorLocation="KSA"
-            post="From its medieval origins digital print everything there is
-                    know about ubiquitous lorem ip surgue cicer elit."
+            author="Maria Garcia"
+            authorLocation="Spain"
+            post="The innovation Eureka Bank brings to the financial world is extraordinary. They are truly setting new standards in banking."
           />
         </Slider>
         <div className="trust-pagination swiper-pagination"></div>
