@@ -234,7 +234,7 @@ function Hero() {
           <div className="rounded-20 mt-[70px] box-border flex w-full max-w-[1320px] items-center justify-center border-[15px] border-[#F3F7F8] bg-[#F3F7F8] sm:p-7 xl:p-14">
             <Image
               className="rounded-20 z-50 h-full w-full"
-              src={dashboard.src}
+              src={require('./Dashboard.png')}
               height={dashboard.height}
               width={dashboard.width}
               alt="dashboard"

@@ -20,105 +20,83 @@ function Accordion() {
         <div className="flex flex-col gap-16 px-[5%] xl:flex-row xl:px-0">
           <div className="flex w-full flex-col gap-[30px] xl:max-w-[630px]">
             <AccordionCard
-              title="Enhance workflow consistency"
+              title="Streamline Digital Transactions"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={1}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Eureka Bank streamlines digital transactions, making it simpler for you to manage your finances securely and efficiently."
             />
             <AccordionCard
-              title="Build professional & performance projects"
+              title="Decentralized Finance Accessibility"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={2}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Gain unparalleled access to decentralized finance tools and platforms with Eureka Bank, empowering your financial independence."
             />
             <AccordionCard
-              title="Work together with your team"
+              title="Collaborative Financial Ecosystem"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={3}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Eureka Bank fosters a collaborative ecosystem, allowing you to connect and grow with a community of forward-thinking individuals."
             />
             <AccordionCard
-              title="Easy-to-use for both designers & developers"
+              title="Intuitive Interface for All Users"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={4}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Our platform is designed for ease of use, ensuring that both beginners and experts can navigate the world of decentralized banking."
             />
             <AccordionCard
-              title="Access to modern UI components"
+              title="Cutting-edge Blockchain Technology"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={5}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Eureka Bank leverages cutting-edge blockchain technology to provide you with secure, transparent, and fast financial services."
             />
           </div>
           <div className="flex w-full flex-col gap-[30px] xl:max-w-[630px]">
             <AccordionCard
-              title="leveraged methods of empowerment"
+              title="Empowering Financial Autonomy"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={6}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="We empower you with financial autonomy through our innovative banking solutions and decentralized approach."
             />
             <AccordionCard
-              title=" leveraged methods of empowerment"
+              title="Global Currency Accessibility"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={7}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Eureka Bank offers unparalleled access to a wide range of currencies, facilitating global transactions with ease."
             />
             <AccordionCard
-              title="leveraged methods of empowerment"
+              title="Secure Asset Management"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={8}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="With Eureka Bank, your assets are managed securely using the latest in encryption and security protocols."
             />
             <AccordionCard
-              title="leveraged methods of empowerment"
+              title="Sustainable Banking Practices"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={9}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Our commitment to sustainability ensures that your banking practices contribute to a healthier planet."
             />
             <AccordionCard
-              title="leveraged methods of empowerment"
+              title="Innovative Financial Solutions"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={10}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Eureka Bank is constantly at the forefront of financial innovation, offering solutions that anticipate your future needs."
             />
             <AccordionCard
-              title="leveraged methods of empowerment"
+              title="24/7 Customer Support"
               activeAccordion={activeAccordion}
               setActiveAccordion={setActiveAccordion}
               id={11}
-              desc="Bankco can help you to enhance workflow consistency. If you
-                  have a large spread of stylistic preferences or if you want to
-                  increase your UI work speed, Venus is the best solution."
+              desc="Our dedicated customer support team is available 24/7 to assist you with any queries or concerns you might have."
             />
           </div>
         </div>
