@@ -9,45 +9,6 @@ function PaymentFilter() {
   const [activeFilter, setActiveFilter] = useState(false);
   return (
     <div className="payment-select relative mb-3">
-      <button
-        aria-label="none"
-        onClick={() => setActiveFilter(!activeFilter)}
-        type="button"
-        className="border-bgray-200 dark:border-darkblack-400 flex h-[56px] w-full items-center justify-between overflow-hidden rounded-lg border px-5"
-      >
-        <div className="flex items-center space-x-2">
-          <span>
-            <Image
-              priority={true}
-              height={mastar.height}
-              width={mastar.width}
-              src={mastar.src}
-              alt="master"
-            />
-          </span>
-          <span className="text-bgray-900 text-sm font-medium dark:text-white">Debit</span>
-        </div>
-        <div className="flex items-center space-x-2">
-          <span className="text-bgray-900 dark:text-bgray-50 text-sm font-bold">$10,431</span>
-          <span className="text-bgray-900 text-sm font-medium">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M4 6L8 10L12 6"
-                stroke="#A0AEC0"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-        </div>
-      </button>
       <div
         id="paymentFilter"
         style={{ display: activeFilter ? 'block' : 'none' }}

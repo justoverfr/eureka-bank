@@ -7,10 +7,10 @@ export async function getUsersHandler(
   res: Response,
 ) {
   if (!req.query.search) {
-    return await readUsers();
+    res.send(await readUsers());
   }
 
-  return await searchUsers(req.query.search);
+  res.send(await searchUsers(req.query.search));
 }
 
 export async function getUserHandler(req: Request<{ id: number }>, res: Response) {
