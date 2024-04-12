@@ -5,7 +5,7 @@ import {
   readUserByWalletAddress,
   readUserWalletPrivateKey,
 } from '../users/user.service';
-import { createTransaction } from './transaction.service';
+import { createTransaction, readUserTransactions } from './transaction.service';
 import { makeTransaction } from './transactions';
 
 export async function sendTransactionHandler(
@@ -49,4 +49,10 @@ export async function sendTransactionHandler(
     console.error(err);
     res.status(500).send(err);
   }
+}
+
+export async function getTransactionsHistoryHandler(req: Request, res: Response) {
+  const transactions = await readUserTransactions(req.user.id);
+
+  res.status(200).send(transactions);
 }
