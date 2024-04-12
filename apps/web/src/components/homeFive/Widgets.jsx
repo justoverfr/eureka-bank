@@ -2,12 +2,12 @@ import React from 'react';
 import Image from 'next/image';
 
 import bg from '/public/static/images/cards/bg.png';
-import dashboard from '/public/static/images/cards/dashboard.jpg';
 import earning from '/public/static/images/cards/earning.png';
 import efficiency from '/public/static/images/cards/efficiency.png';
 import offer from '/public/static/images/cards/offer.png';
 import revenue from '/public/static/images/cards/revenue.png';
 import vector from '/public/static/images/cards/vector.png';
+import dashboard from '/public/static/images/DashboardEurekaBank.png';
 import check from '/public/static/images/icon/check.svg';
 
 function Widgets() {
@@ -63,7 +63,7 @@ function Widgets() {
             <Image
               height={dashboard.height}
               width={dashboard.width}
-              src={require('../../images/DashboardEurekaBank.png')}
+              src={dashboard.src}
               className="z-10 w-full px-6 pt-14 xl:px-11 xl:pt-28"
               alt="dashboard"
               data-aos="fade-right"

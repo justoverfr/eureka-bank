@@ -1,9 +1,11 @@
-import { Request, Response } from 'express';
+import e, { Request, Response } from 'express';
 
 import { readUserById } from '@/modules/users/user.service';
 
 import {
+  cancelContactRequest,
   createContactRequest,
+  declineContactRequest,
   readReceivedRequests,
   readSentRequests,
 } from './contact-request.service';
@@ -45,4 +47,16 @@ export async function getSentRequestsHandler(req: Request<{ id: number }>, res: 
   }
 
   res.send(users);
+}
+
+export async function acceptContactRequestHandler(req: Request<{ id: string }>, res: Response) {
+  return req.body;
+}
+
+export async function declineContactRequestHandler(req: Request<{ id: string }>, res: Response) {
+  return await declineContactRequest(req.body.senderId, req.body.receiverId);
+}
+
+export async function cancelContactRequestHandler(req: Request<{ id: string }>, res: Response) {
+  return await cancelContactRequest(req.body.senderId, req.body.receiverId);
 }

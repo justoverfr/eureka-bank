@@ -1,6 +1,9 @@
 import { Router } from 'express';
 
 import {
+  acceptContactRequestHandler,
+  cancelContactRequestHandler,
+  declineContactRequestHandler,
   getReceivedRequestsHandler,
   getSentRequestsHandler,
   sendContactRequestHandler,
@@ -10,11 +13,8 @@ const contactRequestRoutes = Router();
 contactRequestRoutes.get('/received', getReceivedRequestsHandler);
 contactRequestRoutes.get('/sent', getSentRequestsHandler);
 contactRequestRoutes.post('/', sendContactRequestHandler);
-
-/*
-Accepter une demande de contact : POST /contact-requests/:id/accept
-Refuser une demande de contact : DELETE /contact-requests/received/:id
-Annuler une demande de contact : DELETE /contact-requests/sent/:id
-*/
+contactRequestRoutes.post('/:id/accept', acceptContactRequestHandler);
+contactRequestRoutes.delete('/received/:id', declineContactRequestHandler);
+contactRequestRoutes.delete('/sent/:id', cancelContactRequestHandler);
 
 export { contactRequestRoutes };

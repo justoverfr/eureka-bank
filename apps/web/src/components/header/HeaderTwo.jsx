@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { useSession } from 'next-auth/react';
 import ProtoTypes from 'prop-types';
 
 import ResProfilePopup from './ResProfilePopup';
@@ -13,6 +14,8 @@ import logoW from '/public/static/images/logo/logo-white.svg';
 
 function HeaderTwo({ handleSidebar }) {
   const [activePopup, handleActivePopup] = useState(false);
+
+  const { data: session } = useSession();
   return (
     <div>
       <header className="mobile-wrapper fixed z-20 block w-full md:hidden">
@@ -84,7 +87,9 @@ function HeaderTwo({ handleSidebar }) {
               </div>
               <div className="hidden 2xl:block">
                 <div className="flex items-center space-x-2.5">
-                  <h3 className="text-bgray-900 text-base font-bold leading-[28px]">John Doe</h3>
+                  <h3 className="text-bgray-900 text-base font-bold leading-[28px]">
+                    {session?.user.firstName} {session?.user.lastName}
+                  </h3>
                   <span>
                     <svg
                       width="24"

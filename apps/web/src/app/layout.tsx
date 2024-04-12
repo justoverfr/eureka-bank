@@ -12,6 +12,7 @@ import 'react-quill/dist/quill.snow.css';
 
 import Chatbot from '@/components/chatbot/chatbot';
 import ServiceWorker from '@/components/sw/sw';
+import { NextAuthProvider } from '@/providers/next-auth-provider';
 import ThemeProvider from '@/providers/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -36,11 +37,10 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <ThemeProvider>
-          <ServiceWorker />
-          <Chatbot />
-          {children}
-        </ThemeProvider>
+        <ServiceWorker />
+        <NextAuthProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </NextAuthProvider>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import dashboard from '/public/static/images/dashboard/dashboard2.jpg';
+import dashboard from '/public/static/images/DashboardEurekaBank.png';
 import figmaW from '/public/static/images/icon/figmaW.svg';
 import rectangle from '/public/static/images/shape/rectangle.svg';
 
@@ -73,7 +73,7 @@ function View() {
           <div className="z-10 mt-10 w-fit pb-12 xl:mt-0">
             <div className="bg-lightGray rounded-l-20 py-4 pl-4 xl:pl-12">
               <Image
-                src={require('../../images/DashboardEurekaBank.png')}
+                src={dashboard.src}
                 height={dashboard.height}
                 width={dashboard.width}
                 alt="dashboard"

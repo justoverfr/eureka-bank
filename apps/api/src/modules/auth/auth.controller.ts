@@ -9,11 +9,12 @@ import {
   readUserByEmail,
   updateUserWalletAddress,
   updateUserWalletPrivateKey,
+  validateUserCredentials,
 } from '@/modules/users/user.service';
 import { blockchain } from '@/utils/blockchain';
 
-import { validateUser } from './auth';
-import { RegisterBody } from './auth.schema';
+import { LoginBody, RegisterBody } from './auth.schema';
+import { getTokens } from './utils';
 
 dotenv.config();
 
@@ -29,14 +30,33 @@ export async function registerHandler(req: Request<object, object, RegisterBody>
 }
 
 export async function loginHandler(
-  req: Request<object, object, { email: string; password: string; rememberMe: boolean }>,
+  req: Request<object, object, LoginBody>,
 
   res: Response,
 ) {
-  const user = await readUserByEmail(req.body.email);
-
   try {
-    await validateUser(user, req.body.password);
+    const user = await validateUserCredentials(req.body.email, req.body.password);
+
+    const { accessToken, refreshToken } = await getTokens(user, req.body.rememberMe);
+
+    res
+      .cookie('refreshToken', refreshToken, {
+        httpOnly: true,
+        path: '/',
+        expires: req.body.rememberMe
+          ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
+          : new Date(Date.now() + 24 * 60 * 60 * 1000),
+      })
+      .send({
+        user,
+        tokens: {
+          accessToken,
+          refreshToken,
+          expiresAt: req.body.rememberMe
+            ? new Date().setTime(new Date().getTime() + 30 * 24 * 60 * 60 * 1000)
+            : new Date().setTime(new Date().getTime() + 24 * 60 * 60 * 1000),
+        },
+      });
   } catch (error) {
     if (error instanceof Error) {
       res.status(StatusCodes.UNAUTHORIZED).send({
@@ -52,27 +72,28 @@ export async function loginHandler(
       });
     }
   }
+}
 
-  const accessToken = await new SignJWT(user)
-    .setExpirationTime('5m')
-    .setProtectedHeader({ alg: 'HS256' })
-    .sign(new TextEncoder().encode(process.env.ACCESS_TOKEN_SECRET as string));
+export async function refreshHandler(req: Request, res: Response) {
+  const user = req.user;
 
-  const refreshToken = await new SignJWT(user)
-    .setExpirationTime(req.body.rememberMe ? '30d' : '1d')
-    .setProtectedHeader({ alg: 'HS256' })
-    .sign(new TextEncoder().encode(process.env.REFRESH_TOKEN_SECRET as string));
+  const rememberMe = req.jwt.payload.exp - req.jwt.payload.iat > 60 * 60 * 24 * 30;
+
+  const { accessToken, refreshToken } = await getTokens(user, rememberMe);
 
   res
     .cookie('refreshToken', refreshToken, {
       httpOnly: true,
       path: '/',
-      expires: req.body.rememberMe
+      expires: rememberMe
         ? new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
         : new Date(Date.now() + 24 * 60 * 60 * 1000),
     })
     .send({
-      user,
       accessToken,
+      refreshToken,
+      expiresAt: rememberMe
+        ? new Date().setTime(new Date().getTime() + 30 * 24 * 60 * 60 * 1000)
+        : new Date().setTime(new Date().getTime() + 24 * 60 * 60 * 1000),
     });
 }

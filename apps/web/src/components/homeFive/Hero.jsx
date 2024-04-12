@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import dashboard from '/public/static/images/dashboard/dashboard.jpg';
+import dashboard from '/public/static/images/Dashboard3EurekaBank.png';
 import fill3 from '/public/static/images/shape/fill3.svg';
 import group5 from '/public/static/images/shape/group5.svg';
 import path from '/public/static/images/shape/path.svg';
@@ -234,7 +234,7 @@ function Hero() {
           <div className="rounded-20 mt-[70px] box-border flex w-full max-w-[1320px] items-center justify-center border-[15px] border-[#F3F7F8] bg-[#F3F7F8] sm:p-7 xl:p-14">
             <Image
               className="rounded-20 z-50 h-full w-full"
-              src={require('../../images/Dashboard3EurekaBank.png')}
+              src={dashboard.src}
               height={dashboard.height}
               width={dashboard.width}
               alt="dashboard"

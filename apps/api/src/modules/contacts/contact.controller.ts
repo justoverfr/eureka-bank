@@ -7,7 +7,7 @@ import {
 } from '@/modules/contact-requests/contact-request.service';
 import { readUserById } from '@/modules/users/user.service';
 
-import { readContacts } from './contact.service';
+import { deleteContact, readContacts } from './contact.service';
 
 export async function getContactsHandler(
   req: Request<object, object, { userId: number }>,
@@ -29,4 +29,10 @@ export async function getContactsHandler(
   }
 
   return contactUsers;
+}
+export async function deleteContactsHandler(
+  req: Request<object, object, { user1Id: number; user2Id: number }>,
+  res: Response,
+) {
+  return await deleteContact(req.body.user1Id, req.body.user2Id);
 }

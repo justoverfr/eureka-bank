@@ -16,7 +16,9 @@ import {
 } from '@chatscope/chat-ui-kit-react';
 import dotenv from 'dotenv';
 
-dotenv.config();
+import GreenBtnV2 from '../button/GreenBtnV2';
+
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const systemMessage = {
   role: 'system',
@@ -38,13 +40,13 @@ function Chatbot() {
   const [isTyping, setIsTyping] = useState(false);
 
   const handleSend = async (messageText: string) => {
-    const newMessage: MessageModel = {
+    const newMessage = {
       message: messageText,
       sentTime: 'just now',
-      sender: 'user',
       direction: 'outgoing',
+      sender: 'user',
       position: 'single',
-    };
+    } satisfies MessageModel;
 
     const newMessages = [...messages, newMessage];
 
@@ -73,7 +75,7 @@ function Chatbot() {
     await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        Authorization: 'Bearer ' + process.env.OPENAI_API_KEY,
+        Authorization: 'Bearer ' + OPENAI_API_KEY,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(apiRequestBody),
@@ -89,6 +91,7 @@ function Chatbot() {
             message: data.choices[0].message.content,
             sentTime: 'just now',
             sender: 'ChatGPT',
+            sentTime: 'just now',
             direction: 'incoming',
             position: 'single',
           },
