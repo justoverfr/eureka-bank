@@ -65,11 +65,7 @@ function LeftSide() {
       redirect: false,
     }).then((response) => {
       if (response?.error) {
-        setError(
-          response?.status === 401
-            ? loginError.invalid_credentials
-            : loginError.unexpected,
-        );
+        setError(response?.status === 401 ? loginError.invalid_credentials : loginError.unexpected);
       } else {
         setError(null);
         router.push('/my-wallet');
@@ -173,11 +169,7 @@ function LeftSide() {
           </div>
         </div>
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            action=""
-            className="space-y-2"
-          >
+          <form onSubmit={form.handleSubmit(onSubmit)} action="" className="space-y-2">
             <FormField
               control={form.control}
               name="email"
@@ -208,10 +200,7 @@ function LeftSide() {
                         placeholder="Password"
                         {...field}
                       />
-                      <button
-                        aria-label="none"
-                        className="absolute bottom-4 right-4 top-4"
-                      >
+                      <button aria-label="none" className="absolute bottom-4 right-4 top-4">
                         <svg
                           width="22"
                           height="20"
@@ -292,9 +281,7 @@ function LeftSide() {
             </button>
           </form>
         </Form>
-        {error && (
-          <div className="text-center text-sm text-red-500">{error}</div>
-        )}
+        {error && <div className="text-center text-sm text-red-500">{error}</div>}
         <p className="text-bgray-900 dark:text-bgray-50 pt-7 text-center text-base font-medium">
           Don’t have an account?{' '}
           <Link href="/signup" className="font-semibold underline">
