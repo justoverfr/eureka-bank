@@ -10,6 +10,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'react-quill/dist/quill.snow.css';
 
+import { Toaster } from 'sonner';
+
 import Chatbot from '@/components/chatbot/chatbot';
 import ServiceWorker from '@/components/sw/sw';
 import { NextAuthProvider } from '@/providers/next-auth-provider';
@@ -41,6 +43,7 @@ export default function RootLayout({
           <ThemeProvider>
             <Chatbot />
             <ServiceWorker />
+            <Toaster />
             {children}
           </ThemeProvider>
         </NextAuthProvider>
