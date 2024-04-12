@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Chatbot from '@/components/chat-bot/chatbot';
+import Chatbot from '@/components/chatbot/chatbot';
 import Accordion from '@/components/homeFive/Accordion';
 import Features from '@/components/homeFive/Features';
 import Footer from '@/components/homeFive/Footer';
