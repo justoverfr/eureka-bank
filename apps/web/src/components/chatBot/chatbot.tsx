@@ -11,12 +11,13 @@ import {
   Message,
   MessageInput,
   MessageList,
+  MessageModel,
   TypingIndicator,
 } from '@chatscope/chat-ui-kit-react';
 
 import GreenBtnV2 from '../button/GreenBtnV2';
 
-const API_KEY_CHAT_BOT = process.env.OPENAI_API_KEY;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const systemMessage = {
   role: 'system',
@@ -26,21 +27,25 @@ const systemMessage = {
 function Chatbot() {
   const [isChatVisible, setIsChatVisible] = useState(false);
 
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<MessageModel[]>([
     {
       message: 'Hello,im the bot of  EurokaBank',
       sentTime: 'just now',
       sender: 'ChatGPT',
+      direction: 'incoming',
+      position: 'single',
     },
   ]);
   const [isTyping, setIsTyping] = useState(false);
 
-  const handleSend = async (message) => {
+  const handleSend = async (messageText: string) => {
     const newMessage = {
-      message,
+      message: messageText,
+      sentTime: 'just now',
       direction: 'outgoing',
       sender: 'user',
-    };
+      position: 'single',
+    } satisfies MessageModel;
 
     const newMessages = [...messages, newMessage];
 
@@ -50,8 +55,8 @@ function Chatbot() {
     await processMessageToChatGPT(newMessages);
   };
 
-  async function processMessageToChatGPT(chatMessages) {
-    let apiMessages = chatMessages.map((messageObject) => {
+  async function processMessageToChatGPT(chatMessages: MessageModel[]) {
+    const apiMessages = chatMessages.map((messageObject) => {
       let role = '';
       if (messageObject.sender === 'ChatGPT') {
         role = 'assistant';
@@ -69,7 +74,7 @@ function Chatbot() {
     await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        Authorization: 'Bearer ' + API_KEY_CHAT_BOT,
+        Authorization: 'Bearer ' + OPENAI_API_KEY,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(apiRequestBody),
@@ -84,6 +89,9 @@ function Chatbot() {
           {
             message: data.choices[0].message.content,
             sender: 'ChatGPT',
+            sentTime: 'just now',
+            direction: 'incoming',
+            position: 'single',
           },
         ]);
         setIsTyping(false);
