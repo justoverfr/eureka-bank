@@ -1,4 +1,31 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 function SearchBar() {
+  const [users, setUsers] = useState([]);
+
+  const searchUsers = (e) => {
+    const search = e.target.value;
+
+    console.log(search);
+
+    fetch(`http://localhost:3333/api/v1/users?search=${search}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setUsers(data);
+      });
+  };
+
+  useEffect(() => {
+    console.log(users);
+  }, [users]);
+
   return (
     <div className="searchbar-wrapper">
       <div className="px bg-bgray-50 focus-within:border-success-300 dark:bg-darkblack-500 flex h-[56px] w-[300px] items-center justify-between rounded-lg border border-transparent px-4 lg:w-[400px]">
@@ -33,6 +60,7 @@ function SearchBar() {
               type="text"
               id="search"
               placeholder="Search..."
+              onChange={searchUsers}
               className="search-input bg-bgray-50 text-bgray-600 dark:bg-darkblack-500 dark:placeholder:text-bgray-500 w-full border-none bg-none px-0 text-sm tracking-wide placeholder:text-sm placeholder:font-semibold focus:outline-none focus:ring-0"
             />
           </label>
