@@ -2,11 +2,14 @@
 
 import Image from 'next/image';
 
+import { useSession } from 'next-auth/react';
 import ProtoTypes from 'prop-types';
 
 import profile from '/public/static/images/avatar/profile-52x52.png';
 
 function Author({ showProfile }) {
+  const { data: session } = useSession();
+
   return (
     <div
       onClick={() => showProfile('profile')}
@@ -25,7 +28,7 @@ function Author({ showProfile }) {
       <div className="hidden 2xl:block">
         <div className="flex items-center space-x-2.5">
           <h3 className="text-bgray-900 text-base font-bold leading-[28px] dark:text-white">
-            John Doe
+            {session?.user.firstName} {session?.user.lastName}
           </h3>
           <span>
             <svg

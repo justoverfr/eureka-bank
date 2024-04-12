@@ -4,7 +4,7 @@ import { app } from './app';
 
 async function main() {
   try {
-    const PORT = (await process.env.BACKEND_PORT) || 3333;
+    const PORT = (await process.env.API_PORT) || 3333;
 
     const server = app.listen({
       host: 'localhost',
