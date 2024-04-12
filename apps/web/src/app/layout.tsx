@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'react-quill/dist/quill.snow.css';
 
-import Chatbot from '@/components/chatbot/chatbot';
+import Chatbot from '@/components/chat-bot/chatbot';
 import ServiceWorker from '@/components/sw/sw';
 import { NextAuthProvider } from '@/providers/next-auth-provider';
 import ThemeProvider from '@/providers/theme-provider';
@@ -37,9 +37,12 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <ServiceWorker />
         <NextAuthProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <Chatbot />
+            <ServiceWorker />
+            {children}
+          </ThemeProvider>
         </NextAuthProvider>
       </body>
     </html>
