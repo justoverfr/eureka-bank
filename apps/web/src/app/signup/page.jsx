@@ -20,7 +20,7 @@ function SignUp() {
                 priority={true}
                 height={logoColor.height}
                 width={logoColor.width}
-                src={logoColor.src}
+                src={require('../../images/EurekaBanklogo.png')}
                 className="block dark:hidden"
                 alt="Logo"
               />
@@ -28,7 +28,7 @@ function SignUp() {
                 priority={true}
                 height={logoWhite.height}
                 width={logoWhite.width}
-                src={logoWhite.src}
+                src={require('../../images/EurekaBanklogo.png')}
                 className="hidden dark:block"
                 alt="Logo"
               />

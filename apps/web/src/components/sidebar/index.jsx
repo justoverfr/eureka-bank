@@ -21,7 +21,7 @@ function Sidebar({ handleActive }) {
             priority={true}
             height={logo.height}
             width={logo.width}
-            src={logo.src}
+            src={require('../../images/EurekaBanklogo.png')}
             className="block dark:hidden"
             alt="logo"
           />
@@ -29,7 +29,7 @@ function Sidebar({ handleActive }) {
             priority={true}
             height={logoW.height}
             width={logoW.width}
-            src={logoW.src}
+            src={require('../../images/EurekaBanklogo.png')}
             className="hidden dark:block"
             alt="logo"
           />

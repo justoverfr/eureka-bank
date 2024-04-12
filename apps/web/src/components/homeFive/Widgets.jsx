@@ -63,7 +63,7 @@ function Widgets() {
             <Image
               height={dashboard.height}
               width={dashboard.width}
-              src={dashboard.src}
+              src={require('../../images/DashboardEurekaBank.png')}
               className="z-10 w-full px-6 pt-14 xl:px-11 xl:pt-28"
               alt="dashboard"
               data-aos="fade-right"

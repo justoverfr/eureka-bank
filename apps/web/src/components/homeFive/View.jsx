@@ -73,7 +73,7 @@ function View() {
           <div className="z-10 mt-10 w-fit pb-12 xl:mt-0">
             <div className="bg-lightGray rounded-l-20 py-4 pl-4 xl:pl-12">
               <Image
-                src={dashboard.src}
+                src={require('../../images/DashboardEurekaBank.png')}
                 height={dashboard.height}
                 width={dashboard.width}
                 alt="dashboard"
