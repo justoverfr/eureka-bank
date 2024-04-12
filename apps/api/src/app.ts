@@ -1,5 +1,7 @@
 import express, { Router } from 'express';
 
+import cors from 'cors';
+import dotenv from 'dotenv';
 import logger from 'pino-http';
 
 import errorHandler from './middlewares/errorHandler';
@@ -9,6 +11,8 @@ import { contactRequestRoutes } from './modules/contact-requests/contact-request
 import { contactRoutes } from './modules/contacts/contact.routes';
 import { transactionRoutes } from './modules/transactions/transaction.routes';
 import { userRoutes } from './modules/users/user.routes';
+
+dotenv.config();
 
 const app = express();
 // Set the application to trust the reverse proxy
@@ -24,7 +28,13 @@ app.use(
   }),
 );
 app.use(express.json());
-// app.use(cors({ origin: env.CORS_ORIGIN, credentials: true }));
+app.use(
+  cors({
+    origin: process.env.WEB_URL,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+  }),
+);
 // app.use(helmet());
 // app.use(rateLimiter);
 

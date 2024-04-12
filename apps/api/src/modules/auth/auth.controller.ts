@@ -52,6 +52,9 @@ export async function loginHandler(
         tokens: {
           accessToken,
           refreshToken,
+          expiresAt: req.body.rememberMe
+            ? new Date().setTime(new Date().getTime() + 30 * 24 * 60 * 60 * 1000)
+            : new Date().setTime(new Date().getTime() + 24 * 60 * 60 * 1000),
         },
       });
   } catch (error) {
@@ -87,10 +90,10 @@ export async function refreshHandler(req: Request, res: Response) {
         : new Date(Date.now() + 24 * 60 * 60 * 1000),
     })
     .send({
-      user,
-      tokens: {
-        accessToken,
-        refreshToken,
-      },
+      accessToken,
+      refreshToken,
+      expiresAt: rememberMe
+        ? new Date().setTime(new Date().getTime() + 30 * 24 * 60 * 60 * 1000)
+        : new Date().setTime(new Date().getTime() + 24 * 60 * 60 * 1000),
     });
 }

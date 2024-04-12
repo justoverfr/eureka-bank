@@ -16,19 +16,24 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials, req) {
         if (!credentials?.email || !credentials?.password) return null;
 
-        const response = await fetch('http://localhost:3333/api/auth/v1/login', {
+        const response = await fetch('http://localhost:3333/api/v1/auth/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(credentials),
+          body: JSON.stringify({
+            email: credentials.email,
+            password: credentials.password,
+            rememberMe: credentials.rememberMe === 'true',
+          }),
         });
 
         if (response.status === 401) {
-          return null;
+          throw new Error('Invalid credentials');
         }
 
         const user = await response.json();
+        console.log('user', user);
         return user;
       },
     }),

@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import { signIn } from 'next-auth/react';
+import { set, useForm } from 'react-hook-form';
 import z from 'zod';
 
 import {
@@ -57,7 +58,19 @@ function LeftSide() {
   const router = useRouter();
 
   const onSubmit = (data: z.infer<typeof loginFormSchema>) => {
-    console.log(data);
+    signIn('credentials', {
+      email: data.email,
+      password: data.password,
+      rememberMe: data.rememberMe,
+      redirect: false,
+    }).then((response) => {
+      if (response?.error) {
+        setError(response?.status === 401 ? loginError.invalid_credentials : loginError.unexpected);
+      } else {
+        setError(null);
+        router.push('/my-wallet');
+      }
+    });
   };
 
   return (
