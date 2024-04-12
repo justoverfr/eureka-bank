@@ -1,13 +1,26 @@
+import { getServerSession } from 'next-auth';
+
+import { authOptions } from '@/utils/next-auth/options';
+
 import GreenBtn from '../button/AddMony';
 import TransparentBtn from '../button/TransparentBtn';
 
-function AddBalance() {
+async function AddBalance() {
+  const session = await getServerSession(authOptions);
+
+  const balance = await fetch(`${process.env.API_URL}/api/v1/balances?currency=erfb`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${session?.tokens.accessToken}`,
+    },
+  }).then((res) => res.json().then((data) => data.balance));
+
   return (
     <div className="dark:bg-darkblack-600 mb-[48px] w-full rounded-xl bg-white px-7 py-11">
       <div className="border-bgray-300 dark:border-darkblack-400 rounded-lg border p-8 pb-12">
         <h3 className="text-bgray-900 text-2xl font-semibold dark:text-white">Total Balance</h3>
         <h2 className="font-poppins text-bgray-900 mb-2 text-4xl font-bold dark:text-white">
-          $88,232.00 <span className="text-bgray-500 text-base font-medium uppercase">USD</span>
+          {balance} <span className="text-bgray-500 text-base font-medium uppercase">ERFB</span>
         </h2>
         <div className="flex gap-4">
           <span className="text-bgray-500 dark:text-darkblack-300 text-base font-medium">
