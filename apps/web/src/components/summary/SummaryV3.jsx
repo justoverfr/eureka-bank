@@ -1,6 +1,8 @@
 'use client';
 
-import { useContext, useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
+
+import { useSession } from 'next-auth/react';
 
 import { ThemeContext } from '@/providers/theme-provider';
 
@@ -134,6 +136,19 @@ function SummaryV3() {
     },
   };
 
+  const [balance, setBalance] = useState(0);
+
+  const { data: session } = useSession();
+
+  useEffect(() => {
+    fetch(`http://localhost:3333/api/v1/balances?currency=erfb`, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${session.tokens.accessToken}`,
+      },
+    }).then((res) => res.json().then((data) => setBalance(data.balance)));
+  }, []);
+
   return (
     <div className="dark:bg-darkblack-600 mb-[48px] flex w-full flex-col justify-between rounded-lg bg-white p-4 lg:px-8 lg:py-7">
       <div className="mb-2 flex items-center justify-between pb-2">
@@ -143,7 +158,7 @@ function SummaryV3() {
           </span>
           <div className="flex items-center space-x-2">
             <h3 className="text-bgray-900 text-xl font-bold leading-[36px] sm:text-2xl dark:text-white">
-              $48,574.21
+              {balance}
             </h3>
             <span className="text-success-300 text-sm font-medium">+20%</span>
           </div>

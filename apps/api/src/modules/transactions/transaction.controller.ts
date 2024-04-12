@@ -1,28 +1,32 @@
 import { Request, Response } from 'express';
 
-import { readUserById, readUserByWalletAddress } from '../users/user.service';
+import {
+  readUserById,
+  readUserByWalletAddress,
+  readUserWalletPrivateKey,
+} from '../users/user.service';
 import { createTransaction } from './transaction.service';
 import { makeTransaction } from './transactions';
 
 export async function sendTransactionHandler(
   req: Request<
-    { hash: string },
+    { receiverWalletAddress: string },
     object,
-    { userId: number; userHash: string; currency: string; amount: string }
+    { userId: number; currency: string; amount: string }
   >,
   res: Response,
 ) {
   const { currency, amount } = req.body;
 
-  const senderInfo = await readUserById(req.body.userId);
-  const receiverInfo = await readUserByWalletAddress(req.params.hash);
+  const senderWalletPrivateKey = await readUserWalletPrivateKey(req.user.id);
+  const receiverInfo = await readUserByWalletAddress(req.params.receiverWalletAddress);
 
   try {
     const receipt = await makeTransaction(
-      req.params.hash,
+      req.params.receiverWalletAddress,
       currency,
       amount,
-      senderInfo.walletPrivateKey!,
+      senderWalletPrivateKey!,
     );
 
     if (!receipt) {
@@ -32,10 +36,10 @@ export async function sendTransactionHandler(
 
     const newTransaction = await createTransaction({
       address: receipt.transactionHash as string,
-      senderId: req.body.userId,
-      senderWalletAddress: senderInfo.walletAddress!,
+      senderId: req.user.id,
+      senderWalletAddress: req.user.walletAddress,
       receiverId: receiverInfo ? receiverInfo.id : null,
-      receiverWalletAddress: req.params.hash,
+      receiverWalletAddress: req.params.receiverWalletAddress,
       currency,
       amount,
     });

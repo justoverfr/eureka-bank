@@ -1,6 +1,10 @@
 import fs from 'fs';
 
+import dotenv from 'dotenv';
+
 import { blockchain } from '@/utils/blockchain';
+
+dotenv.config();
 
 export async function makeTransaction(
   receiverHash: string,
@@ -12,7 +16,7 @@ export async function makeTransaction(
 
   let transaction = {};
   if (currency === 'erfb') {
-    const contractAddress = '0xa42bF13A968CBF183A91C7A620e40283e909A869';
+    const contractAddress = '0xb6353EFfEB94353C01a4e7D1c784639C66F34fc7';
 
     const abiJson = fs.readFileSync(`./src/modules/transactions/contract-abi.json`, 'utf-8');
     const contractAbi = JSON.parse(abiJson);

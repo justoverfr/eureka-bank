@@ -122,3 +122,13 @@ export async function updateUserWalletPrivateKey(userId: number, newPrivateKey: 
 
   return user;
 }
+
+export async function readUserWalletPrivateKey(userId: number) {
+  const user = await db
+    .select({ walletPrivateKey })
+    .from(schema.users)
+    .where(eq(schema.users.id, userId))
+    .then((rows) => rows[0]);
+
+  return user?.walletPrivateKey;
+}

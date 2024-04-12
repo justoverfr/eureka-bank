@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { use, useEffect, useState } from 'react';
 
+import { useSession } from 'next-auth/react';
 import ProtoTypes from 'prop-types';
 
 function CardSelect({ currencyOptions }) {
@@ -11,6 +12,19 @@ function CardSelect({ currencyOptions }) {
   const handleActiveFilter = (index) => {
     setActiveFilter(index);
   };
+
+  const [balance, setBalance] = useState(0);
+
+  const { data: session } = useSession();
+
+  useEffect(() => {
+    fetch(`http://localhost:3333/api/v1/balances?currency=erfb`, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${session.tokens.accessToken}`,
+      },
+    }).then((res) => res.json().then((data) => setBalance(data.balance)));
+  }, []);
 
   return (
     <div className="payment-select relative mb-3">
@@ -24,9 +38,10 @@ function CardSelect({ currencyOptions }) {
       >
         <div className="flex items-center space-x-2">
           <span>{activeFilter ? currencyOptions[activeFilter] : currencyOptions[0]}</span>
+          <div className="text-bgray-900 text-sm font-bold">SAUMON24,098.00</div>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-bgray-900 text-sm font-bold">$24,098.00</span>
+          <span className="text-bgray-900 text-sm font-bold">{balance}</span>
           <span className="text-bgray-900 text-sm font-medium">
             <svg
               width="16"
