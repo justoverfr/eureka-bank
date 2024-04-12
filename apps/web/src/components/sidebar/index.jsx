@@ -8,8 +8,7 @@ import ProtoTypes from 'prop-types';
 
 import profileImg from '/public/static/images/avatar/profile-xs.png';
 import bg from '/public/static/images/bg/upgrade-bg.png';
-import logo from '/public/static/images/logo/logo-color.svg';
-import logoW from '/public/static/images/logo/logo-white.svg';
+import logo from '/public/static/images/EurekaBanklogo.png';
 
 function Sidebar({ handleActive }) {
   const [activeDashboard, setActiveDashboard] = useState(false);
@@ -21,15 +20,15 @@ function Sidebar({ handleActive }) {
             priority={true}
             height={logo.height}
             width={logo.width}
-            src={require('../../images/EurekaBanklogo.png')}
+            src={logo.src}
             className="block dark:hidden"
             alt="logo"
           />
           <Image
             priority={true}
-            height={logoW.height}
-            width={logoW.width}
-            src={require('../../images/EurekaBanklogo.png')}
+            height={logo.height}
+            width={logo.width}
+            src={logo.src}
             className="hidden dark:block"
             alt="logo"
           />

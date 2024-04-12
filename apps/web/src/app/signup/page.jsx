@@ -4,9 +4,8 @@ import Link from 'next/link';
 import SignUpForm from '@/components/forms/SignUpForm';
 import RightSide from '@/components/signin/RightSide';
 
+import logoColor from '/public/static/images/EurekaBanklogo.png';
 import signupImg from '/public/static/images/illustration/signup.svg';
-import logoColor from '/public/static/images/logo/logo-color.svg';
-import logoWhite from '/public/static/images/logo/logo-white.svg';
 
 function SignUp() {
   return (
@@ -20,15 +19,15 @@ function SignUp() {
                 priority={true}
                 height={logoColor.height}
                 width={logoColor.width}
-                src={require('../../images/EurekaBanklogo.png')}
+                src={logoColor.src}
                 className="block dark:hidden"
                 alt="Logo"
               />
               <Image
                 priority={true}
-                height={logoWhite.height}
-                width={logoWhite.width}
-                src={require('../../images/EurekaBanklogo.png')}
+                height={logoColor.height}
+                width={logoColor.width}
+                src={logoColor.src}
                 className="hidden dark:block"
                 alt="Logo"
               />

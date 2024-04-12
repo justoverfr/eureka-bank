@@ -16,6 +16,7 @@ import { userRoutes } from './modules/users/user.routes';
 dotenv.config();
 
 const app = express();
+
 // Set the application to trust the reverse proxy
 app.set('trust proxy', true);
 

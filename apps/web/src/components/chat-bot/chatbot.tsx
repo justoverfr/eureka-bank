@@ -91,7 +91,6 @@ function Chatbot() {
             message: data.choices[0].message.content,
             sentTime: 'just now',
             sender: 'ChatGPT',
-            sentTime: 'just now',
             direction: 'incoming',
             position: 'single',
           },
