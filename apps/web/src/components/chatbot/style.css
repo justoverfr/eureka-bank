@@ -1,0 +1,31 @@
+.chatbot-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+  z-index: 1000;
+}
+
+.chatbot-popup {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  opacity: 90%;
+}
+
+.chatbot-toggle-btn {
+  background-color: #00cc00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 50%;
+}

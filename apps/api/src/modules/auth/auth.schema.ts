@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { zodToJsonSchema } from 'zod-to-json-schema';
 
 import { schema } from '@eureka-bank/db';
 
@@ -27,8 +26,20 @@ export const registerBodySchema = z.object({
   }),
 }) satisfies z.ZodType<NewUser>;
 
-export const registerJson = {
-  body: zodToJsonSchema(registerBodySchema, 'registerSchema'),
-};
-
 export type RegisterBody = z.infer<typeof registerBodySchema>;
+
+export const loginBodySchema = z.object({
+  email: z
+    .string({
+      required_error: 'Email is required',
+    })
+    .email({
+      message: 'Invalid email',
+    }),
+  password: z.string({
+    required_error: 'Password is required',
+  }),
+  rememberMe: z.boolean().default(false),
+});
+
+export type LoginBody = z.infer<typeof loginBodySchema>;

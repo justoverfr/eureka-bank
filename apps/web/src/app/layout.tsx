@@ -2,6 +2,20 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import './globals.css';
+import '/public/static/css/style.css';
+import '/public/static/css/font-awesome-all.min.css';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'react-quill/dist/quill.snow.css';
+
+import { Toaster } from 'sonner';
+
+import Chatbot from '@/components/chatbot/chatbot';
+import ServiceWorker from '@/components/sw/sw';
+import { NextAuthProvider } from '@/providers/next-auth-provider';
+import ThemeProvider from '@/providers/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,7 +31,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+        />
+      </head>
+      <body className={inter.className}>
+        <NextAuthProvider>
+          <ThemeProvider>
+            <Chatbot />
+            <ServiceWorker />
+            <Toaster />
+            {children}
+          </ThemeProvider>
+        </NextAuthProvider>
+      </body>
     </html>
   );
 }

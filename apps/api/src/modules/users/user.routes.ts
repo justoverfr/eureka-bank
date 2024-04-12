@@ -1,9 +1,10 @@
-import { FastifyPluginAsync } from 'fastify';
+import { Router } from 'express';
 
-const userRoutes: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
-  fastify.get('/', async function (request, reply) {
-    return { root: false };
-  });
-};
+import { getUserHandler, getUsersHandler } from './user.controller';
 
-export default userRoutes;
+const userRoutes = Router();
+
+userRoutes.get('/', getUsersHandler);
+userRoutes.get('/:id', getUserHandler);
+
+export { userRoutes };

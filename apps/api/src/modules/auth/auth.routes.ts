@@ -1,16 +1,15 @@
-import { FastifyPluginAsync } from 'fastify';
+import { Router } from 'express';
 
-import { registerHandler } from './auth.controller';
-import { registerJson } from './auth.schema';
+import { verifyAccessToken, verifyRefreshToken } from '@/middlewares/auth';
+import { validateRequest } from '@/middlewares/validation';
 
-const authRoutes: FastifyPluginAsync = async (fastify, opts): Promise<void> => {
-  fastify.post(
-    '/register',
-    {
-      schema: registerJson,
-    },
-    registerHandler,
-  );
-};
+import { loginHandler, refreshHandler, registerHandler } from './auth.controller';
+import { loginBodySchema, registerBodySchema } from './auth.schema';
 
-export default authRoutes;
+const authRoutes = Router();
+
+authRoutes.post('/register', validateRequest({ body: registerBodySchema }), registerHandler);
+authRoutes.post('/login', validateRequest({ body: loginBodySchema }), loginHandler);
+authRoutes.post('/refresh', verifyRefreshToken, refreshHandler);
+
+export { authRoutes };
