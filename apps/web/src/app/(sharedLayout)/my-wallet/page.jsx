@@ -1,6 +1,5 @@
 import AddBalance from '@/components/addBalance/AddBalance';
 import ListTab from '@/components/listTab';
-import EfficiencyV2 from '@/components/revenueFlow/EfficiencyV2';
 import SummaryV3 from '@/components/summary/SummaryV3';
 import Wallet from '@/components/wallet';
 

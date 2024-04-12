@@ -1,22 +1,17 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Session } from 'next-auth';
 import { useSession } from 'next-auth/react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
 import z from 'zod';
 
 import GreenBtn from '@/components/button/AddMony';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
 
 import PaymentFilter from './PaymentFilter';
 import member from '/public/static/images/avatar/members-3.png';
@@ -50,9 +45,26 @@ export default function QuickTransfer({ session }: { session: Session }) {
       }),
     }).then((res) => {
       if (res.ok) {
-        console.log('Transaction successful');
+        toast.success(
+          <div>
+            <p>Transaction successful</p>
+            {res.json().then((data) => {
+              return (
+                <p>
+                  Transaction hash:{' '}
+                  <Link
+                    href={`https://sepolia.etherscan.io/tx/${data.address}`}
+                    className="text-blue-500 dark:text-blue-400"
+                  >
+                    {data.address}
+                  </Link>
+                </p>
+              );
+            })}
+          </div>,
+        );
       } else {
-        console.log('Transaction failed');
+        toast.error(<p>Transaction failed</p>);
       }
     });
   };
