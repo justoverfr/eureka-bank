@@ -1,14 +1,9 @@
 import { Request, Response } from 'express';
 
-import { readUsers, searchUsers } from './user.service';
+import { readUserById, readUsers, searchUsers } from './user.service';
 
 export async function getUsersHandler(
-  req: Request<
-    { id: string },
-    object,
-    { senderId: number; receiverId: number },
-    { search: string }
-  >,
+  req: Request<object, object, object, { search: string }>,
   res: Response,
 ) {
   if (!req.query.search) {
@@ -16,4 +11,8 @@ export async function getUsersHandler(
   }
 
   return await searchUsers(req.query.search);
+}
+
+export async function getUserHandler(req: Request<{ id: number }>, res: Response) {
+  res.send(await readUserById(Number(req.params.id)));
 }
